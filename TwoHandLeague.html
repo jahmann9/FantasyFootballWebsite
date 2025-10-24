@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Head-to-Head & Career Totals Report</title>
+  <style>
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:20px; background:#0f172a; color:#e6eef8}
+    .container{max-width:1100px;margin:0 auto}
+    h1,h2{color:#fff}
+    .controls{display:flex;gap:10px;margin-bottom:12px}
+    textarea{width:100%;height:160px;padding:8px;border-radius:6px;border:1px solid #334155;background:#071025;color:#e6eef8}
+    button{background:#06b6d4;border:none;padding:10px 14px;border-radius:8px;color:#021124;cursor:pointer;font-weight:600}
+    button.secondary{background:#94a3b8;color:#04212b}
+    table{width:100%;border-collapse:collapse;margin-top:12px}
+    th,td{padding:8px;border-bottom:1px solid #1f2937;text-align:left}
+    th{background:#0b1220;color:#9fb6c9;position:sticky;top:0}
+    tr:hover td{background:#071827}
+    .pf{color:#7ee787} .pa{color:#ffb4b4}
+    .card{background:linear-gradient(180deg,#071025 0%, #041325 100%);padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.6);margin-bottom:14px}
+    .player-row{display:flex;justify-content:space-between;align-items:center;padding:8px;border-radius:8px;margin-bottom:6px}
+    .opp-list{margin-top:8px}
+    .opp-item{display:flex;justify-content:space-between;padding:8px;border-radius:6px;margin-bottom:6px;background:#021122}
+    .small{font-size:0.9rem;color:#9fb6c9}
+    .muted{color:#7b8794}
+    .no-data{color:#f97316}
+    details{margin-bottom:8px}
+    summary{cursor:pointer;padding:8px;border-radius:6px;background:#031022}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Head-to-Head & Career Totals Report</h1>
+    <p class="muted">Paste the JSON output from your Python script (see top comments for format) then click "Render report".</p>
+
+    <div class="card">
+      <div class="controls">
+        <button id="renderBtn">Render report</button>
+        <button id="clearBtn" class="secondary">Clear</button>
+        <button id="sampleBtn" class="secondary">Load sample data</button>
+      </div>
+      <textarea id="jsonInput" placeholder='Paste JSON here'></textarea>
+    </div>
+
+    <div id="report"></div>
+  </div>
+
+<script>
+function render(data){
+  const container = document.getElementById('report');
+  container.innerHTML = '';
+  if(!data){container.innerHTML = '<p class="no-data">No data provided.</p>';return}
+
+  const career = data.career_totals || data.careerTotals || [];
+  const h2h = data.head_to_head || data.headToHead || data.headToHeadRecords || {};
+
+  // Career totals table
+  const careerCard = document.createElement('div');
+  careerCard.className = 'card';
+  careerCard.innerHTML = '<h2>Career Totals</h2>';
+  const table = document.createElement('table');
+  const thead = document.createElement('thead');
+  thead.innerHTML = '<tr><th>Player</th><th>W-L</th><th>%</th><th>PF</th><th>PA</th><th>Avg PF</th><th>Avg PA</th></tr>';
+  table.appendChild(thead);
+  const tbody = document.createElement('tbody');
+
+  career.sort((a,b)=>b.wins - a.wins);
+  career.forEach(p=>{
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td><strong>${escapeHtml(p.name||p.player||p.owner||'Unknown')}</strong></td>
+      <td>${p.wins||0}-${p.losses||0}</td>
+      <td>${(p.winningPercentage!==undefined)?p.winningPercentage+'%':''}</td>
+      <td class='pf'>${p.pointsFor||0}</td>
+      <td class='pa'>${p.pointsAgainst||0}</td>
+      <td>${p.avgPointsFor||0}</td>
+      <td>${p.avgPointsAgainst||0}</td>`;
+    tbody.appendChild(tr);
+  });
+  table.appendChild(tbody);
+  careerCard.appendChild(table);
+  container.appendChild(careerCard);
+
+  // Head-to-head section
+  const h2hCard = document.createElement('div');
+  h2hCard.className = 'card';
+  h2hCard.innerHTML = '<h2>Head-to-Head Records</h2>';
+
+  const players = Object.keys(h2h);
+  if(players.length===0){
+    h2hCard.innerHTML += '<p class="muted">No head-to-head data found.</p>';
+  } else {
+    players.sort((a,b)=>a.localeCompare(b));
+    players.forEach(player => {
+      const details = document.createElement('details');
+      const summary = document.createElement('summary');
+      summary.innerHTML = `<strong>${escapeHtml(player)}</strong> <span class='small muted'>click to expand</span>`;
+      details.appendChild(summary);
+
+      const opps = h2h[player];
+      // convert to array and sort by wins desc
+      const oppArray = Object.keys(opps).map(k=>({name:k,record:opps[k]})).sort((x,y)=> (y.record.wins||0) - (x.record.wins||0));
+
+      const list = document.createElement('div');
+      list.className = 'opp-list';
+      oppArray.forEach(item=>{
+        const r = item.record;
+        const games = (r.wins||0) + (r.losses||0);
+        if(games===0) return; // skip
+        const div = document.createElement('div');
+        div.className = 'opp-item';
+        div.innerHTML = `<div><strong>${escapeHtml(item.name)}</strong><div class='small muted'>${r.wins||0}-${r.losses||0} (${Math.round(((r.wins||0)/games)*10000)/100}%)</div></div>
+                         <div style='text-align:right'><div class='pf'>PF: ${r.pointsFor||0}</div><div class='pa'>PA: ${r.pointsAgainst||0}</div></div>`;
+        list.appendChild(div);
+      });
+      details.appendChild(list);
+      h2hCard.appendChild(details);
+    });
+  }
+
+  container.appendChild(h2hCard);
+}
+
+function escapeHtml(s){return String(s).replace(/[&<>\"']/g, function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[m]})}
+
+// Wire up controls
+document.getElementById('renderBtn').addEventListener('click', ()=>{
+  const txt = document.getElementById('jsonInput').value.trim();
+  if(!txt){alert('Paste JSON into the box first.');return}
+  try{
+    const data = JSON.parse(txt);
+    render(data);
+  }catch(e){alert('Invalid JSON: '+e.message)}
+});
+
+document.getElementById('clearBtn').addEventListener('click', ()=>{
+  document.getElementById('jsonInput').value=''; document.getElementById('report').innerHTML='';
+});
+
+// Sample data loader
+const sample = {
+  career_totals:[
+    {name:'Jaron Ahmann',wins:12,losses:3,pointsFor:2000,pointsAgainst:1500,avgPointsFor:100,avgPointsAgainst:75,winningPercentage:80},
+    {name:'Jacob Maxfield',wins:8,losses:7,pointsFor:1600,pointsAgainst:1550,avgPointsFor:88.9,avgPointsAgainst:86.1,winningPercentage:53.33}
+  ],
+  head_to_head:{
+    'Jaron Ahmann':{
+      'Jacob Maxfield':{wins:7,losses:3,pointsFor:700,pointsAgainst:650},
+      'Bo Kitrell':{wins:5,losses:5,pointsFor:600,pointsAgainst:610}
+    },
+    'Jacob Maxfield':{
+      'Jaron Ahmann':{wins:3,losses:7,pointsFor:650,pointsAgainst:700}
+    }
+  }
+};
+
+document.getElementById('sampleBtn').addEventListener('click', ()=>{
+  document.getElementById('jsonInput').value = JSON.stringify(sample, null, 2);
+});
+
+</script>
+</body>
+</html>
