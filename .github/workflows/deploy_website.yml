@@ -1,10 +1,14 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+# Deploy Fantasy Football Website to GitHub Pages
+name: Deploy Fantasy Football Website
 
 on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
+    paths:
+      - "TwoHandLeague.html"
+      - "league_summary.json"
+      - ".github/workflows/deploy_website.yml"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -22,22 +26,46 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
+  # Build and deploy job
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Setup Pages
+        
+      - name: Verify required files exist
+        run: |
+          if [ ! -f "TwoHandLeague.html" ]; then
+            echo "Error: TwoHandLeague.html not found"
+            exit 1
+          fi
+          if [ ! -f "league_summary.json" ]; then
+            echo "Warning: league_summary.json not found"
+          fi
+          echo "Required files verified"
+          
+      - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
+        
+      - name: Create deployment directory
+        run: |
+          mkdir -p _site
+          cp TwoHandLeague.html _site/index.html
+          cp TwoHandLeague.html _site/
+          if [ -f "league_summary.json" ]; then
+            cp league_summary.json _site/
+          fi
+          echo "Files prepared for deployment:"
+          ls -la _site/
+          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          path: '_site'
+          
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
