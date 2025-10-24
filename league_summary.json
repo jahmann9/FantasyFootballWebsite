@@ -2,23 +2,23 @@
   "career_totals": [
     {
       "name": "Jaron Ahmann",
-      "wins": 55,
-      "losses": 47,
-      "pointsFor": 11040.62,
-      "pointsAgainst": 10943.6,
-      "avgPointsFor": 108.24,
-      "avgPointsAgainst": 107.29,
-      "winningPercentage": 53.92
+      "wins": 68,
+      "losses": 55,
+      "pointsFor": 14048.62,
+      "pointsAgainst": 13612.6,
+      "avgPointsFor": 114.22,
+      "avgPointsAgainst": 110.67,
+      "winningPercentage": 55.28
     },
     {
       "name": "Jackson Gannon",
-      "wins": 58,
-      "losses": 44,
-      "pointsFor": 11380.0,
-      "pointsAgainst": 11016.42,
-      "avgPointsFor": 111.57,
-      "avgPointsAgainst": 108.0,
-      "winningPercentage": 56.86
+      "wins": 62,
+      "losses": 61,
+      "pointsFor": 13742.0,
+      "pointsAgainst": 13877.42,
+      "avgPointsFor": 111.72,
+      "avgPointsAgainst": 112.82,
+      "winningPercentage": 50.41
     },
     {
       "name": "Matt Smelser",
@@ -32,23 +32,23 @@
     },
     {
       "name": "Jacob Maxfield",
-      "wins": 54,
-      "losses": 48,
-      "pointsFor": 10786.78,
-      "pointsAgainst": 10758.52,
-      "avgPointsFor": 105.75,
-      "avgPointsAgainst": 105.48,
-      "winningPercentage": 52.94
+      "wins": 70,
+      "losses": 53,
+      "pointsFor": 13542.78,
+      "pointsAgainst": 13277.52,
+      "avgPointsFor": 110.1,
+      "avgPointsAgainst": 107.95,
+      "winningPercentage": 56.91
     },
     {
       "name": "Austin Horan",
-      "wins": 56,
-      "losses": 46,
-      "pointsFor": 11179.68,
-      "pointsAgainst": 10738.62,
-      "avgPointsFor": 109.6,
-      "avgPointsAgainst": 105.28,
-      "winningPercentage": 54.9
+      "wins": 68,
+      "losses": 55,
+      "pointsFor": 13923.68,
+      "pointsAgainst": 13171.62,
+      "avgPointsFor": 113.2,
+      "avgPointsAgainst": 107.09,
+      "winningPercentage": 55.28
     },
     {
       "name": "Tom Docter",
@@ -62,33 +62,33 @@
     },
     {
       "name": "Bo Kitrell",
-      "wins": 46,
-      "losses": 56,
-      "pointsFor": 10785.78,
-      "pointsAgainst": 10953.26,
-      "avgPointsFor": 105.74,
-      "avgPointsAgainst": 107.38,
-      "winningPercentage": 45.1
+      "wins": 52,
+      "losses": 71,
+      "pointsFor": 12885.78,
+      "pointsAgainst": 13702.26,
+      "avgPointsFor": 104.76,
+      "avgPointsAgainst": 111.4,
+      "winningPercentage": 42.28
     },
     {
       "name": "Dylan Bohlke",
-      "wins": 52,
-      "losses": 50,
-      "pointsFor": 10949.0,
-      "pointsAgainst": 10836.6,
-      "avgPointsFor": 107.34,
-      "avgPointsAgainst": 106.24,
-      "winningPercentage": 50.98
+      "wins": 65,
+      "losses": 58,
+      "pointsFor": 14195.0,
+      "pointsAgainst": 13597.6,
+      "avgPointsFor": 115.41,
+      "avgPointsAgainst": 110.55,
+      "winningPercentage": 52.85
     },
     {
       "name": "Trevor Reimnitz",
-      "wins": 32,
-      "losses": 58,
-      "pointsFor": 9369.64,
-      "pointsAgainst": 10170.5,
-      "avgPointsFor": 104.11,
-      "avgPointsAgainst": 113.01,
-      "winningPercentage": 35.56
+      "wins": 39,
+      "losses": 72,
+      "pointsFor": 11409.64,
+      "pointsAgainst": 12665.5,
+      "avgPointsFor": 102.79,
+      "avgPointsAgainst": 114.1,
+      "winningPercentage": 35.14
     },
     {
       "name": "Zach Fleer",
@@ -112,23 +112,23 @@
     },
     {
       "name": "Keaton Moss",
-      "wins": 45,
-      "losses": 45,
-      "pointsFor": 9841.18,
-      "pointsAgainst": 9869.9,
-      "avgPointsFor": 109.35,
-      "avgPointsAgainst": 109.67,
-      "winningPercentage": 50.0
+      "wins": 58,
+      "losses": 53,
+      "pointsFor": 12611.18,
+      "pointsAgainst": 12524.9,
+      "avgPointsFor": 113.61,
+      "avgPointsAgainst": 112.84,
+      "winningPercentage": 52.25
     },
     {
       "name": "Erik Gustafson",
-      "wins": 35,
-      "losses": 43,
-      "pointsFor": 8739.04,
-      "pointsAgainst": 9108.56,
-      "avgPointsFor": 112.04,
-      "avgPointsAgainst": 116.78,
-      "winningPercentage": 44.87
+      "wins": 43,
+      "losses": 56,
+      "pointsFor": 11253.04,
+      "pointsAgainst": 11799.56,
+      "avgPointsFor": 113.67,
+      "avgPointsAgainst": 119.19,
+      "winningPercentage": 43.43
     },
     {
       "name": "Reed Becker",
@@ -139,6 +139,36 @@
       "avgPointsFor": 77.55,
       "avgPointsAgainst": 100.4,
       "winningPercentage": 18.18
+    },
+    {
+      "name": "Scott Ayers",
+      "wins": 11,
+      "losses": 10,
+      "pointsFor": 2737,
+      "pointsAgainst": 2529,
+      "avgPointsFor": 130.33,
+      "avgPointsAgainst": 120.43,
+      "winningPercentage": 52.38
+    },
+    {
+      "name": "Jason Hawkins",
+      "wins": 12,
+      "losses": 9,
+      "pointsFor": 2588,
+      "pointsAgainst": 2627,
+      "avgPointsFor": 123.24,
+      "avgPointsAgainst": 125.1,
+      "winningPercentage": 57.14
+    },
+    {
+      "name": "Bryant Holt",
+      "wins": 11,
+      "losses": 10,
+      "pointsFor": 2848,
+      "pointsAgainst": 2725,
+      "avgPointsFor": 135.62,
+      "avgPointsAgainst": 129.76,
+      "winningPercentage": 52.38
     }
   ],
   "head_to_head": {
