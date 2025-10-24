@@ -37,6 +37,7 @@
       <div class="controls">
         <button id="renderBtn">Render report</button>
         <button id="clearBtn" class="secondary">Clear</button>
+        <button id="resetBtn" class="secondary">Reset to default</button>
         <button id="sampleBtn" class="secondary">Load sample data</button>
       </div>
       <textarea id="jsonInput" placeholder='Paste JSON here'></textarea>
@@ -122,6 +123,52 @@ function render(data){
 
 function escapeHtml(s){return String(s).replace(/[&<>\"']/g, function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[m]})}
 
+// Global variable to store the default data
+let defaultData = null;
+
+// Load the default league summary data
+async function loadDefaultData() {
+  try {
+    const response = await fetch('league_summary.json');
+    if (!response.ok) throw new Error('Failed to load league_summary.json');
+    defaultData = await response.json();
+    return defaultData;
+  } catch (error) {
+    console.error('Error loading default data:', error);
+    // Fallback to sample data if league_summary.json is not available
+    defaultData = getSampleData();
+    return defaultData;
+  }
+}
+
+// Get sample data
+function getSampleData() {
+  return {
+    career_totals:[
+      {name:'Jaron Ahmann',wins:12,losses:3,pointsFor:2000,pointsAgainst:1500,avgPointsFor:100,avgPointsAgainst:75,winningPercentage:80},
+      {name:'Jacob Maxfield',wins:8,losses:7,pointsFor:1600,pointsAgainst:1550,avgPointsFor:88.9,avgPointsAgainst:86.1,winningPercentage:53.33}
+    ],
+    head_to_head:{
+      'Jaron Ahmann':{
+        'Jacob Maxfield':{wins:7,losses:3,pointsFor:700,pointsAgainst:650},
+        'Bo Kitrell':{wins:5,losses:5,pointsFor:600,pointsAgainst:610}
+      },
+      'Jacob Maxfield':{
+        'Jaron Ahmann':{wins:3,losses:7,pointsFor:650,pointsAgainst:700}
+      }
+    }
+  };
+}
+
+// Initialize the page with default data
+async function initializePage() {
+  const data = await loadDefaultData();
+  if (data) {
+    document.getElementById('jsonInput').value = JSON.stringify(data, null, 2);
+    render(data);
+  }
+}
+
 // Wire up controls
 document.getElementById('renderBtn').addEventListener('click', ()=>{
   const txt = document.getElementById('jsonInput').value.trim();
@@ -136,26 +183,22 @@ document.getElementById('clearBtn').addEventListener('click', ()=>{
   document.getElementById('jsonInput').value=''; document.getElementById('report').innerHTML='';
 });
 
-// Sample data loader
-const sample = {
-  career_totals:[
-    {name:'Jaron Ahmann',wins:12,losses:3,pointsFor:2000,pointsAgainst:1500,avgPointsFor:100,avgPointsAgainst:75,winningPercentage:80},
-    {name:'Jacob Maxfield',wins:8,losses:7,pointsFor:1600,pointsAgainst:1550,avgPointsFor:88.9,avgPointsAgainst:86.1,winningPercentage:53.33}
-  ],
-  head_to_head:{
-    'Jaron Ahmann':{
-      'Jacob Maxfield':{wins:7,losses:3,pointsFor:700,pointsAgainst:650},
-      'Bo Kitrell':{wins:5,losses:5,pointsFor:600,pointsAgainst:610}
-    },
-    'Jacob Maxfield':{
-      'Jaron Ahmann':{wins:3,losses:7,pointsFor:650,pointsAgainst:700}
-    }
+document.getElementById('resetBtn').addEventListener('click', ()=>{
+  if (defaultData) {
+    document.getElementById('jsonInput').value = JSON.stringify(defaultData, null, 2);
+    render(defaultData);
+  } else {
+    alert('Default data not available');
   }
-};
+});
 
 document.getElementById('sampleBtn').addEventListener('click', ()=>{
+  const sample = getSampleData();
   document.getElementById('jsonInput').value = JSON.stringify(sample, null, 2);
 });
+
+// Initialize the page when it loads
+document.addEventListener('DOMContentLoaded', initializePage);
 
 </script>
 </body>
