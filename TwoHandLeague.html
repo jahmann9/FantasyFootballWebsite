@@ -15,6 +15,11 @@
     table{width:100%;border-collapse:collapse;margin-top:12px}
     th,td{padding:8px;border-bottom:1px solid #1f2937;text-align:left}
     th{background:#0b1220;color:#9fb6c9;position:sticky;top:0}
+    th.sortable{cursor:pointer;user-select:none;position:relative}
+    th.sortable:hover{background:#1a2332}
+    th.sortable::after{content:'↕';margin-left:8px;opacity:0.5;font-size:0.8em}
+    th.sortable.asc::after{content:'↑';opacity:1}
+    th.sortable.desc::after{content:'↓';opacity:1}
     tr:hover td{background:#071827}
     .pf{color:#7ee787} .pa{color:#ffb4b4}
     .card{background:linear-gradient(180deg,#071025 0%, #041325 100%);padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.6);margin-bottom:14px}
@@ -60,26 +65,34 @@ function render(data){
   careerCard.className = 'card';
   careerCard.innerHTML = '<h2>Career Totals</h2>';
   const table = document.createElement('table');
+  table.id = 'careerTable';
   const thead = document.createElement('thead');
-  thead.innerHTML = '<tr><th>Player</th><th>W-L</th><th>%</th><th>PF</th><th>PA</th><th>Avg PF</th><th>Avg PA</th></tr>';
+  thead.innerHTML = `<tr>
+    <th class="sortable" data-column="name" data-type="string">Player</th>
+    <th class="sortable" data-column="wins" data-type="number">W-L</th>
+    <th class="sortable" data-column="winningPercentage" data-type="number">%</th>
+    <th class="sortable" data-column="pointsFor" data-type="number">PF</th>
+    <th class="sortable" data-column="pointsAgainst" data-type="number">PA</th>
+    <th class="sortable" data-column="avgPointsFor" data-type="number">Avg PF</th>
+    <th class="sortable" data-column="avgPointsAgainst" data-type="number">Avg PA</th>
+  </tr>`;
   table.appendChild(thead);
   const tbody = document.createElement('tbody');
+  tbody.id = 'careerTableBody';
 
+  // Store original data for sorting
+  window.careerData = [...career];
+  
+  // Sort by wins initially (descending)
   career.sort((a,b)=>b.wins - a.wins);
-  career.forEach(p=>{
-    const tr = document.createElement('tr');
-    tr.innerHTML = `<td><strong>${escapeHtml(p.name||p.player||p.owner||'Unknown')}</strong></td>
-      <td>${p.wins||0}-${p.losses||0}</td>
-      <td>${(p.winningPercentage!==undefined)?p.winningPercentage+'%':''}</td>
-      <td class='pf'>${p.pointsFor||0}</td>
-      <td class='pa'>${p.pointsAgainst||0}</td>
-      <td>${p.avgPointsFor||0}</td>
-      <td>${p.avgPointsAgainst||0}</td>`;
-    tbody.appendChild(tr);
-  });
+  renderCareerTableRows(career, tbody);
+  
   table.appendChild(tbody);
   careerCard.appendChild(table);
   container.appendChild(careerCard);
+
+  // Add sort event listeners
+  setupTableSorting();
 
   // Head-to-head section
   const h2hCard = document.createElement('div');
@@ -119,6 +132,94 @@ function render(data){
   }
 
   container.appendChild(h2hCard);
+}
+
+// Function to render career table rows
+function renderCareerTableRows(data, tbody) {
+  tbody.innerHTML = '';
+  data.forEach(p=>{
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td><strong>${escapeHtml(p.name||p.player||p.owner||'Unknown')}</strong></td>
+      <td>${p.wins||0}-${p.losses||0}</td>
+      <td>${(p.winningPercentage!==undefined)?p.winningPercentage+'%':''}</td>
+      <td class='pf'>${p.pointsFor||0}</td>
+      <td class='pa'>${p.pointsAgainst||0}</td>
+      <td>${p.avgPointsFor||0}</td>
+      <td>${p.avgPointsAgainst||0}</td>`;
+    tbody.appendChild(tr);
+  });
+}
+
+// Function to setup table sorting
+function setupTableSorting() {
+  const table = document.getElementById('careerTable');
+  if (!table) return;
+  
+  const headers = table.querySelectorAll('th.sortable');
+  let currentSort = { column: 'wins', direction: 'desc' };
+  
+  // Set initial sort indicator
+  const initialHeader = table.querySelector(`th[data-column="${currentSort.column}"]`);
+  if (initialHeader) {
+    initialHeader.classList.add(currentSort.direction);
+  }
+  
+  headers.forEach(header => {
+    header.addEventListener('click', () => {
+      const column = header.dataset.column;
+      const type = header.dataset.type;
+      
+      // Remove sort classes from all headers
+      headers.forEach(h => h.classList.remove('asc', 'desc'));
+      
+      // Determine sort direction
+      let direction = 'asc';
+      if (currentSort.column === column && currentSort.direction === 'asc') {
+        direction = 'desc';
+      }
+      
+      // Add sort class to current header
+      header.classList.add(direction);
+      
+      // Sort the data
+      const sortedData = sortTableData([...window.careerData], column, direction, type);
+      
+      // Re-render the table body
+      const tbody = document.getElementById('careerTableBody');
+      renderCareerTableRows(sortedData, tbody);
+      
+      // Update current sort
+      currentSort = { column, direction };
+    });
+  });
+}
+
+// Function to sort table data
+function sortTableData(data, column, direction, type) {
+  return data.sort((a, b) => {
+    let aVal = a[column];
+    let bVal = b[column];
+    
+    // Handle special cases
+    if (column === 'name') {
+      aVal = a.name || a.player || a.owner || 'Unknown';
+      bVal = b.name || b.player || b.owner || 'Unknown';
+    }
+    
+    // Convert to appropriate type
+    if (type === 'number') {
+      aVal = parseFloat(aVal) || 0;
+      bVal = parseFloat(bVal) || 0;
+    } else {
+      aVal = String(aVal).toLowerCase();
+      bVal = String(bVal).toLowerCase();
+    }
+    
+    // Sort logic
+    if (aVal < bVal) return direction === 'asc' ? -1 : 1;
+    if (aVal > bVal) return direction === 'asc' ? 1 : -1;
+    return 0;
+  });
 }
 
 function escapeHtml(s){return String(s).replace(/[&<>\"']/g, function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[m]})}
