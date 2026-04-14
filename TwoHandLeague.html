@@ -15,6 +15,11 @@
     table{width:100%;border-collapse:collapse;margin-top:12px}
     th,td{padding:8px;border-bottom:1px solid #1f2937;text-align:left}
     th{background:#0b1220;color:#9fb6c9;position:sticky;top:0}
+    th.sortable{cursor:pointer}
+    th.sortable{position:relative;padding-right:24px}
+    th.sortable::after{content:'';position:absolute;right:8px;top:50%;transform:translateY(-50%);font-size:0.8rem;color:#9fb6c9}
+    th.sortable[data-sort-dir="asc"]::after{content:'▲'}
+    th.sortable[data-sort-dir="desc"]::after{content:'▼'}
     tr:hover td{background:#071827}
     .pf{color:#7ee787} .pa{color:#ffb4b4}
     .card{background:linear-gradient(180deg,#071025 0%, #041325 100%);padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.6);margin-bottom:14px}
@@ -78,6 +83,8 @@ function render(data){
     tbody.appendChild(tr);
   });
   table.appendChild(tbody);
+  // make the career totals table sortable by header clicks
+  makeTableSortable(table);
   careerCard.appendChild(table);
   container.appendChild(careerCard);
 
@@ -122,6 +129,36 @@ function render(data){
 }
 
 function escapeHtml(s){return String(s).replace(/[&<>\"']/g, function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[m]})}
+
+// Make a table sortable by clicking its headers
+function makeTableSortable(table){
+  const ths = table.querySelectorAll('th');
+  ths.forEach((th, index)=>{
+    th.classList.add('sortable');
+    th.addEventListener('click', ()=>{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.querySelectorAll('tr'));
+      const currentDir = th.getAttribute('data-sort-dir') === 'asc' ? -1 : 1;
+      rows.sort((a,b)=>{
+        const aText = a.children[index].innerText.trim();
+        const bText = b.children[index].innerText.trim();
+        const aNum = parseFloat(aText.replace(/[^0-9.\-]/g,''));
+        const bNum = parseFloat(bText.replace(/[^0-9.\-]/g,''));
+        let res = 0;
+        if(!isNaN(aNum) && !isNaN(bNum)){
+          res = aNum - bNum;
+        } else {
+          res = aText.localeCompare(bText, undefined, {numeric:true});
+        }
+        return res * currentDir;
+      });
+      ths.forEach(t=>{t.removeAttribute('data-sort-dir'); t.removeAttribute('aria-sort')});
+      th.setAttribute('data-sort-dir', currentDir===1 ? 'asc' : 'desc');
+      th.setAttribute('aria-sort', currentDir===1 ? 'ascending' : 'descending');
+      rows.forEach(r=>tbody.appendChild(r));
+    });
+  });
+}
 
 // Global variable to store the default data
 let defaultData = null;
