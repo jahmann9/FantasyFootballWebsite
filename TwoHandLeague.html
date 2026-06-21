@@ -1,3 +1,26 @@
+<!--
+Instructions:
+1) Run your Python script and print or dump a JSON object containing "career_totals" and "head_to_head" structures. Example format:
+
+{
+  "career_totals": [
+    {"name":"Jaron Ahmann","wins":12,"losses":3,"pointsFor":2000,"pointsAgainst":1500,"avgPointsFor":100.0,"avgPointsAgainst":75.0,"winningPercentage":80.0},
+    ...
+  ],
+  "head_to_head": {
+    "Jaron Ahmann": {
+       "Jacob Maxfield": {"wins":7,"losses":3,"pointsFor":700,"pointsAgainst":650},
+       ...
+    },
+    ...
+  }
+}
+
+2) Open this HTML in a browser. Paste the JSON into the "Paste JSON here" box and click "Render report".
+
+Optional: I can modify your Python script to automatically write this HTML with the data embedded. Ask me to do that and I'll produce the updated Python.
+-->
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,29 +31,65 @@
     body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:20px; background:#0f172a; color:#e6eef8}
     .container{max-width:1100px;margin:0 auto}
     h1,h2{color:#fff}
-    .controls{display:flex;gap:10px;margin-bottom:12px}
+    .controls{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}
     textarea{width:100%;height:160px;padding:8px;border-radius:6px;border:1px solid #334155;background:#071025;color:#e6eef8}
     button{background:#06b6d4;border:none;padding:10px 14px;border-radius:8px;color:#021124;cursor:pointer;font-weight:600}
     button.secondary{background:#94a3b8;color:#04212b}
     table{width:100%;border-collapse:collapse;margin-top:12px}
     th,td{padding:8px;border-bottom:1px solid #1f2937;text-align:left}
     th{background:#0b1220;color:#9fb6c9;position:sticky;top:0}
-    th.sortable{cursor:pointer}
-    th.sortable{position:relative;padding-right:24px}
-    th.sortable::after{content:'';position:absolute;right:8px;top:50%;transform:translateY(-50%);font-size:0.8rem;color:#9fb6c9}
-    th.sortable[data-sort-dir="asc"]::after{content:'▲'}
-    th.sortable[data-sort-dir="desc"]::after{content:'▼'}
     tr:hover td{background:#071827}
     .pf{color:#7ee787} .pa{color:#ffb4b4}
     .card{background:linear-gradient(180deg,#071025 0%, #041325 100%);padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.6);margin-bottom:14px}
     .player-row{display:flex;justify-content:space-between;align-items:center;padding:8px;border-radius:8px;margin-bottom:6px}
     .opp-list{margin-top:8px}
-    .opp-item{display:flex;justify-content:space-between;padding:8px;border-radius:6px;margin-bottom:6px;background:#021122}
+    .opp-item{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:8px;border-radius:6px;margin-bottom:6px;background:#021122;flex-wrap:wrap}
     .small{font-size:0.9rem;color:#9fb6c9}
     .muted{color:#7b8794}
     .no-data{color:#f97316}
     details{margin-bottom:8px}
     summary{cursor:pointer;padding:8px;border-radius:6px;background:#031022}
+    .table-scroll{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+    .score-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+    @media (max-width: 768px){
+      body{margin:12px}
+      .controls{flex-direction:column;align-items:stretch}
+      .controls button{width:100%}
+      textarea{height:130px}
+      .score-grid{grid-template-columns:1fr}
+      table{font-size:0.9rem}
+      th,td{padding:6px}
+      .opp-item > div:last-child{width:100%;text-align:left !important}
+
+      /* Convert career totals table rows into mobile cards */
+      .career-table thead{display:none}
+      .career-table tbody,
+      .career-table tr,
+      .career-table td{display:block;width:100%}
+      .career-table tr{
+        background:#021122;
+        border:1px solid #1f2937;
+        border-radius:10px;
+        padding:8px;
+        margin-bottom:10px;
+      }
+      .career-table td{
+        border-bottom:1px solid #1f2937;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        gap:8px;
+        padding:6px 4px;
+      }
+      .career-table td:last-child{border-bottom:none}
+      .career-table td::before{
+        content:attr(data-label);
+        color:#9fb6c9;
+        font-weight:600;
+        font-size:0.82rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -42,7 +101,6 @@
       <div class="controls">
         <button id="renderBtn">Render report</button>
         <button id="clearBtn" class="secondary">Clear</button>
-        <button id="resetBtn" class="secondary">Reset to default</button>
         <button id="sampleBtn" class="secondary">Load sample data</button>
       </div>
       <textarea id="jsonInput" placeholder='Paste JSON here'></textarea>
@@ -65,6 +123,7 @@ function render(data){
   careerCard.className = 'card';
   careerCard.innerHTML = '<h2>Career Totals</h2>';
   const table = document.createElement('table');
+  table.className = 'career-table';
   const thead = document.createElement('thead');
   thead.innerHTML = '<tr><th>Player</th><th>W-L</th><th>%</th><th>PF</th><th>PA</th><th>Avg PF</th><th>Avg PA</th></tr>';
   table.appendChild(thead);
@@ -73,20 +132,77 @@ function render(data){
   career.sort((a,b)=>b.wins - a.wins);
   career.forEach(p=>{
     const tr = document.createElement('tr');
-    tr.innerHTML = `<td><strong>${escapeHtml(p.name||p.player||p.owner||'Unknown')}</strong></td>
-      <td>${p.wins||0}-${p.losses||0}</td>
-      <td>${(p.winningPercentage!==undefined)?p.winningPercentage+'%':''}</td>
-      <td class='pf'>${p.pointsFor||0}</td>
-      <td class='pa'>${p.pointsAgainst||0}</td>
-      <td>${p.avgPointsFor||0}</td>
-      <td>${p.avgPointsAgainst||0}</td>`;
+    tr.innerHTML = `<td data-label='Player'><strong>${escapeHtml(p.name||p.player||p.owner||'Unknown')}</strong></td>
+      <td data-label='W-L'>${p.wins||0}-${p.losses||0}</td>
+      <td data-label='Win %'>${(p.winningPercentage!==undefined)?p.winningPercentage+'%':''}</td>
+      <td data-label='PF' class='pf'>${p.pointsFor||0}</td>
+      <td data-label='PA' class='pa'>${p.pointsAgainst||0}</td>
+      <td data-label='Avg PF'>${p.avgPointsFor||0}</td>
+      <td data-label='Avg PA'>${p.avgPointsAgainst||0}</td>`;
     tbody.appendChild(tr);
   });
   table.appendChild(tbody);
-  // make the career totals table sortable by header clicks
-  makeTableSortable(table);
-  careerCard.appendChild(table);
+  const careerTableWrap = document.createElement('div');
+  careerTableWrap.className = 'table-scroll';
+  careerTableWrap.appendChild(table);
+  careerCard.appendChild(careerTableWrap);
   container.appendChild(careerCard);
+  // make the career totals table sortable by clicking headers
+  makeTableSortable(table);
+
+  // Top/Bottom scores section
+  const scoreCard = document.createElement('div');
+  scoreCard.className = 'card';
+  scoreCard.innerHTML = '<h2>Top 5 / Bottom 5 Scores</h2>';
+
+  const scoreList = document.createElement('div');
+  const careerByName = [...career].sort((a,b)=> String(a.name||'').localeCompare(String(b.name||'')));
+  careerByName.forEach(p => {
+    const highest = Array.isArray(p.highest_scores) ? p.highest_scores : [];
+    const lowest = Array.isArray(p.lowest_scores) ? p.lowest_scores : [];
+    if(highest.length === 0 && lowest.length === 0) return;
+
+    const block = document.createElement('div');
+    block.style.padding = '10px 0';
+    block.style.borderBottom = '1px solid #1f2937';
+
+    const highestRows = highest.length
+      ? highest.map(s => `<tr><td class='pf' style='padding:4px 8px;border-bottom:1px solid #1f2937;'>${s.score}</td><td style='padding:4px 8px;border-bottom:1px solid #1f2937;'>${s.year}</td><td style='padding:4px 8px;border-bottom:1px solid #1f2937;'>${s.week}</td></tr>`).join('')
+      : `<tr><td colspan='3' class='muted' style='padding:4px 8px;'>No data</td></tr>`;
+
+    const lowestRows = lowest.length
+      ? lowest.map(s => `<tr><td class='pa' style='padding:4px 8px;border-bottom:1px solid #1f2937;'>${s.score}</td><td style='padding:4px 8px;border-bottom:1px solid #1f2937;'>${s.year}</td><td style='padding:4px 8px;border-bottom:1px solid #1f2937;'>${s.week}</td></tr>`).join('')
+      : `<tr><td colspan='3' class='muted' style='padding:4px 8px;'>No data</td></tr>`;
+
+    block.innerHTML = `
+      <div style='margin-bottom:8px;'><strong>${escapeHtml(p.name||p.player||p.owner||'Unknown')}</strong></div>
+      <div class='score-grid'>
+        <div>
+          <div class='small' style='color:#7ee787;font-weight:700;margin-bottom:4px;'>Top 5</div>
+          <div class='table-scroll'><table style='width:100%;border-collapse:collapse;'>
+            <thead><tr><th style='padding:4px 8px;text-align:left;'>Score</th><th style='padding:4px 8px;text-align:left;'>Year</th><th style='padding:4px 8px;text-align:left;'>Week</th></tr></thead>
+            <tbody>${highestRows}</tbody>
+          </table></div>
+        </div>
+        <div>
+          <div class='small' style='color:#ffb4b4;font-weight:700;margin-bottom:4px;'>Bottom 5</div>
+          <div class='table-scroll'><table style='width:100%;border-collapse:collapse;'>
+            <thead><tr><th style='padding:4px 8px;text-align:left;'>Score</th><th style='padding:4px 8px;text-align:left;'>Year</th><th style='padding:4px 8px;text-align:left;'>Week</th></tr></thead>
+            <tbody>${lowestRows}</tbody>
+          </table></div>
+        </div>
+      </div>
+    `;
+
+    scoreList.appendChild(block);
+  });
+
+  if(scoreList.children.length === 0){
+    scoreCard.innerHTML += '<p class="muted">No top/bottom score data found.</p>';
+  } else {
+    scoreCard.appendChild(scoreList);
+  }
+  container.appendChild(scoreCard);
 
   // Head-to-head section
   const h2hCard = document.createElement('div');
@@ -118,6 +234,40 @@ function render(data){
         div.className = 'opp-item';
         div.innerHTML = `<div><strong>${escapeHtml(item.name)}</strong><div class='small muted'>${r.wins||0}-${r.losses||0} (${Math.round(((r.wins||0)/games)*10000)/100}%)</div></div>
                          <div style='text-align:right'><div class='pf'>PF: ${r.pointsFor||0}</div><div class='pa'>PA: ${r.pointsAgainst||0}</div></div>`;
+
+        const gameHistory = Array.isArray(r.games) ? [...r.games] : [];
+        if(gameHistory.length > 0){
+          // Show most recent matchup first.
+          gameHistory.sort((a, b) => {
+            const ay = Number(a.year) || 0;
+            const by = Number(b.year) || 0;
+            if (ay !== by) return by - ay;
+            return (Number(b.week) || 0) - (Number(a.week) || 0);
+          });
+
+          const historyWrap = document.createElement('div');
+          historyWrap.className = 'small muted';
+          historyWrap.style.width = '100%';
+          historyWrap.style.marginTop = '14px';
+          historyWrap.style.paddingTop = '6px';
+          historyWrap.style.borderTop = '1px solid #1f2937';
+          historyWrap.innerHTML = '<div style="margin-bottom:4px;color:#9fb6c9;">Matchups:</div>';
+
+          gameHistory.forEach(g => {
+            const row = document.createElement('div');
+            row.style.display = 'flex';
+            row.style.justifyContent = 'space-between';
+            row.style.gap = '8px';
+            row.style.padding = '2px 0';
+            const outcome = g.outcome || ((g.scoreFor > g.scoreAgainst) ? 'W' : (g.scoreFor < g.scoreAgainst) ? 'L' : 'T');
+            const platform = g.platform || 'Unknown';
+            const outcomeColor = outcome === 'W' ? '#7ee787' : (outcome === 'L' ? '#ffb4b4' : '#facc15');
+            row.innerHTML = `<span>Year ${g.year}, Week ${g.week}</span><span>${g.scoreFor} - ${g.scoreAgainst} <span style="color:${outcomeColor};font-weight:700;margin-left:8px;">${outcome}</span> <span style="border:1px solid #334155;border-radius:999px;padding:0 6px;margin-left:6px;color:#9fb6c9;">${platform}</span></span>`;
+            historyWrap.appendChild(row);
+          });
+
+          div.appendChild(historyWrap);
+        }
         list.appendChild(div);
       });
       details.appendChild(list);
@@ -130,80 +280,48 @@ function render(data){
 
 function escapeHtml(s){return String(s).replace(/[&<>\"']/g, function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[m]})}
 
-// Make a table sortable by clicking its headers
+// Lightweight table sorter for the career totals table
 function makeTableSortable(table){
-  const ths = table.querySelectorAll('th');
-  ths.forEach((th, index)=>{
-    th.classList.add('sortable');
+  if(!table) return;
+  const thead = table.querySelector('thead');
+  const tbody = table.querySelector('tbody');
+  if(!thead || !tbody) return;
+  const ths = Array.from(thead.querySelectorAll('th'));
+
+  const getCellText = (tr, idx) => (tr.children[idx] && tr.children[idx].innerText) ? tr.children[idx].innerText.trim() : '';
+
+  const parseForColumn = (idx, text) => {
+    if(idx === 0) return text.toLowerCase(); // player name
+    if(idx === 1){ // W-L -> sort by wins
+      const m = (text||'').split('-');
+      return parseInt(m[0]) || 0;
+    }
+    if(idx === 2) return parseFloat((text||'').replace('%','')) || 0; // percentage
+    // numeric columns (PF, PA, Avg PF, Avg PA)
+    return parseFloat((text||'').replace(/[^0-9.\-]/g,'')) || 0;
+  };
+
+  ths.forEach((th, idx) => {
+    th.style.cursor = 'pointer';
     th.addEventListener('click', ()=>{
-      const tbody = table.tBodies[0];
+      const dir = th.dataset.sortDir === 'asc' ? 'desc' : 'asc';
+      // clear sort indicators on all headers
+      ths.forEach(h => { h.innerText = h.innerText.replace(/ ▲| ▼/g,''); delete h.dataset.sortDir; });
+      th.dataset.sortDir = dir;
+      // sort rows
       const rows = Array.from(tbody.querySelectorAll('tr'));
-      const currentDir = th.getAttribute('data-sort-dir') === 'asc' ? -1 : 1;
-      rows.sort((a,b)=>{
-        const aText = a.children[index].innerText.trim();
-        const bText = b.children[index].innerText.trim();
-        const aNum = parseFloat(aText.replace(/[^0-9.\-]/g,''));
-        const bNum = parseFloat(bText.replace(/[^0-9.\-]/g,''));
-        let res = 0;
-        if(!isNaN(aNum) && !isNaN(bNum)){
-          res = aNum - bNum;
-        } else {
-          res = aText.localeCompare(bText, undefined, {numeric:true});
-        }
-        return res * currentDir;
+      rows.sort((a,b) => {
+        const va = parseForColumn(idx, getCellText(a, idx));
+        const vb = parseForColumn(idx, getCellText(b, idx));
+        if(va === vb) return 0;
+        return (va > vb ? 1 : -1) * (dir === 'asc' ? 1 : -1);
       });
-      ths.forEach(t=>{t.removeAttribute('data-sort-dir'); t.removeAttribute('aria-sort')});
-      th.setAttribute('data-sort-dir', currentDir===1 ? 'asc' : 'desc');
-      th.setAttribute('aria-sort', currentDir===1 ? 'ascending' : 'descending');
-      rows.forEach(r=>tbody.appendChild(r));
+      // re-append in sorted order
+      rows.forEach(r => tbody.appendChild(r));
+      // add indicator
+      th.innerText += dir === 'asc' ? ' ▲' : ' ▼';
     });
   });
-}
-
-// Global variable to store the default data
-let defaultData = null;
-
-// Load the default league summary data
-async function loadDefaultData() {
-  try {
-    const response = await fetch('league_summary.json');
-    if (!response.ok) throw new Error('Failed to load league_summary.json');
-    defaultData = await response.json();
-    return defaultData;
-  } catch (error) {
-    console.error('Error loading default data:', error);
-    // Fallback to sample data if league_summary.json is not available
-    defaultData = getSampleData();
-    return defaultData;
-  }
-}
-
-// Get sample data
-function getSampleData() {
-  return {
-    career_totals:[
-      {name:'Jaron Ahmann',wins:12,losses:3,pointsFor:2000,pointsAgainst:1500,avgPointsFor:100,avgPointsAgainst:75,winningPercentage:80},
-      {name:'Jacob Maxfield',wins:8,losses:7,pointsFor:1600,pointsAgainst:1550,avgPointsFor:88.9,avgPointsAgainst:86.1,winningPercentage:53.33}
-    ],
-    head_to_head:{
-      'Jaron Ahmann':{
-        'Jacob Maxfield':{wins:7,losses:3,pointsFor:700,pointsAgainst:650},
-        'Bo Kitrell':{wins:5,losses:5,pointsFor:600,pointsAgainst:610}
-      },
-      'Jacob Maxfield':{
-        'Jaron Ahmann':{wins:3,losses:7,pointsFor:650,pointsAgainst:700}
-      }
-    }
-  };
-}
-
-// Initialize the page with default data
-async function initializePage() {
-  const data = await loadDefaultData();
-  if (data) {
-    document.getElementById('jsonInput').value = JSON.stringify(data, null, 2);
-    render(data);
-  }
 }
 
 // Wire up controls
@@ -220,22 +338,26 @@ document.getElementById('clearBtn').addEventListener('click', ()=>{
   document.getElementById('jsonInput').value=''; document.getElementById('report').innerHTML='';
 });
 
-document.getElementById('resetBtn').addEventListener('click', ()=>{
-  if (defaultData) {
-    document.getElementById('jsonInput').value = JSON.stringify(defaultData, null, 2);
-    render(defaultData);
-  } else {
-    alert('Default data not available');
+// Sample data loader
+const sample = {
+  career_totals:[
+    {name:'Jaron Ahmann',wins:12,losses:3,pointsFor:2000,pointsAgainst:1500,avgPointsFor:100,avgPointsAgainst:75,winningPercentage:80},
+    {name:'Jacob Maxfield',wins:8,losses:7,pointsFor:1600,pointsAgainst:1550,avgPointsFor:88.9,avgPointsAgainst:86.1,winningPercentage:53.33}
+  ],
+  head_to_head:{
+    'Jaron Ahmann':{
+      'Jacob Maxfield':{wins:7,losses:3,pointsFor:700,pointsAgainst:650},
+      'Bo Kitrell':{wins:5,losses:5,pointsFor:600,pointsAgainst:610}
+    },
+    'Jacob Maxfield':{
+      'Jaron Ahmann':{wins:3,losses:7,pointsFor:650,pointsAgainst:700}
+    }
   }
-});
+};
 
 document.getElementById('sampleBtn').addEventListener('click', ()=>{
-  const sample = getSampleData();
   document.getElementById('jsonInput').value = JSON.stringify(sample, null, 2);
 });
-
-// Initialize the page when it loads
-document.addEventListener('DOMContentLoaded', initializePage);
 
 </script>
 </body>
