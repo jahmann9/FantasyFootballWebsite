@@ -359,6 +359,26 @@ document.getElementById('sampleBtn').addEventListener('click', ()=>{
   document.getElementById('jsonInput').value = JSON.stringify(sample, null, 2);
 });
 
+// Try to load league_summary.json automatically on page load.
+async function loadDefaultLeagueSummary(){
+  try {
+    const resp = await fetch('league_summary.json', { cache: 'no-store' });
+    if (!resp.ok) {
+      throw new Error(`HTTP ${resp.status}`);
+    }
+    const data = await resp.json();
+    document.getElementById('jsonInput').value = JSON.stringify(data, null, 2);
+    render(data);
+  } catch (err) {
+    // This commonly fails when opening the file directly via file://
+    console.info('Could not auto-load league_summary.json. Paste JSON manually or serve files over HTTP.', err);
+    const report = document.getElementById('report');
+    report.innerHTML = "<div class='card'><p class='no-data'>Could not auto-load league_summary.json.</p><p class='muted'>If you opened this file directly, start a local server and open via http://localhost:</p><p class='small'>python3 -m http.server 8000</p><p class='small'>Then open TwoHandLeague.html from that server.</p></div>";
+  }
+}
+
+loadDefaultLeagueSummary();
+
 </script>
 </body>
 </html>
