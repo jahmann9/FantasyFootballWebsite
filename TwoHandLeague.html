@@ -48,7 +48,7 @@ Optional: I can modify your Python script to automatically write this HTML with 
     .muted{color:#7b8794}
     .no-data{color:#f97316}
     details{margin-bottom:8px}
-    summary{cursor:pointer;padding:8px;border-radius:6px;background:#031022}
+    summary{cursor:pointer;padding:8px;border-radius:6px;background:#031022;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
     .table-scroll{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
     .score-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 
@@ -60,6 +60,7 @@ Optional: I can modify your Python script to automatically write this HTML with 
       .score-grid{grid-template-columns:1fr}
       table{font-size:0.9rem}
       th,td{padding:6px}
+      summary{font-size:0.95rem}
       .opp-item > div:last-child{width:100%;text-align:left !important}
 
       /* Convert career totals table rows into mobile cards */
@@ -150,6 +151,65 @@ function render(data){
   // make the career totals table sortable by clicking headers
   makeTableSortable(table);
 
+  // Top 10 all-time scores section
+  const topScoresCard = document.createElement('div');
+  topScoresCard.className = 'card';
+  topScoresCard.innerHTML = '<h2>Top 10 Scores All Time</h2>';
+
+  const allScores = [];
+  Object.keys(h2h).forEach(playerName => {
+    const opponents = h2h[playerName] || {};
+    Object.keys(opponents).forEach(opponentName => {
+      const games = Array.isArray(opponents[opponentName].games) ? opponents[opponentName].games : [];
+      games.forEach(g => {
+        allScores.push({
+          name: playerName,
+          points: Number(g.scoreFor) || 0,
+          year: Number(g.year) || 0,
+          week: Number(g.week) || 0
+        });
+      });
+    });
+  });
+
+  allScores.sort((a, b) => {
+    if (b.points !== a.points) return b.points - a.points;
+    if (b.year !== a.year) return b.year - a.year;
+    return b.week - a.week;
+  });
+
+  const top10 = allScores.slice(0, 10);
+  if(top10.length === 0){
+    topScoresCard.innerHTML += '<p class="muted">No score history found.</p>';
+  } else {
+    const wrap = document.createElement('div');
+    wrap.className = 'table-scroll';
+    const topTable = document.createElement('table');
+    topTable.innerHTML = `
+      <thead>
+        <tr>
+          <th>Player</th>
+          <th>Points</th>
+          <th>Year</th>
+          <th>Week</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${top10.map(s => `
+          <tr>
+            <td><strong>${escapeHtml(s.name)}</strong></td>
+            <td class='pf'>${s.points}</td>
+            <td>${s.year}</td>
+            <td>${s.week}</td>
+          </tr>
+        `).join('')}
+      </tbody>
+    `;
+    wrap.appendChild(topTable);
+    topScoresCard.appendChild(wrap);
+  }
+  container.appendChild(topScoresCard);
+
   // Top/Bottom scores section
   const scoreCard = document.createElement('div');
   scoreCard.className = 'card';
@@ -162,10 +222,6 @@ function render(data){
     const lowest = Array.isArray(p.lowest_scores) ? p.lowest_scores : [];
     if(highest.length === 0 && lowest.length === 0) return;
 
-    const block = document.createElement('div');
-    block.style.padding = '10px 0';
-    block.style.borderBottom = '1px solid #1f2937';
-
     const highestRows = highest.length
       ? highest.map(s => `<tr><td class='pf' style='padding:4px 8px;border-bottom:1px solid #1f2937;'>${s.score}</td><td style='padding:4px 8px;border-bottom:1px solid #1f2937;'>${s.year}</td><td style='padding:4px 8px;border-bottom:1px solid #1f2937;'>${s.week}</td></tr>`).join('')
       : `<tr><td colspan='3' class='muted' style='padding:4px 8px;'>No data</td></tr>`;
@@ -174,8 +230,16 @@ function render(data){
       ? lowest.map(s => `<tr><td class='pa' style='padding:4px 8px;border-bottom:1px solid #1f2937;'>${s.score}</td><td style='padding:4px 8px;border-bottom:1px solid #1f2937;'>${s.year}</td><td style='padding:4px 8px;border-bottom:1px solid #1f2937;'>${s.week}</td></tr>`).join('')
       : `<tr><td colspan='3' class='muted' style='padding:4px 8px;'>No data</td></tr>`;
 
-    block.innerHTML = `
-      <div style='margin-bottom:8px;'><strong>${escapeHtml(p.name||p.player||p.owner||'Unknown')}</strong></div>
+    const details = document.createElement('details');
+    details.style.marginBottom = '10px';
+    const summary = document.createElement('summary');
+    summary.innerHTML = `<strong>${escapeHtml(p.name||p.player||p.owner||'Unknown')}</strong> <span class='small muted'>click to expand</span>`;
+    details.appendChild(summary);
+
+    const content = document.createElement('div');
+    content.style.padding = '10px 0';
+    content.style.borderBottom = '1px solid #1f2937';
+    content.innerHTML = `
       <div class='score-grid'>
         <div>
           <div class='small' style='color:#7ee787;font-weight:700;margin-bottom:4px;'>Top 5</div>
@@ -194,7 +258,8 @@ function render(data){
       </div>
     `;
 
-    scoreList.appendChild(block);
+    details.appendChild(content);
+    scoreList.appendChild(details);
   });
 
   if(scoreList.children.length === 0){
