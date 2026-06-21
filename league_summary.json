@@ -8,7 +8,61 @@
       "pointsAgainst": 14377.6,
       "avgPointsFor": 114.77,
       "avgPointsAgainst": 110.6,
-      "winningPercentage": 56.15
+      "winningPercentage": 56.15,
+      "highest_scores": [
+        {
+          "score": 177.56,
+          "year": 2024,
+          "week": 3
+        },
+        {
+          "score": 169.34,
+          "year": 2024,
+          "week": 11
+        },
+        {
+          "score": 167.98,
+          "year": 2023,
+          "week": 2
+        },
+        {
+          "score": 165.8,
+          "year": 2025,
+          "week": 4
+        },
+        {
+          "score": 157.76,
+          "year": 2024,
+          "week": 2
+        }
+      ],
+      "lowest_scores": [
+        {
+          "score": -6,
+          "year": 2016,
+          "week": 9
+        },
+        {
+          "score": 42,
+          "year": 2017,
+          "week": 3
+        },
+        {
+          "score": 56,
+          "year": 2017,
+          "week": 7
+        },
+        {
+          "score": 56.94,
+          "year": 2019,
+          "week": 3
+        },
+        {
+          "score": 61,
+          "year": 2017,
+          "week": 4
+        }
+      ]
     },
     {
       "name": "Jackson Gannon",
@@ -18,7 +72,61 @@
       "pointsAgainst": 14772.42,
       "avgPointsFor": 111.83,
       "avgPointsAgainst": 113.63,
-      "winningPercentage": 49.23
+      "winningPercentage": 49.23,
+      "highest_scores": [
+        {
+          "score": 184.92,
+          "year": 2023,
+          "week": 3
+        },
+        {
+          "score": 180.1,
+          "year": 2025,
+          "week": 11
+        },
+        {
+          "score": 177.74,
+          "year": 2023,
+          "week": 8
+        },
+        {
+          "score": 172.94,
+          "year": 2019,
+          "week": 3
+        },
+        {
+          "score": 170.7,
+          "year": 2023,
+          "week": 2
+        }
+      ],
+      "lowest_scores": [
+        {
+          "score": 41.54,
+          "year": 2021,
+          "week": 14
+        },
+        {
+          "score": 54.14,
+          "year": 2020,
+          "week": 10
+        },
+        {
+          "score": 56.06,
+          "year": 2020,
+          "week": 8
+        },
+        {
+          "score": 61,
+          "year": 2016,
+          "week": 11
+        },
+        {
+          "score": 64,
+          "year": 2016,
+          "week": 2
+        }
+      ]
     },
     {
       "name": "Matt Smelser",
@@ -28,7 +136,61 @@
       "pointsAgainst": 2192,
       "avgPointsFor": 87.88,
       "avgPointsAgainst": 91.33,
-      "winningPercentage": 50.0
+      "winningPercentage": 50.0,
+      "highest_scores": [
+        {
+          "score": 127,
+          "year": 2016,
+          "week": 7
+        },
+        {
+          "score": 122,
+          "year": 2016,
+          "week": 2
+        },
+        {
+          "score": 120,
+          "year": 2017,
+          "week": 11
+        },
+        {
+          "score": 119,
+          "year": 2016,
+          "week": 1
+        },
+        {
+          "score": 119,
+          "year": 2017,
+          "week": 12
+        }
+      ],
+      "lowest_scores": [
+        {
+          "score": 54,
+          "year": 2017,
+          "week": 3
+        },
+        {
+          "score": 63,
+          "year": 2016,
+          "week": 9
+        },
+        {
+          "score": 65,
+          "year": 2016,
+          "week": 11
+        },
+        {
+          "score": 69,
+          "year": 2016,
+          "week": 3
+        },
+        {
+          "score": 70,
+          "year": 2017,
+          "week": 5
+        }
+      ]
     },
     {
       "name": "Jacob Maxfield",
@@ -38,7 +200,61 @@
       "pointsAgainst": 14149.52,
       "avgPointsFor": 111.21,
       "avgPointsAgainst": 108.84,
-      "winningPercentage": 56.92
+      "winningPercentage": 56.92,
+      "highest_scores": [
+        {
+          "score": 182.94,
+          "year": 2025,
+          "week": 9
+        },
+        {
+          "score": 179.86,
+          "year": 2023,
+          "week": 10
+        },
+        {
+          "score": 164.36,
+          "year": 2023,
+          "week": 8
+        },
+        {
+          "score": 154.96,
+          "year": 2023,
+          "week": 13
+        },
+        {
+          "score": 154.8,
+          "year": 2024,
+          "week": 11
+        }
+      ],
+      "lowest_scores": [
+        {
+          "score": 51,
+          "year": 2017,
+          "week": 9
+        },
+        {
+          "score": 51,
+          "year": 2017,
+          "week": 1
+        },
+        {
+          "score": 60,
+          "year": 2017,
+          "week": 8
+        },
+        {
+          "score": 61,
+          "year": 2017,
+          "week": 7
+        },
+        {
+          "score": 61.38,
+          "year": 2018,
+          "week": 8
+        }
+      ]
     },
     {
       "name": "Austin Horan",
@@ -48,7 +264,61 @@
       "pointsAgainst": 13877.62,
       "avgPointsFor": 113.91,
       "avgPointsAgainst": 106.75,
-      "winningPercentage": 56.92
+      "winningPercentage": 56.92,
+      "highest_scores": [
+        {
+          "score": 197.54,
+          "year": 2023,
+          "week": 4
+        },
+        {
+          "score": 181.48,
+          "year": 2023,
+          "week": 9
+        },
+        {
+          "score": 179.14,
+          "year": 2024,
+          "week": 4
+        },
+        {
+          "score": 177.44,
+          "year": 2023,
+          "week": 3
+        },
+        {
+          "score": 174.4,
+          "year": 2020,
+          "week": 12
+        }
+      ],
+      "lowest_scores": [
+        {
+          "score": 60,
+          "year": 2016,
+          "week": 7
+        },
+        {
+          "score": 61,
+          "year": 2017,
+          "week": 6
+        },
+        {
+          "score": 62.54,
+          "year": 2019,
+          "week": 7
+        },
+        {
+          "score": 65.02,
+          "year": 2021,
+          "week": 11
+        },
+        {
+          "score": 66,
+          "year": 2017,
+          "week": 1
+        }
+      ]
     },
     {
       "name": "Tom Docter",
@@ -58,7 +328,61 @@
       "pointsAgainst": 9171.5,
       "avgPointsFor": 109.96,
       "avgPointsAgainst": 104.22,
-      "winningPercentage": 55.68
+      "winningPercentage": 55.68,
+      "highest_scores": [
+        {
+          "score": 173.54,
+          "year": 2021,
+          "week": 7
+        },
+        {
+          "score": 167.1,
+          "year": 2021,
+          "week": 5
+        },
+        {
+          "score": 163.02,
+          "year": 2022,
+          "week": 2
+        },
+        {
+          "score": 162.92,
+          "year": 2022,
+          "week": 12
+        },
+        {
+          "score": 158.4,
+          "year": 2021,
+          "week": 14
+        }
+      ],
+      "lowest_scores": [
+        {
+          "score": 63.1,
+          "year": 2019,
+          "week": 3
+        },
+        {
+          "score": 66,
+          "year": 2017,
+          "week": 7
+        },
+        {
+          "score": 77,
+          "year": 2017,
+          "week": 1
+        },
+        {
+          "score": 78,
+          "year": 2017,
+          "week": 10
+        },
+        {
+          "score": 78,
+          "year": 2016,
+          "week": 2
+        }
+      ]
     },
     {
       "name": "Bo Kitrell",
@@ -68,7 +392,61 @@
       "pointsAgainst": 14643.26,
       "avgPointsFor": 105.43,
       "avgPointsAgainst": 112.64,
-      "winningPercentage": 42.31
+      "winningPercentage": 42.31,
+      "highest_scores": [
+        {
+          "score": 162.22,
+          "year": 2021,
+          "week": 14
+        },
+        {
+          "score": 161.34,
+          "year": 2025,
+          "week": 9
+        },
+        {
+          "score": 160.36,
+          "year": 2021,
+          "week": 1
+        },
+        {
+          "score": 160.36,
+          "year": 2025,
+          "week": 4
+        },
+        {
+          "score": 159.34,
+          "year": 2021,
+          "week": 5
+        }
+      ],
+      "lowest_scores": [
+        {
+          "score": 57.96,
+          "year": 2019,
+          "week": 9
+        },
+        {
+          "score": 58.66,
+          "year": 2019,
+          "week": 7
+        },
+        {
+          "score": 59.1,
+          "year": 2024,
+          "week": 7
+        },
+        {
+          "score": 59.8,
+          "year": 2019,
+          "week": 8
+        },
+        {
+          "score": 63,
+          "year": 2017,
+          "week": 3
+        }
+      ]
     },
     {
       "name": "Dylan Bohlke",
@@ -78,7 +456,61 @@
       "pointsAgainst": 14405.6,
       "avgPointsFor": 116.98,
       "avgPointsAgainst": 110.81,
-      "winningPercentage": 53.85
+      "winningPercentage": 53.85,
+      "highest_scores": [
+        {
+          "score": 211.84,
+          "year": 2025,
+          "week": 7
+        },
+        {
+          "score": 209.74,
+          "year": 2025,
+          "week": 5
+        },
+        {
+          "score": 201.6,
+          "year": 2025,
+          "week": 10
+        },
+        {
+          "score": 186.82,
+          "year": 2024,
+          "week": 8
+        },
+        {
+          "score": 186.44,
+          "year": 2024,
+          "week": 5
+        }
+      ],
+      "lowest_scores": [
+        {
+          "score": 46.46,
+          "year": 2023,
+          "week": 14
+        },
+        {
+          "score": 61,
+          "year": 2016,
+          "week": 11
+        },
+        {
+          "score": 61,
+          "year": 2016,
+          "week": 2
+        },
+        {
+          "score": 72,
+          "year": 2016,
+          "week": 5
+        },
+        {
+          "score": 73.44,
+          "year": 2021,
+          "week": 9
+        }
+      ]
     },
     {
       "name": "Trevor Reimnitz",
@@ -88,7 +520,61 @@
       "pointsAgainst": 13500.5,
       "avgPointsFor": 102.57,
       "avgPointsAgainst": 114.41,
-      "winningPercentage": 34.75
+      "winningPercentage": 34.75,
+      "highest_scores": [
+        {
+          "score": 167.44,
+          "year": 2023,
+          "week": 11
+        },
+        {
+          "score": 158.72,
+          "year": 2021,
+          "week": 3
+        },
+        {
+          "score": 157.9,
+          "year": 2023,
+          "week": 10
+        },
+        {
+          "score": 156.04,
+          "year": 2019,
+          "week": 11
+        },
+        {
+          "score": 154.8,
+          "year": 2021,
+          "week": 5
+        }
+      ],
+      "lowest_scores": [
+        {
+          "score": 4,
+          "year": 2016,
+          "week": 9
+        },
+        {
+          "score": 41,
+          "year": 2016,
+          "week": 2
+        },
+        {
+          "score": 44,
+          "year": 2016,
+          "week": 3
+        },
+        {
+          "score": 50,
+          "year": 2016,
+          "week": 11
+        },
+        {
+          "score": 53,
+          "year": 2016,
+          "week": 8
+        }
+      ]
     },
     {
       "name": "Zach Fleer",
@@ -98,7 +584,61 @@
       "pointsAgainst": 896,
       "avgPointsFor": 90.92,
       "avgPointsAgainst": 74.67,
-      "winningPercentage": 58.33
+      "winningPercentage": 58.33,
+      "highest_scores": [
+        {
+          "score": 134,
+          "year": 2016,
+          "week": 5
+        },
+        {
+          "score": 120,
+          "year": 2016,
+          "week": 9
+        },
+        {
+          "score": 107,
+          "year": 2016,
+          "week": 4
+        },
+        {
+          "score": 102,
+          "year": 2016,
+          "week": 2
+        },
+        {
+          "score": 100,
+          "year": 2016,
+          "week": 3
+        }
+      ],
+      "lowest_scores": [
+        {
+          "score": 43,
+          "year": 2016,
+          "week": 12
+        },
+        {
+          "score": 72,
+          "year": 2016,
+          "week": 10
+        },
+        {
+          "score": 72,
+          "year": 2016,
+          "week": 8
+        },
+        {
+          "score": 74,
+          "year": 2016,
+          "week": 6
+        },
+        {
+          "score": 83,
+          "year": 2016,
+          "week": 1
+        }
+      ]
     },
     {
       "name": "Zach Haynes",
@@ -108,7 +648,61 @@
       "pointsAgainst": 2193.54,
       "avgPointsFor": 86.22,
       "avgPointsAgainst": 95.37,
-      "winningPercentage": 39.13
+      "winningPercentage": 39.13,
+      "highest_scores": [
+        {
+          "score": 136.56,
+          "year": 2018,
+          "week": 1
+        },
+        {
+          "score": 119.2,
+          "year": 2018,
+          "week": 7
+        },
+        {
+          "score": 112.54,
+          "year": 2018,
+          "week": 9
+        },
+        {
+          "score": 108.74,
+          "year": 2018,
+          "week": 3
+        },
+        {
+          "score": 106.52,
+          "year": 2018,
+          "week": 11
+        }
+      ],
+      "lowest_scores": [
+        {
+          "score": 47,
+          "year": 2017,
+          "week": 2
+        },
+        {
+          "score": 49.82,
+          "year": 2018,
+          "week": 5
+        },
+        {
+          "score": 55,
+          "year": 2017,
+          "week": 5
+        },
+        {
+          "score": 64,
+          "year": 2017,
+          "week": 12
+        },
+        {
+          "score": 66,
+          "year": 2017,
+          "week": 7
+        }
+      ]
     },
     {
       "name": "Keaton Moss",
@@ -118,7 +712,61 @@
       "pointsAgainst": 13390.9,
       "avgPointsFor": 115.42,
       "avgPointsAgainst": 113.48,
-      "winningPercentage": 53.39
+      "winningPercentage": 53.39,
+      "highest_scores": [
+        {
+          "score": 203.6,
+          "year": 2023,
+          "week": 5
+        },
+        {
+          "score": 185.08,
+          "year": 2022,
+          "week": 4
+        },
+        {
+          "score": 176.06,
+          "year": 2023,
+          "week": 10
+        },
+        {
+          "score": 175.44,
+          "year": 2022,
+          "week": 8
+        },
+        {
+          "score": 172.48,
+          "year": 2021,
+          "week": 6
+        }
+      ],
+      "lowest_scores": [
+        {
+          "score": 53.72,
+          "year": 2018,
+          "week": 10
+        },
+        {
+          "score": 57.04,
+          "year": 2018,
+          "week": 7
+        },
+        {
+          "score": 57.76,
+          "year": 2019,
+          "week": 7
+        },
+        {
+          "score": 58,
+          "year": 2017,
+          "week": 5
+        },
+        {
+          "score": 68,
+          "year": 2017,
+          "week": 6
+        }
+      ]
     },
     {
       "name": "Erik Gustafson",
@@ -128,7 +776,61 @@
       "pointsAgainst": 12757.56,
       "avgPointsFor": 112.89,
       "avgPointsAgainst": 120.35,
-      "winningPercentage": 42.45
+      "winningPercentage": 42.45,
+      "highest_scores": [
+        {
+          "score": 172.76,
+          "year": 2023,
+          "week": 2
+        },
+        {
+          "score": 165.94,
+          "year": 2023,
+          "week": 8
+        },
+        {
+          "score": 164.92,
+          "year": 2019,
+          "week": 5
+        },
+        {
+          "score": 163.7,
+          "year": 2021,
+          "week": 14
+        },
+        {
+          "score": 160.98,
+          "year": 2021,
+          "week": 5
+        }
+      ],
+      "lowest_scores": [
+        {
+          "score": 58.1,
+          "year": 2018,
+          "week": 7
+        },
+        {
+          "score": 62.4,
+          "year": 2019,
+          "week": 12
+        },
+        {
+          "score": 63.78,
+          "year": 2019,
+          "week": 10
+        },
+        {
+          "score": 71.16,
+          "year": 2018,
+          "week": 9
+        },
+        {
+          "score": 73.62,
+          "year": 2019,
+          "week": 2
+        }
+      ]
     },
     {
       "name": "Reed Becker",
@@ -138,7 +840,61 @@
       "pointsAgainst": 1104.36,
       "avgPointsFor": 77.55,
       "avgPointsAgainst": 100.4,
-      "winningPercentage": 18.18
+      "winningPercentage": 18.18,
+      "highest_scores": [
+        {
+          "score": 116.76,
+          "year": 2018,
+          "week": 8
+        },
+        {
+          "score": 96.88,
+          "year": 2018,
+          "week": 7
+        },
+        {
+          "score": 96.16,
+          "year": 2018,
+          "week": 2
+        },
+        {
+          "score": 89.46,
+          "year": 2018,
+          "week": 9
+        },
+        {
+          "score": 86.72,
+          "year": 2018,
+          "week": 3
+        }
+      ],
+      "lowest_scores": [
+        {
+          "score": 39.06,
+          "year": 2018,
+          "week": 10
+        },
+        {
+          "score": 52.8,
+          "year": 2018,
+          "week": 6
+        },
+        {
+          "score": 58.44,
+          "year": 2018,
+          "week": 11
+        },
+        {
+          "score": 59.46,
+          "year": 2018,
+          "week": 4
+        },
+        {
+          "score": 74.08,
+          "year": 2018,
+          "week": 1
+        }
+      ]
     },
     {
       "name": "Scott Ayers",
@@ -148,7 +904,61 @@
       "pointsAgainst": 5208.02,
       "avgPointsFor": 134.37,
       "avgPointsAgainst": 124.0,
-      "winningPercentage": 54.76
+      "winningPercentage": 54.76,
+      "highest_scores": [
+        {
+          "score": 191.48,
+          "year": 2025,
+          "week": 13
+        },
+        {
+          "score": 188.96,
+          "year": 2023,
+          "week": 3
+        },
+        {
+          "score": 172.7,
+          "year": 2025,
+          "week": 4
+        },
+        {
+          "score": 170.22,
+          "year": 2023,
+          "week": 13
+        },
+        {
+          "score": 169.24,
+          "year": 2025,
+          "week": 7
+        }
+      ],
+      "lowest_scores": [
+        {
+          "score": 89.44,
+          "year": 2024,
+          "week": 10
+        },
+        {
+          "score": 101.16,
+          "year": 2023,
+          "week": 10
+        },
+        {
+          "score": 101.38,
+          "year": 2024,
+          "week": 8
+        },
+        {
+          "score": 103.14,
+          "year": 2024,
+          "week": 5
+        },
+        {
+          "score": 106.38,
+          "year": 2023,
+          "week": 9
+        }
+      ]
     },
     {
       "name": "Jason Hawkins",
@@ -158,7 +968,61 @@
       "pointsAgainst": 3456,
       "avgPointsFor": 115.96,
       "avgPointsAgainst": 123.43,
-      "winningPercentage": 46.43
+      "winningPercentage": 46.43,
+      "highest_scores": [
+        {
+          "score": 202.06,
+          "year": 2024,
+          "week": 8
+        },
+        {
+          "score": 196.72,
+          "year": 2024,
+          "week": 6
+        },
+        {
+          "score": 187.86,
+          "year": 2024,
+          "week": 9
+        },
+        {
+          "score": 153.88,
+          "year": 2024,
+          "week": 10
+        },
+        {
+          "score": 148.56,
+          "year": 2024,
+          "week": 13
+        }
+      ],
+      "lowest_scores": [
+        {
+          "score": 53.68,
+          "year": 2025,
+          "week": 7
+        },
+        {
+          "score": 66.46,
+          "year": 2025,
+          "week": 3
+        },
+        {
+          "score": 69.4,
+          "year": 2025,
+          "week": 13
+        },
+        {
+          "score": 69.6,
+          "year": 2025,
+          "week": 4
+        },
+        {
+          "score": 75.7,
+          "year": 2025,
+          "week": 1
+        }
+      ]
     },
     {
       "name": "Bryant Holt",
@@ -168,7 +1032,61 @@
       "pointsAgainst": 3543,
       "avgPointsFor": 132.46,
       "avgPointsAgainst": 126.54,
-      "winningPercentage": 53.57
+      "winningPercentage": 53.57,
+      "highest_scores": [
+        {
+          "score": 183.2,
+          "year": 2024,
+          "week": 11
+        },
+        {
+          "score": 182.02,
+          "year": 2024,
+          "week": 1
+        },
+        {
+          "score": 158.46,
+          "year": 2025,
+          "week": 2
+        },
+        {
+          "score": 155.18,
+          "year": 2024,
+          "week": 13
+        },
+        {
+          "score": 154.9,
+          "year": 2024,
+          "week": 8
+        }
+      ],
+      "lowest_scores": [
+        {
+          "score": 82.68,
+          "year": 2025,
+          "week": 12
+        },
+        {
+          "score": 86.8,
+          "year": 2025,
+          "week": 4
+        },
+        {
+          "score": 97.82,
+          "year": 2025,
+          "week": 7
+        },
+        {
+          "score": 105.12,
+          "year": 2024,
+          "week": 6
+        },
+        {
+          "score": 105.62,
+          "year": 2025,
+          "week": 11
+        }
+      ]
     }
   ],
   "head_to_head": {
