@@ -17112,5 +17112,702 @@
         ]
       }
     }
-  }
+  },
+  "championships": [
+    {
+      "name": "Austin Horan",
+      "playoffAppearances": {
+        "count": 5,
+        "years": [
+          2016,
+          2018,
+          2022,
+          2023,
+          2025
+        ]
+      },
+      "playoffRecord": {
+        "wins": 6,
+        "losses": 4
+      },
+      "finalAppearances": {
+        "count": 4,
+        "years": [
+          2016,
+          2018,
+          2022,
+          2023
+        ]
+      },
+      "championships": {
+        "count": 1,
+        "years": [
+          2022
+        ]
+      },
+      "finalsRecord": {
+        "wins": 1,
+        "losses": 3,
+        "years": [
+          2016,
+          2018,
+          2022,
+          2023
+        ]
+      },
+      "regularSeasonChampionships": {
+        "count": 2,
+        "years": [
+          2016,
+          2025
+        ]
+      }
+    },
+    {
+      "name": "Bo Kitrell",
+      "playoffAppearances": {
+        "count": 2,
+        "years": [
+          2018,
+          2021
+        ]
+      },
+      "playoffRecord": {
+        "wins": 0,
+        "losses": 2
+      },
+      "finalAppearances": {
+        "count": 0,
+        "years": []
+      },
+      "championships": {
+        "count": 0,
+        "years": []
+      },
+      "finalsRecord": {
+        "wins": 0,
+        "losses": 0,
+        "years": []
+      },
+      "regularSeasonChampionships": {
+        "count": 0,
+        "years": []
+      }
+    },
+    {
+      "name": "Bryant Holt",
+      "playoffAppearances": {
+        "count": 1,
+        "years": [
+          2024
+        ]
+      },
+      "playoffRecord": {
+        "wins": 0,
+        "losses": 1
+      },
+      "finalAppearances": {
+        "count": 0,
+        "years": []
+      },
+      "championships": {
+        "count": 0,
+        "years": []
+      },
+      "finalsRecord": {
+        "wins": 0,
+        "losses": 0,
+        "years": []
+      },
+      "regularSeasonChampionships": {
+        "count": 0,
+        "years": []
+      }
+    },
+    {
+      "name": "Dylan Bohlke",
+      "playoffAppearances": {
+        "count": 6,
+        "years": [
+          2017,
+          2018,
+          2020,
+          2022,
+          2024,
+          2025
+        ]
+      },
+      "playoffRecord": {
+        "wins": 6,
+        "losses": 5
+      },
+      "finalAppearances": {
+        "count": 3,
+        "years": [
+          2017,
+          2024,
+          2025
+        ]
+      },
+      "championships": {
+        "count": 1,
+        "years": [
+          2024
+        ]
+      },
+      "finalsRecord": {
+        "wins": 1,
+        "losses": 2,
+        "years": [
+          2017,
+          2024,
+          2025
+        ]
+      },
+      "regularSeasonChampionships": {
+        "count": 2,
+        "years": [
+          2017,
+          2018
+        ]
+      }
+    },
+    {
+      "name": "Erik Gustafson",
+      "playoffAppearances": {
+        "count": 1,
+        "years": [
+          2020
+        ]
+      },
+      "playoffRecord": {
+        "wins": 2,
+        "losses": 0
+      },
+      "finalAppearances": {
+        "count": 1,
+        "years": [
+          2020
+        ]
+      },
+      "championships": {
+        "count": 1,
+        "years": [
+          2020
+        ]
+      },
+      "finalsRecord": {
+        "wins": 1,
+        "losses": 0,
+        "years": [
+          2020
+        ]
+      },
+      "regularSeasonChampionships": {
+        "count": 0,
+        "years": []
+      }
+    },
+    {
+      "name": "Jackson Gannon",
+      "playoffAppearances": {
+        "count": 5,
+        "years": [
+          2017,
+          2018,
+          2019,
+          2021,
+          2023
+        ]
+      },
+      "playoffRecord": {
+        "wins": 10,
+        "losses": 1
+      },
+      "finalAppearances": {
+        "count": 5,
+        "years": [
+          2017,
+          2018,
+          2019,
+          2021,
+          2023
+        ]
+      },
+      "championships": {
+        "count": 4,
+        "years": [
+          2017,
+          2018,
+          2019,
+          2023
+        ]
+      },
+      "finalsRecord": {
+        "wins": 4,
+        "losses": 1,
+        "years": [
+          2017,
+          2018,
+          2019,
+          2021,
+          2023
+        ]
+      },
+      "regularSeasonChampionships": {
+        "count": 2,
+        "years": [
+          2019,
+          2023
+        ]
+      }
+    },
+    {
+      "name": "Jacob Maxfield",
+      "playoffAppearances": {
+        "count": 6,
+        "years": [
+          2016,
+          2018,
+          2019,
+          2020,
+          2024,
+          2025
+        ]
+      },
+      "playoffRecord": {
+        "wins": 5,
+        "losses": 5
+      },
+      "finalAppearances": {
+        "count": 3,
+        "years": [
+          2016,
+          2019,
+          2024
+        ]
+      },
+      "championships": {
+        "count": 1,
+        "years": [
+          2016
+        ]
+      },
+      "finalsRecord": {
+        "wins": 1,
+        "losses": 2,
+        "years": [
+          2016,
+          2019,
+          2024
+        ]
+      },
+      "regularSeasonChampionships": {
+        "count": 0,
+        "years": []
+      }
+    },
+    {
+      "name": "Jaron Ahmann",
+      "playoffAppearances": {
+        "count": 6,
+        "years": [
+          2018,
+          2020,
+          2022,
+          2023,
+          2024,
+          2025
+        ]
+      },
+      "playoffRecord": {
+        "wins": 3,
+        "losses": 6
+      },
+      "finalAppearances": {
+        "count": 2,
+        "years": [
+          2020,
+          2022
+        ]
+      },
+      "championships": {
+        "count": 0,
+        "years": []
+      },
+      "finalsRecord": {
+        "wins": 0,
+        "losses": 2,
+        "years": [
+          2020,
+          2022
+        ]
+      },
+      "regularSeasonChampionships": {
+        "count": 1,
+        "years": [
+          2020
+        ]
+      }
+    },
+    {
+      "name": "Jason Hawkins",
+      "playoffAppearances": {
+        "count": 1,
+        "years": [
+          2024
+        ]
+      },
+      "playoffRecord": {
+        "wins": 0,
+        "losses": 1
+      },
+      "finalAppearances": {
+        "count": 0,
+        "years": []
+      },
+      "championships": {
+        "count": 0,
+        "years": []
+      },
+      "finalsRecord": {
+        "wins": 0,
+        "losses": 0,
+        "years": []
+      },
+      "regularSeasonChampionships": {
+        "count": 1,
+        "years": [
+          2024
+        ]
+      }
+    },
+    {
+      "name": "Keaton Moss",
+      "playoffAppearances": {
+        "count": 4,
+        "years": [
+          2021,
+          2022,
+          2024,
+          2025
+        ]
+      },
+      "playoffRecord": {
+        "wins": 3,
+        "losses": 3
+      },
+      "finalAppearances": {
+        "count": 1,
+        "years": [
+          2025
+        ]
+      },
+      "championships": {
+        "count": 1,
+        "years": [
+          2025
+        ]
+      },
+      "finalsRecord": {
+        "wins": 1,
+        "losses": 0,
+        "years": [
+          2025
+        ]
+      },
+      "regularSeasonChampionships": {
+        "count": 1,
+        "years": [
+          2022
+        ]
+      }
+    },
+    {
+      "name": "Matt Smelser",
+      "playoffAppearances": {
+        "count": 0,
+        "years": []
+      },
+      "playoffRecord": {
+        "wins": 0,
+        "losses": 1
+      },
+      "finalAppearances": {
+        "count": 0,
+        "years": []
+      },
+      "championships": {
+        "count": 0,
+        "years": []
+      },
+      "finalsRecord": {
+        "wins": 0,
+        "losses": 0,
+        "years": []
+      },
+      "regularSeasonChampionships": {
+        "count": 0,
+        "years": []
+      }
+    },
+    {
+      "name": "Reed Becker",
+      "playoffAppearances": {
+        "count": 0,
+        "years": []
+      },
+      "playoffRecord": {
+        "wins": 0,
+        "losses": 0
+      },
+      "finalAppearances": {
+        "count": 0,
+        "years": []
+      },
+      "championships": {
+        "count": 0,
+        "years": []
+      },
+      "finalsRecord": {
+        "wins": 0,
+        "losses": 0,
+        "years": []
+      },
+      "regularSeasonChampionships": {
+        "count": 0,
+        "years": []
+      }
+    },
+    {
+      "name": "Scott Ayers",
+      "playoffAppearances": {
+        "count": 2,
+        "years": [
+          2023,
+          2025
+        ]
+      },
+      "playoffRecord": {
+        "wins": 0,
+        "losses": 2
+      },
+      "finalAppearances": {
+        "count": 0,
+        "years": []
+      },
+      "championships": {
+        "count": 0,
+        "years": []
+      },
+      "finalsRecord": {
+        "wins": 0,
+        "losses": 0,
+        "years": []
+      },
+      "regularSeasonChampionships": {
+        "count": 0,
+        "years": []
+      }
+    },
+    {
+      "name": "Tom Docter",
+      "playoffAppearances": {
+        "count": 4,
+        "years": [
+          2016,
+          2017,
+          2019,
+          2021
+        ]
+      },
+      "playoffRecord": {
+        "wins": 2,
+        "losses": 3
+      },
+      "finalAppearances": {
+        "count": 1,
+        "years": [
+          2021
+        ]
+      },
+      "championships": {
+        "count": 1,
+        "years": [
+          2021
+        ]
+      },
+      "finalsRecord": {
+        "wins": 1,
+        "losses": 0,
+        "years": [
+          2021
+        ]
+      },
+      "regularSeasonChampionships": {
+        "count": 1,
+        "years": [
+          2021
+        ]
+      }
+    },
+    {
+      "name": "Trevor Reimnitz",
+      "playoffAppearances": {
+        "count": 1,
+        "years": [
+          2019
+        ]
+      },
+      "playoffRecord": {
+        "wins": 0,
+        "losses": 1
+      },
+      "finalAppearances": {
+        "count": 0,
+        "years": []
+      },
+      "championships": {
+        "count": 0,
+        "years": []
+      },
+      "finalsRecord": {
+        "wins": 0,
+        "losses": 0,
+        "years": []
+      },
+      "regularSeasonChampionships": {
+        "count": 0,
+        "years": []
+      }
+    },
+    {
+      "name": "Zach Fleer",
+      "playoffAppearances": {
+        "count": 0,
+        "years": []
+      },
+      "playoffRecord": {
+        "wins": 0,
+        "losses": 1
+      },
+      "finalAppearances": {
+        "count": 0,
+        "years": []
+      },
+      "championships": {
+        "count": 0,
+        "years": []
+      },
+      "finalsRecord": {
+        "wins": 0,
+        "losses": 0,
+        "years": []
+      },
+      "regularSeasonChampionships": {
+        "count": 0,
+        "years": []
+      }
+    },
+    {
+      "name": "Zach Haynes",
+      "playoffAppearances": {
+        "count": 0,
+        "years": []
+      },
+      "playoffRecord": {
+        "wins": 0,
+        "losses": 0
+      },
+      "finalAppearances": {
+        "count": 0,
+        "years": []
+      },
+      "championships": {
+        "count": 0,
+        "years": []
+      },
+      "finalsRecord": {
+        "wins": 0,
+        "losses": 0,
+        "years": []
+      },
+      "regularSeasonChampionships": {
+        "count": 0,
+        "years": []
+      }
+    }
+  ],
+  "finals_history": [
+    {
+      "year": 2025,
+      "winner": "Keaton Moss",
+      "winnerScore": 194.32,
+      "runnerUp": "Dylan Bohlke",
+      "runnerUpScore": 141.14
+    },
+    {
+      "year": 2024,
+      "winner": "Dylan Bohlke",
+      "winnerScore": 172.12,
+      "runnerUp": "Jacob Maxfield",
+      "runnerUpScore": 140.54
+    },
+    {
+      "year": 2023,
+      "winner": "Jackson Gannon",
+      "winnerScore": 342.42,
+      "runnerUp": "Austin Horan",
+      "runnerUpScore": 269.06
+    },
+    {
+      "year": 2022,
+      "winner": "Austin Horan",
+      "winnerScore": 229.82,
+      "runnerUp": "Jaron Ahmann",
+      "runnerUpScore": 222.34
+    },
+    {
+      "year": 2021,
+      "winner": "Tom Docter",
+      "winnerScore": 277.22,
+      "runnerUp": "Jackson Gannon",
+      "runnerUpScore": 261.74
+    },
+    {
+      "year": 2020,
+      "winner": "Erik Gustafson",
+      "winnerScore": 328.18,
+      "runnerUp": "Jaron Ahmann",
+      "runnerUpScore": 219.08
+    },
+    {
+      "year": 2019,
+      "winner": "Jackson Gannon",
+      "winnerScore": 210.14,
+      "runnerUp": "Jacob Maxfield",
+      "runnerUpScore": 173.24
+    },
+    {
+      "year": 2018,
+      "winner": "Jackson Gannon",
+      "winnerScore": null,
+      "runnerUp": "Austin Horan",
+      "runnerUpScore": null
+    },
+    {
+      "year": 2017,
+      "winner": "Jackson Gannon",
+      "winnerScore": null,
+      "runnerUp": "Dylan Bohlke",
+      "runnerUpScore": null
+    },
+    {
+      "year": 2016,
+      "winner": "Jacob Maxfield",
+      "winnerScore": null,
+      "runnerUp": "Austin Horan",
+      "runnerUpScore": null
+    }
+  ]
 }

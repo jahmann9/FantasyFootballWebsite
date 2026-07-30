@@ -124,12 +124,14 @@ Optional: I can modify your Python script to automatically write this HTML with 
       <nav class="tab-bar">
         <button class="tab-btn active" data-tab="career">Career Totals</button>
         <button class="tab-btn" data-tab="profiles">Player Profiles</button>
+        <button class="tab-btn" data-tab="championships">Championships</button>
         <button class="tab-btn" data-tab="top10">Top 10 Scores</button>
         <button class="tab-btn" data-tab="scores">Top / Bottom 5</button>
         <button class="tab-btn" data-tab="h2h">Head-to-Head</button>
       </nav>
       <div id="tab-career" class="tab-pane active"></div>
       <div id="tab-profiles" class="tab-pane"></div>
+      <div id="tab-championships" class="tab-pane"></div>
       <div id="tab-top10" class="tab-pane"></div>
       <div id="tab-scores" class="tab-pane"></div>
       <div id="tab-h2h" class="tab-pane"></div>
@@ -161,6 +163,8 @@ function render(data){
 
   const career = data.career_totals || data.careerTotals || [];
   const h2h = data.head_to_head || data.headToHead || data.headToHeadRecords || {};
+  const championships = data.championships || [];
+  const finalsHistory = data.finals_history || [];
 
   // Career totals table
   const container = pane('career');
@@ -306,6 +310,101 @@ function render(data){
   });
 
   profileContainer.appendChild(profileCard);
+
+  // Championships tab
+  const championshipsContainer = pane('championships');
+  const championshipsCard = document.createElement('div');
+  championshipsCard.className = 'card';
+  championshipsCard.innerHTML = '<h2>Championships</h2>';
+
+  if(championships.length === 0){
+    championshipsCard.innerHTML += '<p class="muted">No championship data found.</p>';
+  } else {
+    const sortedChampionships = [...championships].sort((a, b) => {
+      if ((b.playoffRecord?.wins || 0) !== (a.playoffRecord?.wins || 0)) {
+        return (b.playoffRecord?.wins || 0) - (a.playoffRecord?.wins || 0);
+      }
+      if ((b.championships?.count || 0) !== (a.championships?.count || 0)) {
+        return (b.championships?.count || 0) - (a.championships?.count || 0);
+      }
+      if ((b.finalAppearances?.count || 0) !== (a.finalAppearances?.count || 0)) {
+        return (b.finalAppearances?.count || 0) - (a.finalAppearances?.count || 0);
+      }
+      return String(a.name || '').localeCompare(String(b.name || ''));
+    });
+
+    sortedChampionships.forEach(p => {
+      const details = document.createElement('details');
+      const summary = document.createElement('summary');
+      summary.innerHTML = `<div><strong>${escapeHtml(p.name || 'Unknown')}</strong><div class='small muted'>Playoff Record: ${p.playoffRecord?.wins || 0}-${p.playoffRecord?.losses || 0}</div></div><span class='small muted'>click to expand</span>`;
+      details.appendChild(summary);
+
+      const content = document.createElement('div');
+      content.style.padding = '10px 4px 4px';
+
+      const blocks = [
+        { label: 'Regular Season Champions', data: p.regularSeasonChampionships, tone: '' },
+        { label: 'Playoff Appearances', data: p.playoffAppearances, tone: '' },
+        { label: 'Final Appearances', data: p.finalAppearances, tone: '' },
+        { label: 'Championships', data: p.championships, tone: 'pf' },
+        {
+          label: 'Finals Record',
+          data: {
+            count: `${p.finalsRecord?.wins || 0}-${p.finalsRecord?.losses || 0}`,
+            years: p.finalsRecord?.years || []
+          },
+          tone: (p.finalsRecord?.wins || 0) > (p.finalsRecord?.losses || 0) ? 'pf' : ((p.finalsRecord?.losses || 0) > (p.finalsRecord?.wins || 0) ? 'pa' : '')
+        }
+      ];
+
+      content.innerHTML = `
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin-bottom:12px;">
+          ${blocks.map(block => `
+            <div class="stat-box">
+              <div class="stat-label">${block.label}</div>
+              <div class="stat-val ${block.tone}">${block.data?.count ?? 0}</div>
+              <div class="small muted" style="margin-top:4px;">${(block.data?.years || []).length ? block.data.years.join(', ') : 'None'}</div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+
+      details.appendChild(content);
+      championshipsCard.appendChild(details);
+    });
+  }
+
+  const finalsHistoryCard = document.createElement('div');
+  finalsHistoryCard.className = 'card';
+  finalsHistoryCard.innerHTML = '<h2>Finals History</h2>';
+
+  if(finalsHistory.length === 0){
+    finalsHistoryCard.innerHTML += '<p class="muted">No finals history found.</p>';
+  } else {
+    const sortedFinals = [...finalsHistory].sort((a, b) => (Number(b.year) || 0) - (Number(a.year) || 0));
+    sortedFinals.forEach(finalItem => {
+      const row = document.createElement('div');
+      row.className = 'opp-item';
+
+      const winnerScore = finalItem.winnerScore == null ? 'Score unavailable' : finalItem.winnerScore;
+      const runnerUpScore = finalItem.runnerUpScore == null ? 'Score unavailable' : finalItem.runnerUpScore;
+
+      row.innerHTML = `
+        <div>
+          <div class='small muted'>${finalItem.year}</div>
+          <div><strong class='pf'>${escapeHtml(finalItem.winner || 'Unknown')}</strong> vs <strong class='pa'>${escapeHtml(finalItem.runnerUp || 'Unknown')}</strong></div>
+        </div>
+        <div style='text-align:right'>
+          <div class='pf'>${winnerScore}</div>
+          <div class='pa'>${runnerUpScore}</div>
+        </div>`;
+
+      finalsHistoryCard.appendChild(row);
+    });
+  }
+
+  championshipsContainer.appendChild(finalsHistoryCard);
+  championshipsContainer.appendChild(championshipsCard);
 
   // Top 10 tab
   const top10Container = pane('top10');
