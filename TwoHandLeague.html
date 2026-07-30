@@ -51,6 +51,17 @@ Optional: I can modify your Python script to automatically write this HTML with 
     summary{cursor:pointer;padding:8px;border-radius:6px;background:#031022;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
     .table-scroll{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
     .score-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .stat-box{background:#021122;border-radius:8px;padding:8px 12px;}
+    .stat-label{font-size:0.78rem;color:#9fb6c9;margin-bottom:3px;}
+    .stat-val{font-size:1.05rem;font-weight:600;}
+
+    /* --- Tabs --- */
+    .tab-bar{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:16px;border-bottom:2px solid #1f2937;padding-bottom:0;}
+    .tab-btn{background:none;border:none;border-bottom:3px solid transparent;border-radius:0;color:#9fb6c9;padding:10px 16px;cursor:pointer;font-weight:600;font-size:0.95rem;margin-bottom:-2px;transition:color .15s,border-color .15s;}
+    .tab-btn:hover{color:#e6eef8;}
+    .tab-btn.active{color:#06b6d4;border-bottom-color:#06b6d4;}
+    .tab-pane{display:none;}
+    .tab-pane.active{display:block;}
 
     @media (max-width: 768px){
       body{margin:12px}
@@ -61,6 +72,9 @@ Optional: I can modify your Python script to automatically write this HTML with 
       table{font-size:0.9rem}
       th,td{padding:6px}
       summary{font-size:0.95rem}
+      .stat-box{padding:6px 8px;}
+      .stat-val{font-size:0.95rem;}
+      .tab-btn{padding:8px 10px;font-size:0.85rem;}
       .opp-item > div:last-child{width:100%;text-align:left !important}
 
       /* Convert career totals table rows into mobile cards */
@@ -95,38 +109,68 @@ Optional: I can modify your Python script to automatically write this HTML with 
 </head>
 <body>
   <div class="container">
-    <h1>Head-to-Head & Career Totals Report</h1>
-    <p class="muted">Paste the JSON output from your Python script (see top comments for format) then click "Render report".</p>
+    <h1>Two Hand Butt Touch League History</h1>
 
-    <div class="card">
+    <div class="card" id="loadingCard">
       <div class="controls">
         <button id="renderBtn">Render report</button>
         <button id="clearBtn" class="secondary">Clear</button>
         <button id="sampleBtn" class="secondary">Load sample data</button>
       </div>
-      <textarea id="jsonInput" placeholder='Paste JSON here'></textarea>
+      <textarea id="jsonInput" placeholder='Paste JSON here' style="display:none"></textarea>
     </div>
 
-    <div id="report"></div>
+    <div id="tabsWrapper" style="display:none">
+      <nav class="tab-bar">
+        <button class="tab-btn active" data-tab="career">Career Totals</button>
+        <button class="tab-btn" data-tab="profiles">Player Profiles</button>
+        <button class="tab-btn" data-tab="top10">Top 10 Scores</button>
+        <button class="tab-btn" data-tab="scores">Top / Bottom 5</button>
+        <button class="tab-btn" data-tab="h2h">Head-to-Head</button>
+      </nav>
+      <div id="tab-career" class="tab-pane active"></div>
+      <div id="tab-profiles" class="tab-pane"></div>
+      <div id="tab-top10" class="tab-pane"></div>
+      <div id="tab-scores" class="tab-pane"></div>
+      <div id="tab-h2h" class="tab-pane"></div>
+    </div>
+
+    <div id="errorMsg"></div>
   </div>
 
 <script>
+function showTab(name){
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active', b.dataset.tab===name));
+  document.querySelectorAll('.tab-pane').forEach(p=>p.classList.toggle('active', p.id==='tab-'+name));
+}
+document.addEventListener('click', e=>{
+  if(e.target.classList.contains('tab-btn')) showTab(e.target.dataset.tab);
+});
+
 function render(data){
-  const container = document.getElementById('report');
-  container.innerHTML = '';
-  if(!data){container.innerHTML = '<p class="no-data">No data provided.</p>';return}
+  if(!data){
+    document.getElementById('errorMsg').innerHTML = '<p class="no-data">No data provided.</p>';
+    return;
+  }
+  document.getElementById('tabsWrapper').style.display = 'block';
+  document.getElementById('loadingCard').style.display = 'none';
+  document.getElementById('errorMsg').innerHTML = '';
+
+  // Helper: get or reset a tab pane
+  const pane = id => { const el = document.getElementById('tab-'+id); el.innerHTML = ''; return el; };
 
   const career = data.career_totals || data.careerTotals || [];
   const h2h = data.head_to_head || data.headToHead || data.headToHeadRecords || {};
 
   // Career totals table
+  const container = pane('career');
   const careerCard = document.createElement('div');
   careerCard.className = 'card';
   careerCard.innerHTML = '<h2>Career Totals</h2>';
   const table = document.createElement('table');
   table.className = 'career-table';
   const thead = document.createElement('thead');
-  thead.innerHTML = '<tr><th>Player</th><th>W-L</th><th>%</th><th>PF</th><th>PA</th><th>Avg PF</th><th>Avg PA</th></tr>';
+  thead.innerHTML = '<tr><th>Player</th><th>W-L</th><th>%</th><th>PF</th><th>PA</th><th>Avg PF</th><th>Avg PA</th><th>Median PF</th><th>Std Dev</th></tr>';
   table.appendChild(thead);
   const tbody = document.createElement('tbody');
 
@@ -139,7 +183,9 @@ function render(data){
       <td data-label='PF' class='pf'>${p.pointsFor||0}</td>
       <td data-label='PA' class='pa'>${p.pointsAgainst||0}</td>
       <td data-label='Avg PF'>${p.avgPointsFor||0}</td>
-      <td data-label='Avg PA'>${p.avgPointsAgainst||0}</td>`;
+      <td data-label='Avg PA'>${p.avgPointsAgainst||0}</td>
+      <td data-label='Median PF'>${p.medianPoints??'—'}</td>
+      <td data-label='Std Dev'>${p.stdDevPoints??'—'}</td>`;
     tbody.appendChild(tr);
   });
   table.appendChild(tbody);
@@ -148,10 +194,121 @@ function render(data){
   careerTableWrap.appendChild(table);
   careerCard.appendChild(careerTableWrap);
   container.appendChild(careerCard);
-  // make the career totals table sortable by clicking headers
   makeTableSortable(table);
 
-  // Top 10 all-time scores section
+  // Player Profiles tab
+  const profileContainer = pane('profiles');
+  const profileCard = document.createElement('div');
+  profileCard.className = 'card';
+  profileCard.innerHTML = '<h2>Player Profiles</h2>';
+
+  const careerSorted = [...career].sort((a,b)=>String(a.name||'').localeCompare(String(b.name||'')));
+  careerSorted.forEach(p => {
+    const details = document.createElement('details');
+    const summary = document.createElement('summary');
+    summary.innerHTML = `<strong>${escapeHtml(p.name||'Unknown')}</strong><span class='small muted'>click to expand</span>`;
+    details.appendChild(summary);
+
+    const content = document.createElement('div');
+    content.style.padding = '10px 4px 4px';
+
+    // --- Streaks ---
+    const cs = p.current_streak || {};
+    const csType = cs.type;
+    const csLen = cs.length || 0;
+    const csColor = csType === 'W' ? '#7ee787' : (csType === 'L' ? '#ffb4b4' : '#facc15');
+    const csLabel = csType ? `<span style="color:${csColor};font-weight:700;">${csLen} ${csType}</span>` : '<span class="muted">None</span>';
+
+    const streakHtml = `
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-bottom:12px;">
+        <div class="stat-box"><div class="stat-label">Current Streak</div><div class="stat-val">${csLabel}</div></div>
+        <div class="stat-box">
+          <div class="stat-label">Longest Win Streak</div>
+          <div class="stat-val pf">${p.longest_win_streak ?? '\u2014'}</div>
+          ${p.longest_win_streak_start ? `<div class="stat-label" style="margin-top:4px;">Wk ${p.longest_win_streak_start.week} ${p.longest_win_streak_start.year} \u2013 Wk ${p.longest_win_streak_end.week} ${p.longest_win_streak_end.year}</div>` : ''}
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Longest Loss Streak</div>
+          <div class="stat-val pa">${p.longest_loss_streak ?? '\u2014'}</div>
+          ${p.longest_loss_streak_start ? `<div class="stat-label" style="margin-top:4px;">Wk ${p.longest_loss_streak_start.week} ${p.longest_loss_streak_start.year} \u2013 Wk ${p.longest_loss_streak_end.week} ${p.longest_loss_streak_end.year}</div>` : ''}
+        </div>
+      </div>`;
+
+    // --- Above / Below Average ---
+    const abv = p.above_avg_record || {};
+    const blw = p.below_avg_record || {};
+    const abvTotal = (abv.wins||0) + (abv.losses||0);
+    const blwTotal = (blw.wins||0) + (blw.losses||0);
+    const abvPct = abvTotal ? ((abv.wins/abvTotal)*100).toFixed(1) : '0.0';
+    const blwPct = blwTotal ? ((blw.wins/blwTotal)*100).toFixed(1) : '0.0';
+
+    const avgHtml = `
+      <div style="margin-bottom:12px;">
+        <div class="small" style="color:#9fb6c9;font-weight:600;margin-bottom:6px;">Record vs. Season Average</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+          <div class="stat-box">
+            <div class="stat-label">Above Average</div>
+            <div class="stat-val pf">${abv.wins||0}-${abv.losses||0} <span class="small muted">(${abvPct}%)</span></div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Below Average</div>
+            <div class="stat-val pa">${blw.wins||0}-${blw.losses||0} <span class="small muted">(${blwPct}%)</span></div>
+          </div>
+        </div>
+      </div>`;
+
+    // --- Best / Worst Season ---
+    const br = p.best_season_record;
+    const wr = p.worst_season_record;
+    const bp = p.best_season_points;
+    const wp = p.worst_season_points;
+
+    const seasonHighlightsHtml = (br || wr || bp || wp) ? `
+      <div style="margin-bottom:12px;">
+        <div class="small" style="color:#9fb6c9;font-weight:600;margin-bottom:6px;">Season Highlights</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;">
+          ${br ? `<div class="stat-box"><div class="stat-label">Best Record</div><div class="stat-val pf">${br.wins}-${br.losses} <span class="small muted">(${br.year})</span></div></div>` : ''}
+          ${wr ? `<div class="stat-box"><div class="stat-label">Worst Record</div><div class="stat-val pa">${wr.wins}-${wr.losses} <span class="small muted">(${wr.year})</span></div></div>` : ''}
+          ${bp ? `<div class="stat-box"><div class="stat-label">Most Points</div><div class="stat-val pf">${bp.pointsFor} <span class="small muted">(${bp.year})</span></div></div>` : ''}
+          ${wp ? `<div class="stat-box"><div class="stat-label">Fewest Points</div><div class="stat-val pa">${wp.pointsFor} <span class="small muted">(${wp.year})</span></div></div>` : ''}
+        </div>
+      </div>` : '';
+
+    // --- Season-by-season table ---
+    const seasons = Array.isArray(p.seasons) ? p.seasons : [];
+    let seasonTableHtml = '';
+    if (seasons.length > 0) {
+      const rows = seasons.map(s => {
+        const sg = (s.wins||0) + (s.losses||0);
+        const spct = sg ? ((s.wins/sg)*100).toFixed(1) : '0.0';
+        return `<tr>
+          <td data-label="Year">${s.year}</td>
+          <td data-label="W-L">${s.wins}-${s.losses}</td>
+          <td data-label="Win %">${spct}%</td>
+          <td data-label="PF" class="pf">${s.pointsFor}</td>
+          <td data-label="PA" class="pa">${s.pointsAgainst}</td>
+          <td data-label="Avg PF">${sg ? (s.pointsFor/sg).toFixed(2) : '\u2014'}</td>
+        </tr>`;
+      }).join('');
+      seasonTableHtml = `
+        <div class="small" style="color:#9fb6c9;font-weight:600;margin-bottom:6px;">Season-by-Season</div>
+        <div class="table-scroll">
+          <table style="width:100%;border-collapse:collapse;">
+            <thead><tr><th>Year</th><th>W-L</th><th>Win %</th><th>PF</th><th>PA</th><th>Avg PF</th></tr></thead>
+            <tbody>${rows}</tbody>
+          </table>
+        </div>`;
+    }
+
+    content.innerHTML = streakHtml + avgHtml + seasonHighlightsHtml + seasonTableHtml;
+    details.appendChild(content);
+    profileCard.appendChild(details);
+  });
+
+  profileContainer.appendChild(profileCard);
+
+  // Top 10 tab
+  const top10Container = pane('top10');
   const topScoresCard = document.createElement('div');
   topScoresCard.className = 'card';
   topScoresCard.innerHTML = '<h2>Top 10 Scores All Time</h2>';
@@ -208,9 +365,10 @@ function render(data){
     wrap.appendChild(topTable);
     topScoresCard.appendChild(wrap);
   }
-  container.appendChild(topScoresCard);
+  top10Container.appendChild(topScoresCard);
 
-  // Top/Bottom scores section
+  // Top/Bottom scores tab
+  const scoresContainer = pane('scores');
   const scoreCard = document.createElement('div');
   scoreCard.className = 'card';
   scoreCard.innerHTML = '<h2>Top 5 / Bottom 5 Scores</h2>';
@@ -267,9 +425,10 @@ function render(data){
   } else {
     scoreCard.appendChild(scoreList);
   }
-  container.appendChild(scoreCard);
+  scoresContainer.appendChild(scoreCard);
 
-  // Head-to-head section
+  // Head-to-head tab
+  const h2hContainer = pane('h2h');
   const h2hCard = document.createElement('div');
   h2hCard.className = 'card';
   h2hCard.innerHTML = '<h2>Head-to-Head Records</h2>';
@@ -295,14 +454,16 @@ function render(data){
         const r = item.record;
         const games = (r.wins||0) + (r.losses||0);
         if(games===0) return; // skip
+
+        const nameColor = (r.wins||0) > (r.losses||0) ? '#7ee787' : (r.losses||0) > (r.wins||0) ? '#ffb4b4' : '#facc15';
+
         const div = document.createElement('div');
         div.className = 'opp-item';
-        div.innerHTML = `<div><strong>${escapeHtml(item.name)}</strong><div class='small muted'>${r.wins||0}-${r.losses||0} (${Math.round(((r.wins||0)/games)*10000)/100}%)</div></div>
+        div.innerHTML = `<div><strong style="color:${nameColor}">${escapeHtml(item.name)}</strong><div class='small muted'>${r.wins||0}-${r.losses||0} (${Math.round(((r.wins||0)/games)*10000)/100}%)</div></div>
                          <div style='text-align:right'><div class='pf'>PF: ${r.pointsFor||0}</div><div class='pa'>PA: ${r.pointsAgainst||0}</div></div>`;
 
         const gameHistory = Array.isArray(r.games) ? [...r.games] : [];
         if(gameHistory.length > 0){
-          // Show most recent matchup first.
           gameHistory.sort((a, b) => {
             const ay = Number(a.year) || 0;
             const by = Number(b.year) || 0;
@@ -340,7 +501,7 @@ function render(data){
     });
   }
 
-  container.appendChild(h2hCard);
+  h2hContainer.appendChild(h2hCard);
 }
 
 function escapeHtml(s){return String(s).replace(/[&<>\"']/g, function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[m]})}
@@ -391,7 +552,12 @@ function makeTableSortable(table){
 
 // Wire up controls
 document.getElementById('renderBtn').addEventListener('click', ()=>{
-  const txt = document.getElementById('jsonInput').value.trim();
+  const textarea = document.getElementById('jsonInput');
+  if(textarea.style.display === 'none'){
+    textarea.style.display = '';
+    return;
+  }
+  const txt = textarea.value.trim();
   if(!txt){alert('Paste JSON into the box first.');return}
   try{
     const data = JSON.parse(txt);
@@ -400,7 +566,11 @@ document.getElementById('renderBtn').addEventListener('click', ()=>{
 });
 
 document.getElementById('clearBtn').addEventListener('click', ()=>{
-  document.getElementById('jsonInput').value=''; document.getElementById('report').innerHTML='';
+  document.getElementById('jsonInput').value='';
+  document.getElementById('tabsWrapper').style.display='none';
+  document.getElementById('loadingCard').style.display='';
+  document.getElementById('errorMsg').innerHTML='';
+  showTab('career');
 });
 
 // Sample data loader
@@ -421,7 +591,9 @@ const sample = {
 };
 
 document.getElementById('sampleBtn').addEventListener('click', ()=>{
-  document.getElementById('jsonInput').value = JSON.stringify(sample, null, 2);
+  const textarea = document.getElementById('jsonInput');
+  textarea.style.display = '';
+  textarea.value = JSON.stringify(sample, null, 2);
 });
 
 // Try to load league_summary.json automatically on page load.
@@ -432,13 +604,14 @@ async function loadDefaultLeagueSummary(){
       throw new Error(`HTTP ${resp.status}`);
     }
     const data = await resp.json();
-    document.getElementById('jsonInput').value = JSON.stringify(data, null, 2);
     render(data);
   } catch (err) {
     // This commonly fails when opening the file directly via file://
     console.info('Could not auto-load league_summary.json. Paste JSON manually or serve files over HTTP.', err);
-    const report = document.getElementById('report');
-    report.innerHTML = "<div class='card'><p class='no-data'>Could not auto-load league_summary.json.</p><p class='muted'>If you opened this file directly, start a local server and open via http://localhost:</p><p class='small'>python3 -m http.server 8000</p><p class='small'>Then open TwoHandLeague.html from that server.</p></div>";
+    const errorMsg = document.getElementById('errorMsg');
+    errorMsg.innerHTML = "<div class='card'><p class='no-data'>Could not auto-load league_summary.json.</p><p class='muted'>If you opened this file directly, start a local server and open via http://localhost:</p><p class='small'>python3 -m http.server 8000</p><p class='small'>Then open TwoHandLeague.html from that server.</p></div>";
+    // Show textarea so user can paste manually
+    document.getElementById('jsonInput').style.display = '';
   }
 }
 
