@@ -3,12 +3,12 @@
     {
       "name": "Jaron Ahmann",
       "wins": 73,
-      "losses": 57,
-      "pointsFor": 14919.62,
-      "pointsAgainst": 14377.6,
-      "avgPointsFor": 114.77,
-      "avgPointsAgainst": 110.6,
-      "winningPercentage": 56.15,
+      "losses": 58,
+      "pointsFor": 15058.62,
+      "pointsAgainst": 14532.6,
+      "avgPointsFor": 114.95,
+      "avgPointsAgainst": 110.94,
+      "winningPercentage": 55.73,
       "seasons": [
         {
           "year": 2016,
@@ -83,9 +83,9 @@
         {
           "year": 2026,
           "wins": 0,
-          "losses": 0,
-          "pointsFor": 0,
-          "pointsAgainst": 0
+          "losses": 1,
+          "pointsFor": 139,
+          "pointsAgainst": 155
         }
       ],
       "highest_scores": [
@@ -142,8 +142,8 @@
           "week": 4
         }
       ],
-      "medianPoints": 115.68,
-      "stdDevPoints": 29.74,
+      "medianPoints": 115.96,
+      "stdDevPoints": 29.7,
       "current_streak": {
         "type": null,
         "length": 0
@@ -168,7 +168,7 @@
       },
       "above_avg_record": {
         "wins": 51,
-        "losses": 12
+        "losses": 13
       },
       "below_avg_record": {
         "wins": 22,
@@ -181,10 +181,10 @@
         "pointsFor": 1825
       },
       "worst_season_record": {
-        "year": 2016,
-        "wins": 4,
-        "losses": 8,
-        "pointsFor": 1031
+        "year": 2026,
+        "wins": 0,
+        "losses": 1,
+        "pointsFor": 139
       },
       "best_season_points": {
         "year": 2024,
@@ -193,21 +193,21 @@
         "losses": 6
       },
       "worst_season_points": {
-        "year": 2017,
-        "pointsFor": 924,
-        "wins": 5,
-        "losses": 7
+        "year": 2026,
+        "pointsFor": 139,
+        "wins": 0,
+        "losses": 1
       }
     },
     {
       "name": "Jackson Gannon",
       "wins": 64,
-      "losses": 66,
-      "pointsFor": 14538.0,
-      "pointsAgainst": 14772.42,
-      "avgPointsFor": 111.83,
-      "avgPointsAgainst": 113.63,
-      "winningPercentage": 49.23,
+      "losses": 67,
+      "pointsFor": 14649.0,
+      "pointsAgainst": 14903.42,
+      "avgPointsFor": 111.82,
+      "avgPointsAgainst": 113.77,
+      "winningPercentage": 48.85,
       "seasons": [
         {
           "year": 2016,
@@ -282,9 +282,9 @@
         {
           "year": 2026,
           "wins": 0,
-          "losses": 0,
-          "pointsFor": 0,
-          "pointsAgainst": 0
+          "losses": 1,
+          "pointsFor": 111,
+          "pointsAgainst": 131
         }
       ],
       "highest_scores": [
@@ -341,8 +341,8 @@
           "week": 2
         }
       ],
-      "medianPoints": 109.74,
-      "stdDevPoints": 29.24,
+      "medianPoints": 110.46,
+      "stdDevPoints": 29.12,
       "current_streak": {
         "type": null,
         "length": 0
@@ -367,7 +367,7 @@
       },
       "above_avg_record": {
         "wins": 45,
-        "losses": 15
+        "losses": 16
       },
       "below_avg_record": {
         "wins": 19,
@@ -380,10 +380,10 @@
         "pointsFor": 2130.44
       },
       "worst_season_record": {
-        "year": 2024,
-        "wins": 2,
-        "losses": 12,
-        "pointsFor": 1544
+        "year": 2026,
+        "wins": 0,
+        "losses": 1,
+        "pointsFor": 111
       },
       "best_season_points": {
         "year": 2023,
@@ -392,10 +392,10 @@
         "losses": 5
       },
       "worst_season_points": {
-        "year": 2016,
-        "pointsFor": 942,
-        "wins": 5,
-        "losses": 7
+        "year": 2026,
+        "pointsFor": 111,
+        "wins": 0,
+        "losses": 1
       }
     },
     {
@@ -536,13 +536,13 @@
     },
     {
       "name": "Jacob Maxfield",
-      "wins": 74,
+      "wins": 75,
       "losses": 56,
-      "pointsFor": 14456.78,
-      "pointsAgainst": 14149.52,
-      "avgPointsFor": 111.21,
-      "avgPointsAgainst": 108.84,
-      "winningPercentage": 56.92,
+      "pointsFor": 14573.78,
+      "pointsAgainst": 14250.52,
+      "avgPointsFor": 111.25,
+      "avgPointsAgainst": 108.78,
+      "winningPercentage": 57.25,
       "seasons": [
         {
           "year": 2016,
@@ -616,10 +616,10 @@
         },
         {
           "year": 2026,
-          "wins": 0,
+          "wins": 1,
           "losses": 0,
-          "pointsFor": 0,
-          "pointsAgainst": 0
+          "pointsFor": 117,
+          "pointsAgainst": 101
         }
       ],
       "highest_scores": [
@@ -676,8 +676,8 @@
           "week": 8
         }
       ],
-      "medianPoints": 107.46,
-      "stdDevPoints": 26.2,
+      "medianPoints": 107.58,
+      "stdDevPoints": 26.1,
       "current_streak": {
         "type": null,
         "length": 0
@@ -701,7 +701,7 @@
         "week": 1
       },
       "above_avg_record": {
-        "wins": 50,
+        "wins": 51,
         "losses": 10
       },
       "below_avg_record": {
@@ -715,10 +715,10 @@
         "pointsFor": 1814
       },
       "worst_season_record": {
-        "year": 2017,
-        "wins": 2,
-        "losses": 10,
-        "pointsFor": 846
+        "year": 2026,
+        "wins": 1,
+        "losses": 0,
+        "pointsFor": 117
       },
       "best_season_points": {
         "year": 2025,
@@ -727,21 +727,21 @@
         "losses": 5
       },
       "worst_season_points": {
-        "year": 2017,
-        "pointsFor": 846,
-        "wins": 2,
-        "losses": 10
+        "year": 2026,
+        "pointsFor": 117,
+        "wins": 1,
+        "losses": 0
       }
     },
     {
       "name": "Austin Horan",
-      "wins": 74,
+      "wins": 75,
       "losses": 56,
-      "pointsFor": 14807.68,
-      "pointsAgainst": 13877.62,
-      "avgPointsFor": 113.91,
-      "avgPointsAgainst": 106.75,
-      "winningPercentage": 56.92,
+      "pointsFor": 14948.68,
+      "pointsAgainst": 13985.62,
+      "avgPointsFor": 114.11,
+      "avgPointsAgainst": 106.76,
+      "winningPercentage": 57.25,
       "seasons": [
         {
           "year": 2016,
@@ -815,10 +815,10 @@
         },
         {
           "year": 2026,
-          "wins": 0,
+          "wins": 1,
           "losses": 0,
-          "pointsFor": 0,
-          "pointsAgainst": 0
+          "pointsFor": 141,
+          "pointsAgainst": 108
         }
       ],
       "highest_scores": [
@@ -900,7 +900,7 @@
         "week": 7
       },
       "above_avg_record": {
-        "wins": 52,
+        "wins": 53,
         "losses": 12
       },
       "below_avg_record": {
@@ -914,10 +914,10 @@
         "pointsFor": 1825
       },
       "worst_season_record": {
-        "year": 2021,
-        "wins": 4,
-        "losses": 10,
-        "pointsFor": 1547.24
+        "year": 2026,
+        "wins": 1,
+        "losses": 0,
+        "pointsFor": 141
       },
       "best_season_points": {
         "year": 2023,
@@ -926,10 +926,10 @@
         "losses": 5
       },
       "worst_season_points": {
-        "year": 2017,
-        "pointsFor": 1009,
-        "wins": 5,
-        "losses": 7
+        "year": 2026,
+        "pointsFor": 141,
+        "wins": 1,
+        "losses": 0
       }
     },
     {
@@ -1106,12 +1106,12 @@
     {
       "name": "Bo Kitrell",
       "wins": 55,
-      "losses": 75,
-      "pointsFor": 13705.78,
-      "pointsAgainst": 14643.26,
-      "avgPointsFor": 105.43,
-      "avgPointsAgainst": 112.64,
-      "winningPercentage": 42.31,
+      "losses": 76,
+      "pointsFor": 13853.78,
+      "pointsAgainst": 14816.26,
+      "avgPointsFor": 105.75,
+      "avgPointsAgainst": 113.1,
+      "winningPercentage": 41.98,
       "seasons": [
         {
           "year": 2016,
@@ -1186,9 +1186,9 @@
         {
           "year": 2026,
           "wins": 0,
-          "losses": 0,
-          "pointsFor": 0,
-          "pointsAgainst": 0
+          "losses": 1,
+          "pointsFor": 148,
+          "pointsAgainst": 173
         }
       ],
       "highest_scores": [
@@ -1245,8 +1245,8 @@
           "week": 3
         }
       ],
-      "medianPoints": 102.92,
-      "stdDevPoints": 26.05,
+      "medianPoints": 103.24,
+      "stdDevPoints": 26.22,
       "current_streak": {
         "type": null,
         "length": 0
@@ -1271,7 +1271,7 @@
       },
       "above_avg_record": {
         "wins": 39,
-        "losses": 32
+        "losses": 33
       },
       "below_avg_record": {
         "wins": 16,
@@ -1284,10 +1284,10 @@
         "pointsFor": 1906.56
       },
       "worst_season_record": {
-        "year": 2024,
-        "wins": 1,
-        "losses": 13,
-        "pointsFor": 1237
+        "year": 2026,
+        "wins": 0,
+        "losses": 1,
+        "pointsFor": 148
       },
       "best_season_points": {
         "year": 2021,
@@ -1296,21 +1296,21 @@
         "losses": 5
       },
       "worst_season_points": {
-        "year": 2019,
-        "pointsFor": 989.36,
-        "wins": 4,
-        "losses": 8
+        "year": 2026,
+        "pointsFor": 148,
+        "wins": 0,
+        "losses": 1
       }
     },
     {
       "name": "Dylan Bohlke",
-      "wins": 70,
+      "wins": 71,
       "losses": 60,
-      "pointsFor": 15208.0,
-      "pointsAgainst": 14405.6,
-      "avgPointsFor": 116.98,
+      "pointsFor": 15339.0,
+      "pointsAgainst": 14516.6,
+      "avgPointsFor": 117.09,
       "avgPointsAgainst": 110.81,
-      "winningPercentage": 53.85,
+      "winningPercentage": 54.2,
       "seasons": [
         {
           "year": 2016,
@@ -1384,10 +1384,10 @@
         },
         {
           "year": 2026,
-          "wins": 0,
+          "wins": 1,
           "losses": 0,
-          "pointsFor": 0,
-          "pointsAgainst": 0
+          "pointsFor": 131,
+          "pointsAgainst": 111
         }
       ],
       "highest_scores": [
@@ -1444,8 +1444,8 @@
           "week": 9
         }
       ],
-      "medianPoints": 111.88,
-      "stdDevPoints": 30.43,
+      "medianPoints": 112,
+      "stdDevPoints": 30.34,
       "current_streak": {
         "type": null,
         "length": 0
@@ -1469,7 +1469,7 @@
         "week": 12
       },
       "above_avg_record": {
-        "wins": 47,
+        "wins": 48,
         "losses": 15
       },
       "below_avg_record": {
@@ -1483,10 +1483,10 @@
         "pointsFor": 1243
       },
       "worst_season_record": {
-        "year": 2019,
-        "wins": 3,
-        "losses": 9,
-        "pointsFor": 1115.34
+        "year": 2026,
+        "wins": 1,
+        "losses": 0,
+        "pointsFor": 131
       },
       "best_season_points": {
         "year": 2025,
@@ -1495,21 +1495,21 @@
         "losses": 5
       },
       "worst_season_points": {
-        "year": 2016,
-        "pointsFor": 1072,
-        "wins": 6,
-        "losses": 6
+        "year": 2026,
+        "pointsFor": 131,
+        "wins": 1,
+        "losses": 0
       }
     },
     {
       "name": "Trevor Reimnitz",
       "wins": 41,
-      "losses": 77,
-      "pointsFor": 12103.64,
-      "pointsAgainst": 13500.5,
-      "avgPointsFor": 102.57,
-      "avgPointsAgainst": 114.41,
-      "winningPercentage": 34.75,
+      "losses": 78,
+      "pointsFor": 12197.64,
+      "pointsAgainst": 13692.5,
+      "avgPointsFor": 102.5,
+      "avgPointsAgainst": 115.06,
+      "winningPercentage": 34.45,
       "seasons": [
         {
           "year": 2016,
@@ -1577,9 +1577,9 @@
         {
           "year": 2026,
           "wins": 0,
-          "losses": 0,
-          "pointsFor": 0,
-          "pointsAgainst": 0
+          "losses": 1,
+          "pointsFor": 94,
+          "pointsAgainst": 192
         }
       ],
       "highest_scores": [
@@ -1636,8 +1636,8 @@
           "week": 8
         }
       ],
-      "medianPoints": 103.37,
-      "stdDevPoints": 27.24,
+      "medianPoints": 103.36,
+      "stdDevPoints": 27.13,
       "current_streak": {
         "type": null,
         "length": 0
@@ -1662,7 +1662,7 @@
       },
       "above_avg_record": {
         "wins": 31,
-        "losses": 22
+        "losses": 23
       },
       "below_avg_record": {
         "wins": 10,
@@ -1675,10 +1675,10 @@
         "pointsFor": 1194.28
       },
       "worst_season_record": {
-        "year": 2016,
-        "wins": 2,
-        "losses": 10,
-        "pointsFor": 750
+        "year": 2026,
+        "wins": 0,
+        "losses": 1,
+        "pointsFor": 94
       },
       "best_season_points": {
         "year": 2023,
@@ -1687,10 +1687,10 @@
         "losses": 9
       },
       "worst_season_points": {
-        "year": 2016,
-        "pointsFor": 750,
-        "wins": 2,
-        "losses": 10
+        "year": 2026,
+        "pointsFor": 94,
+        "wins": 0,
+        "losses": 1
       }
     },
     {
@@ -1960,13 +1960,13 @@
     },
     {
       "name": "Keaton Moss",
-      "wins": 63,
+      "wins": 64,
       "losses": 55,
-      "pointsFor": 13619.18,
-      "pointsAgainst": 13390.9,
-      "avgPointsFor": 115.42,
-      "avgPointsAgainst": 113.48,
-      "winningPercentage": 53.39,
+      "pointsFor": 13811.18,
+      "pointsAgainst": 13484.9,
+      "avgPointsFor": 116.06,
+      "avgPointsAgainst": 113.32,
+      "winningPercentage": 53.78,
       "seasons": [
         {
           "year": 2017,
@@ -2033,10 +2033,10 @@
         },
         {
           "year": 2026,
-          "wins": 0,
+          "wins": 1,
           "losses": 0,
-          "pointsFor": 0,
-          "pointsAgainst": 0
+          "pointsFor": 192,
+          "pointsAgainst": 94
         }
       ],
       "highest_scores": [
@@ -2044,6 +2044,11 @@
           "score": 203.6,
           "year": 2023,
           "week": 5
+        },
+        {
+          "score": 192.06,
+          "year": 2026,
+          "week": 1
         },
         {
           "score": 185.08,
@@ -2059,11 +2064,6 @@
           "score": 175.44,
           "year": 2022,
           "week": 8
-        },
-        {
-          "score": 172.48,
-          "year": 2021,
-          "week": 6
         }
       ],
       "lowest_scores": [
@@ -2093,8 +2093,8 @@
           "week": 6
         }
       ],
-      "medianPoints": 113.09,
-      "stdDevPoints": 29.3,
+      "medianPoints": 113.18,
+      "stdDevPoints": 30.03,
       "current_streak": {
         "type": null,
         "length": 0
@@ -2118,7 +2118,7 @@
         "week": 1
       },
       "above_avg_record": {
-        "wins": 38,
+        "wins": 39,
         "losses": 12
       },
       "below_avg_record": {
@@ -2132,10 +2132,10 @@
         "pointsFor": 1835.58
       },
       "worst_season_record": {
-        "year": 2018,
-        "wins": 3,
-        "losses": 8,
-        "pointsFor": 949.22
+        "year": 2026,
+        "wins": 1,
+        "losses": 0,
+        "pointsFor": 192
       },
       "best_season_points": {
         "year": 2025,
@@ -2144,21 +2144,21 @@
         "losses": 5
       },
       "worst_season_points": {
-        "year": 2018,
-        "pointsFor": 949.22,
-        "wins": 3,
-        "losses": 8
+        "year": 2026,
+        "pointsFor": 192,
+        "wins": 1,
+        "losses": 0
       }
     },
     {
       "name": "Erik Gustafson",
       "wins": 45,
-      "losses": 61,
-      "pointsFor": 11966.04,
-      "pointsAgainst": 12757.56,
-      "avgPointsFor": 112.89,
-      "avgPointsAgainst": 120.35,
-      "winningPercentage": 42.45,
+      "losses": 62,
+      "pointsFor": 12067.04,
+      "pointsAgainst": 12874.56,
+      "avgPointsFor": 112.78,
+      "avgPointsAgainst": 120.32,
+      "winningPercentage": 42.06,
       "seasons": [
         {
           "year": 2018,
@@ -2219,9 +2219,9 @@
         {
           "year": 2026,
           "wins": 0,
-          "losses": 0,
-          "pointsFor": 0,
-          "pointsAgainst": 0
+          "losses": 1,
+          "pointsFor": 101,
+          "pointsAgainst": 117
         }
       ],
       "highest_scores": [
@@ -2278,8 +2278,8 @@
           "week": 2
         }
       ],
-      "medianPoints": 110.74,
-      "stdDevPoints": 24.77,
+      "medianPoints": 110.68,
+      "stdDevPoints": 24.68,
       "current_streak": {
         "type": null,
         "length": 0
@@ -2304,7 +2304,7 @@
       },
       "above_avg_record": {
         "wins": 30,
-        "losses": 14
+        "losses": 15
       },
       "below_avg_record": {
         "wins": 15,
@@ -2317,10 +2317,10 @@
         "pointsFor": 1785.1
       },
       "worst_season_record": {
-        "year": 2025,
-        "wins": 4,
-        "losses": 10,
-        "pointsFor": 1547
+        "year": 2026,
+        "wins": 0,
+        "losses": 1,
+        "pointsFor": 101
       },
       "best_season_points": {
         "year": 2023,
@@ -2329,10 +2329,10 @@
         "losses": 7
       },
       "worst_season_points": {
-        "year": 2018,
-        "pointsFor": 1012.48,
-        "wins": 5,
-        "losses": 6
+        "year": 2026,
+        "pointsFor": 101,
+        "wins": 0,
+        "losses": 1
       }
     },
     {
@@ -2466,13 +2466,13 @@
     },
     {
       "name": "Scott Ayers",
-      "wins": 23,
+      "wins": 24,
       "losses": 19,
-      "pointsFor": 5643.66,
-      "pointsAgainst": 5208.02,
-      "avgPointsFor": 134.37,
-      "avgPointsAgainst": 124.0,
-      "winningPercentage": 54.76,
+      "pointsFor": 5816.66,
+      "pointsAgainst": 5356.02,
+      "avgPointsFor": 135.27,
+      "avgPointsAgainst": 124.56,
+      "winningPercentage": 55.81,
       "seasons": [
         {
           "year": 2023,
@@ -2497,10 +2497,10 @@
         },
         {
           "year": 2026,
-          "wins": 0,
+          "wins": 1,
           "losses": 0,
-          "pointsFor": 0,
-          "pointsAgainst": 0
+          "pointsFor": 173,
+          "pointsAgainst": 148
         }
       ],
       "highest_scores": [
@@ -2515,6 +2515,11 @@
           "week": 3
         },
         {
+          "score": 173.76,
+          "year": 2026,
+          "week": 1
+        },
+        {
           "score": 172.7,
           "year": 2025,
           "week": 4
@@ -2523,11 +2528,6 @@
           "score": 170.22,
           "year": 2023,
           "week": 13
-        },
-        {
-          "score": 169.24,
-          "year": 2025,
-          "week": 7
         }
       ],
       "lowest_scores": [
@@ -2557,8 +2557,8 @@
           "week": 9
         }
       ],
-      "medianPoints": 137.77,
-      "stdDevPoints": 25.84,
+      "medianPoints": 137.86,
+      "stdDevPoints": 26.17,
       "current_streak": {
         "type": null,
         "length": 0
@@ -2582,7 +2582,7 @@
         "week": 11
       },
       "above_avg_record": {
-        "wins": 16,
+        "wins": 17,
         "losses": 3
       },
       "below_avg_record": {
@@ -2596,10 +2596,10 @@
         "pointsFor": 1956.66
       },
       "worst_season_record": {
-        "year": 2024,
-        "wins": 6,
-        "losses": 8,
-        "pointsFor": 1666
+        "year": 2026,
+        "wins": 1,
+        "losses": 0,
+        "pointsFor": 173
       },
       "best_season_points": {
         "year": 2025,
@@ -2608,21 +2608,21 @@
         "losses": 6
       },
       "worst_season_points": {
-        "year": 2024,
-        "pointsFor": 1666,
-        "wins": 6,
-        "losses": 8
+        "year": 2026,
+        "pointsFor": 173,
+        "wins": 1,
+        "losses": 0
       }
     },
     {
       "name": "Jason Hawkins",
       "wins": 13,
-      "losses": 15,
-      "pointsFor": 3247,
-      "pointsAgainst": 3456,
-      "avgPointsFor": 115.96,
-      "avgPointsAgainst": 123.43,
-      "winningPercentage": 46.43,
+      "losses": 16,
+      "pointsFor": 3355,
+      "pointsAgainst": 3597,
+      "avgPointsFor": 115.69,
+      "avgPointsAgainst": 124.03,
+      "winningPercentage": 44.83,
       "seasons": [
         {
           "year": 2024,
@@ -2641,9 +2641,9 @@
         {
           "year": 2026,
           "wins": 0,
-          "losses": 0,
-          "pointsFor": 0,
-          "pointsAgainst": 0
+          "losses": 1,
+          "pointsFor": 108,
+          "pointsAgainst": 141
         }
       ],
       "highest_scores": [
@@ -2700,8 +2700,8 @@
           "week": 1
         }
       ],
-      "medianPoints": 111.73,
-      "stdDevPoints": 40.33,
+      "medianPoints": 109.96,
+      "stdDevPoints": 39.61,
       "current_streak": {
         "type": null,
         "length": 0
@@ -2726,7 +2726,7 @@
       },
       "above_avg_record": {
         "wins": 9,
-        "losses": 4
+        "losses": 5
       },
       "below_avg_record": {
         "wins": 4,
@@ -2739,10 +2739,10 @@
         "pointsFor": 2045
       },
       "worst_season_record": {
-        "year": 2025,
-        "wins": 2,
-        "losses": 12,
-        "pointsFor": 1202
+        "year": 2026,
+        "wins": 0,
+        "losses": 1,
+        "pointsFor": 108
       },
       "best_season_points": {
         "year": 2024,
@@ -2751,21 +2751,21 @@
         "losses": 3
       },
       "worst_season_points": {
-        "year": 2025,
-        "pointsFor": 1202,
-        "wins": 2,
-        "losses": 12
+        "year": 2026,
+        "pointsFor": 108,
+        "wins": 0,
+        "losses": 1
       }
     },
     {
       "name": "Bryant Holt",
-      "wins": 15,
+      "wins": 16,
       "losses": 13,
-      "pointsFor": 3709,
-      "pointsAgainst": 3543,
-      "avgPointsFor": 132.46,
-      "avgPointsAgainst": 126.54,
-      "winningPercentage": 53.57,
+      "pointsFor": 3864,
+      "pointsAgainst": 3682,
+      "avgPointsFor": 133.24,
+      "avgPointsAgainst": 126.97,
+      "winningPercentage": 55.17,
       "seasons": [
         {
           "year": 2024,
@@ -2783,10 +2783,10 @@
         },
         {
           "year": 2026,
-          "wins": 0,
+          "wins": 1,
           "losses": 0,
-          "pointsFor": 0,
-          "pointsAgainst": 0
+          "pointsFor": 155,
+          "pointsAgainst": 139
         }
       ],
       "highest_scores": [
@@ -2811,9 +2811,9 @@
           "week": 13
         },
         {
-          "score": 154.9,
-          "year": 2024,
-          "week": 8
+          "score": 155.1,
+          "year": 2026,
+          "week": 1
         }
       ],
       "lowest_scores": [
@@ -2843,8 +2843,8 @@
           "week": 11
         }
       ],
-      "medianPoints": 139.76,
-      "stdDevPoints": 25.1,
+      "medianPoints": 140.68,
+      "stdDevPoints": 24.99,
       "current_streak": {
         "type": null,
         "length": 0
@@ -2868,7 +2868,7 @@
         "week": 8
       },
       "above_avg_record": {
-        "wins": 9,
+        "wins": 10,
         "losses": 5
       },
       "below_avg_record": {
@@ -2882,10 +2882,10 @@
         "pointsFor": 2009
       },
       "worst_season_record": {
-        "year": 2025,
-        "wins": 6,
-        "losses": 8,
-        "pointsFor": 1700
+        "year": 2026,
+        "wins": 1,
+        "losses": 0,
+        "pointsFor": 155
       },
       "best_season_points": {
         "year": 2024,
@@ -2894,10 +2894,10 @@
         "losses": 5
       },
       "worst_season_points": {
-        "year": 2025,
-        "pointsFor": 1700,
-        "wins": 6,
-        "losses": 8
+        "year": 2026,
+        "pointsFor": 155,
+        "wins": 1,
+        "losses": 0
       }
     }
   ],
@@ -4096,10 +4096,10 @@
         ]
       },
       "Jason Hawkins": {
-        "wins": 2,
+        "wins": 3,
         "losses": 2,
-        "pointsFor": 454.3,
-        "pointsAgainst": 365.98,
+        "pointsFor": 596.16,
+        "pointsAgainst": 474.88,
         "games": [
           {
             "year": 2024,
@@ -4136,9 +4136,9 @@
           {
             "year": 2026,
             "week": 1,
-            "scoreFor": 0.0,
-            "scoreAgainst": 0.0,
-            "outcome": "T",
+            "scoreFor": 141.86,
+            "scoreAgainst": 108.9,
+            "outcome": "W",
             "platform": "Sleeper"
           },
           {
@@ -5098,10 +5098,10 @@
         ]
       },
       "Jackson Gannon": {
-        "wins": 6,
+        "wins": 7,
         "losses": 10,
-        "pointsFor": 1828.04,
-        "pointsAgainst": 1771.16,
+        "pointsFor": 1959.48,
+        "pointsAgainst": 1882.82,
         "games": [
           {
             "year": 2016,
@@ -5234,9 +5234,9 @@
           {
             "year": 2026,
             "week": 1,
-            "scoreFor": 0.0,
-            "scoreAgainst": 0.0,
-            "outcome": "T",
+            "scoreFor": 131.44,
+            "scoreAgainst": 111.66,
+            "outcome": "W",
             "platform": "Sleeper"
           },
           {
@@ -5469,9 +5469,9 @@
     "Jackson Gannon": {
       "Dylan Bohlke": {
         "wins": 10,
-        "losses": 6,
-        "pointsFor": 1771.16,
-        "pointsAgainst": 1828.04,
+        "losses": 7,
+        "pointsFor": 1882.82,
+        "pointsAgainst": 1959.48,
         "games": [
           {
             "year": 2016,
@@ -5604,9 +5604,9 @@
           {
             "year": 2026,
             "week": 1,
-            "scoreFor": 0.0,
-            "scoreAgainst": 0.0,
-            "outcome": "T",
+            "scoreFor": 111.66,
+            "scoreAgainst": 131.44,
+            "outcome": "L",
             "platform": "Sleeper"
           },
           {
@@ -7486,10 +7486,10 @@
         ]
       },
       "Erik Gustafson": {
-        "wins": 9,
+        "wins": 10,
         "losses": 4,
-        "pointsFor": 1556.5,
-        "pointsAgainst": 1365.16,
+        "pointsFor": 1673.56,
+        "pointsAgainst": 1466.76,
         "games": [
           {
             "year": 2018,
@@ -7598,9 +7598,9 @@
           {
             "year": 2026,
             "week": 1,
-            "scoreFor": 0.0,
-            "scoreAgainst": 0.0,
-            "outcome": "T",
+            "scoreFor": 117.06,
+            "scoreAgainst": 101.6,
+            "outcome": "W",
             "platform": "Sleeper"
           },
           {
@@ -9995,9 +9995,9 @@
       },
       "Scott Ayers": {
         "wins": 0,
-        "losses": 5,
-        "pointsFor": 432.44,
-        "pointsAgainst": 690.32,
+        "losses": 6,
+        "pointsFor": 580.76,
+        "pointsAgainst": 864.08,
         "games": [
           {
             "year": 2023,
@@ -10042,9 +10042,9 @@
           {
             "year": 2026,
             "week": 1,
-            "scoreFor": 0.0,
-            "scoreAgainst": 0.0,
-            "outcome": "T",
+            "scoreFor": 148.32,
+            "scoreAgainst": 173.76,
+            "outcome": "L",
             "platform": "Sleeper"
           },
           {
@@ -11583,9 +11583,9 @@
       },
       "Bryant Holt": {
         "wins": 3,
-        "losses": 1,
-        "pointsFor": 555.38,
-        "pointsAgainst": 495.04,
+        "losses": 2,
+        "pointsFor": 694.38,
+        "pointsAgainst": 650.14,
         "games": [
           {
             "year": 2024,
@@ -11622,9 +11622,9 @@
           {
             "year": 2026,
             "week": 1,
-            "scoreFor": 0.0,
-            "scoreAgainst": 0.0,
-            "outcome": "T",
+            "scoreFor": 139.0,
+            "scoreAgainst": 155.1,
+            "outcome": "L",
             "platform": "Sleeper"
           },
           {
@@ -12483,9 +12483,9 @@
       },
       "Keaton Moss": {
         "wins": 5,
-        "losses": 8,
-        "pointsFor": 1392.26,
-        "pointsAgainst": 1597.86,
+        "losses": 9,
+        "pointsFor": 1486.54,
+        "pointsAgainst": 1789.92,
         "games": [
           {
             "year": 2018,
@@ -12594,9 +12594,9 @@
           {
             "year": 2026,
             "week": 1,
-            "scoreFor": 0.0,
-            "scoreAgainst": 0.0,
-            "outcome": "T",
+            "scoreFor": 94.28,
+            "scoreAgainst": 192.06,
+            "outcome": "L",
             "platform": "Sleeper"
           },
           {
@@ -13020,10 +13020,10 @@
     },
     "Keaton Moss": {
       "Trevor Reimnitz": {
-        "wins": 8,
+        "wins": 9,
         "losses": 5,
-        "pointsFor": 1597.86,
-        "pointsAgainst": 1392.26,
+        "pointsFor": 1789.92,
+        "pointsAgainst": 1486.54,
         "games": [
           {
             "year": 2018,
@@ -13132,9 +13132,9 @@
           {
             "year": 2026,
             "week": 1,
-            "scoreFor": 0.0,
-            "scoreAgainst": 0.0,
-            "outcome": "T",
+            "scoreFor": 192.06,
+            "scoreAgainst": 94.28,
+            "outcome": "W",
             "platform": "Sleeper"
           },
           {
@@ -14963,9 +14963,9 @@
       },
       "Jacob Maxfield": {
         "wins": 4,
-        "losses": 9,
-        "pointsFor": 1365.16,
-        "pointsAgainst": 1556.5,
+        "losses": 10,
+        "pointsFor": 1466.76,
+        "pointsAgainst": 1673.56,
         "games": [
           {
             "year": 2018,
@@ -15074,9 +15074,9 @@
           {
             "year": 2026,
             "week": 1,
-            "scoreFor": 0.0,
-            "scoreAgainst": 0.0,
-            "outcome": "T",
+            "scoreFor": 101.6,
+            "scoreAgainst": 117.06,
+            "outcome": "L",
             "platform": "Sleeper"
           },
           {
@@ -16044,10 +16044,10 @@
         ]
       },
       "Bo Kitrell": {
-        "wins": 5,
+        "wins": 6,
         "losses": 0,
-        "pointsFor": 690.32,
-        "pointsAgainst": 432.44,
+        "pointsFor": 864.08,
+        "pointsAgainst": 580.76,
         "games": [
           {
             "year": 2023,
@@ -16092,9 +16092,9 @@
           {
             "year": 2026,
             "week": 1,
-            "scoreFor": 0.0,
-            "scoreAgainst": 0.0,
-            "outcome": "T",
+            "scoreFor": 173.76,
+            "scoreAgainst": 148.32,
+            "outcome": "W",
             "platform": "Sleeper"
           },
           {
@@ -16318,10 +16318,10 @@
         ]
       },
       "Jaron Ahmann": {
-        "wins": 1,
+        "wins": 2,
         "losses": 3,
-        "pointsFor": 495.04,
-        "pointsAgainst": 555.38,
+        "pointsFor": 650.14,
+        "pointsAgainst": 694.38,
         "games": [
           {
             "year": 2024,
@@ -16358,9 +16358,9 @@
           {
             "year": 2026,
             "week": 1,
-            "scoreFor": 0.0,
-            "scoreAgainst": 0.0,
-            "outcome": "T",
+            "scoreFor": 155.1,
+            "scoreAgainst": 139.0,
+            "outcome": "W",
             "platform": "Sleeper"
           },
           {
@@ -16689,9 +16689,9 @@
     "Jason Hawkins": {
       "Austin Horan": {
         "wins": 2,
-        "losses": 2,
-        "pointsFor": 365.98,
-        "pointsAgainst": 454.3,
+        "losses": 3,
+        "pointsFor": 474.88,
+        "pointsAgainst": 596.16,
         "games": [
           {
             "year": 2024,
@@ -16728,9 +16728,9 @@
           {
             "year": 2026,
             "week": 1,
-            "scoreFor": 0.0,
-            "scoreAgainst": 0.0,
-            "outcome": "T",
+            "scoreFor": 108.9,
+            "scoreAgainst": 141.86,
+            "outcome": "L",
             "platform": "Sleeper"
           },
           {
