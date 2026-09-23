@@ -145,8 +145,8 @@
       "medianPoints": 116.19,
       "stdDevPoints": 29.61,
       "current_streak": {
-        "type": null,
-        "length": 0
+        "type": "W",
+        "length": 1
       },
       "longest_win_streak": 8,
       "longest_win_streak_start": {
@@ -344,8 +344,8 @@
       "medianPoints": 109.74,
       "stdDevPoints": 29.3,
       "current_streak": {
-        "type": null,
-        "length": 0
+        "type": "L",
+        "length": 5
       },
       "longest_win_streak": 8,
       "longest_win_streak_start": {
@@ -679,8 +679,8 @@
       "medianPoints": 108.67,
       "stdDevPoints": 26.09,
       "current_streak": {
-        "type": null,
-        "length": 0
+        "type": "L",
+        "length": 1
       },
       "longest_win_streak": 8,
       "longest_win_streak_start": {
@@ -878,8 +878,8 @@
       "medianPoints": 113.38,
       "stdDevPoints": 29.32,
       "current_streak": {
-        "type": null,
-        "length": 0
+        "type": "W",
+        "length": 7
       },
       "longest_win_streak": 9,
       "longest_win_streak_start": {
@@ -1248,8 +1248,8 @@
       "medianPoints": 103.37,
       "stdDevPoints": 26.31,
       "current_streak": {
-        "type": null,
-        "length": 0
+        "type": "W",
+        "length": 1
       },
       "longest_win_streak": 4,
       "longest_win_streak_start": {
@@ -1447,8 +1447,8 @@
       "medianPoints": 112.35,
       "stdDevPoints": 31.13,
       "current_streak": {
-        "type": null,
-        "length": 0
+        "type": "W",
+        "length": 5
       },
       "longest_win_streak": 14,
       "longest_win_streak_start": {
@@ -1639,8 +1639,8 @@
       "medianPoints": 103.2,
       "stdDevPoints": 27.1,
       "current_streak": {
-        "type": null,
-        "length": 0
+        "type": "L",
+        "length": 2
       },
       "longest_win_streak": 4,
       "longest_win_streak_start": {
@@ -2096,8 +2096,8 @@
       "medianPoints": 113.29,
       "stdDevPoints": 29.91,
       "current_streak": {
-        "type": null,
-        "length": 0
+        "type": "L",
+        "length": 1
       },
       "longest_win_streak": 6,
       "longest_win_streak_start": {
@@ -2281,8 +2281,8 @@
       "medianPoints": 110.74,
       "stdDevPoints": 24.57,
       "current_streak": {
-        "type": null,
-        "length": 0
+        "type": "W",
+        "length": 1
       },
       "longest_win_streak": 5,
       "longest_win_streak_start": {
@@ -2560,8 +2560,8 @@
       "medianPoints": 137.91,
       "stdDevPoints": 26.09,
       "current_streak": {
-        "type": null,
-        "length": 0
+        "type": "W",
+        "length": 2
       },
       "longest_win_streak": 6,
       "longest_win_streak_start": {
@@ -2703,8 +2703,8 @@
       "medianPoints": 109.48,
       "stdDevPoints": 39.18,
       "current_streak": {
-        "type": null,
-        "length": 0
+        "type": "L",
+        "length": 6
       },
       "longest_win_streak": 7,
       "longest_win_streak_start": {
@@ -2846,8 +2846,8 @@
       "medianPoints": 139.76,
       "stdDevPoints": 25.18,
       "current_streak": {
-        "type": null,
-        "length": 0
+        "type": "L",
+        "length": 1
       },
       "longest_win_streak": 5,
       "longest_win_streak_start": {
