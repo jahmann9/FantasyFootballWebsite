@@ -123,6 +123,9 @@ Optional: I can modify your Python script to automatically write this HTML with 
     <div id="tabsWrapper" style="display:none">
       <nav class="tab-bar">
         <button class="tab-btn active" data-tab="career">Career Totals</button>
+        <button class="tab-btn" data-tab="power">Power Rankings</button>
+        <button class="tab-btn" data-tab="schedule">Schedule Comparison</button>
+        <button class="tab-btn" data-tab="weekly-record">Weekly Record</button>
         <button class="tab-btn" data-tab="profiles">Player Profiles</button>
         <button class="tab-btn" data-tab="championships">Championships</button>
         <button class="tab-btn" data-tab="top10">Top 10 Scores</button>
@@ -130,6 +133,9 @@ Optional: I can modify your Python script to automatically write this HTML with 
         <button class="tab-btn" data-tab="h2h">Head-to-Head</button>
       </nav>
       <div id="tab-career" class="tab-pane active"></div>
+      <div id="tab-power" class="tab-pane"></div>
+      <div id="tab-schedule" class="tab-pane"></div>
+      <div id="tab-weekly-record" class="tab-pane"></div>
       <div id="tab-profiles" class="tab-pane"></div>
       <div id="tab-championships" class="tab-pane"></div>
       <div id="tab-top10" class="tab-pane"></div>
@@ -165,6 +171,10 @@ function render(data){
   const h2h = data.head_to_head || data.headToHead || data.headToHeadRecords || {};
   const championships = data.championships || [];
   const finalsHistory = data.finals_history || [];
+  const powerRankings = Array.isArray(data.power_rankings_current_year) ? data.power_rankings_current_year : [];
+  const scheduleComparison = data.schedule_comparison_current_year || {};
+  const weeklyRecord = data.weekly_record_current_year || {};
+  const currentYear = Number(data.current_year || (powerRankings[0] && powerRankings[0].year) || new Date().getFullYear());
 
   // Career totals table
   const container = pane('career');
@@ -310,6 +320,132 @@ function render(data){
   });
 
   profileContainer.appendChild(profileCard);
+
+  // Power rankings tab
+  const powerContainer = pane('power');
+  const powerCard = document.createElement('div');
+  powerCard.className = 'card';
+  powerCard.innerHTML = `<h2>Power Rankings (${currentYear})</h2>`;
+
+  if (powerRankings.length === 0) {
+    powerCard.innerHTML += '<p class="muted">No current-year power ranking data found.</p>';
+  } else {
+    const wrap = document.createElement('div');
+    wrap.className = 'table-scroll';
+    const table = document.createElement('table');
+    table.innerHTML = `
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Team</th>
+          <th>Power Ranking Score</th>
+          <th>Wins</th>
+          <th>Losses</th>
+          <th>Ties</th>
+          <th>PF</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${powerRankings.map((team, index) => `
+          <tr>
+            <td>${index + 1}</td>
+            <td><strong>${escapeHtml(team.name || 'Unknown')}</strong></td>
+            <td class='pf'>${Number(team.powerRankingScore || 0).toFixed(2)}</td>
+            <td>${team.wins || 0}</td>
+            <td>${team.losses || 0}</td>
+            <td>${team.ties || 0}</td>
+            <td class='pf'>${Number(team.pointsFor || 0).toFixed(2)}</td>
+          </tr>
+        `).join('')}
+      </tbody>
+    `;
+    wrap.appendChild(table);
+    powerCard.appendChild(wrap);
+  }
+  powerContainer.appendChild(powerCard);
+
+  // Schedule comparison tab
+  const scheduleContainer = pane('schedule');
+  const scheduleCard = document.createElement('div');
+  scheduleCard.className = 'card';
+  scheduleCard.innerHTML = `<h2>Schedule Comparison (${currentYear})</h2>`;
+
+  const scheduleTeams = Object.keys(scheduleComparison || {});
+  if (scheduleTeams.length === 0) {
+    scheduleCard.innerHTML += '<p class="muted">No schedule comparison data found.</p>';
+  } else {
+    const wrap = document.createElement('div');
+    wrap.className = 'table-scroll';
+    const table = document.createElement('table');
+    table.style.whiteSpace = 'nowrap';
+    const headerRow = ['Team', ...scheduleTeams].map(label => `<th>${escapeHtml(label)}</th>`).join('');
+    const rows = scheduleTeams.map(team => {
+      const cells = scheduleTeams.map(opponent => {
+        const record = scheduleComparison[team]?.[opponent] || { wins: 0, losses: 0, ties: 0 };
+        const label = `${record.wins || 0}-${record.losses || 0}${record.ties ? `-${record.ties}` : ''}`;
+        const isDiagonal = team === opponent;
+        return `<td style="${isDiagonal ? 'background:#1f3c5a;color:#f4f7fb;font-weight:700;border:1px solid #325781;' : ''}">${label}</td>`;
+      }).join('');
+      return `<tr><th>${escapeHtml(team)}</th>${cells}</tr>`;
+    }).join('');
+    table.innerHTML = `<thead><tr>${headerRow}</tr></thead><tbody>${rows}</tbody>`;
+    wrap.appendChild(table);
+    scheduleCard.appendChild(wrap);
+  }
+  scheduleContainer.appendChild(scheduleCard);
+
+  // Weekly record tab
+  const weeklyRecordContainer = pane('weekly-record');
+  const weeklyRecordCard = document.createElement('div');
+  weeklyRecordCard.className = 'card';
+  weeklyRecordCard.innerHTML = `<h2>Weekly Record vs All Teams (${currentYear})</h2>`;
+
+  const weeklyTeams = Object.keys(weeklyRecord || {});
+  if (weeklyTeams.length === 0) {
+    weeklyRecordCard.innerHTML += '<p class="muted">No weekly record data found.</p>';
+  } else {
+    const allWeeks = Array.from(new Set(
+      weeklyTeams.flatMap(team => Object.keys((weeklyRecord[team] && weeklyRecord[team].weeks) || {}))
+    )).map(Number).sort((a, b) => a - b);
+
+    const visibleTeams = weeklyTeams
+      .map(team => ({
+        team,
+        teamRecord: weeklyRecord[team] || { weeks: {}, total: { wins: 0, losses: 0 } }
+      }))
+      .filter(({ teamRecord }) => {
+        const totalWins = Number(teamRecord.total?.wins || 0);
+        const totalLosses = Number(teamRecord.total?.losses || 0);
+        return totalWins > 0 || totalLosses > 0;
+      })
+      .sort((a, b) => {
+        const aWins = Number(a.teamRecord.total?.wins || 0);
+        const bWins = Number(b.teamRecord.total?.wins || 0);
+        const aLosses = Number(a.teamRecord.total?.losses || 0);
+        const bLosses = Number(b.teamRecord.total?.losses || 0);
+        if (bWins !== aWins) return bWins - aWins;
+        if (aLosses !== bLosses) return aLosses - bLosses;
+        return String(a.team).localeCompare(String(b.team));
+      });
+
+    const wrap = document.createElement('div');
+    wrap.className = 'table-scroll';
+    const table = document.createElement('table');
+    table.style.whiteSpace = 'nowrap';
+    const headerRow = ['Team', ...allWeeks.map(week => `Week ${week}`), 'Total'].map(label => `<th>${escapeHtml(label)}</th>`).join('');
+    const rows = visibleTeams.map(({ team, teamRecord }) => {
+      const weekCells = allWeeks.map(week => {
+        const record = teamRecord.weeks?.[String(week)] || { wins: 0, losses: 0 };
+        return `<td>${record.wins || 0}-${record.losses || 0}</td>`;
+      }).join('');
+      const total = teamRecord.total || { wins: 0, losses: 0 };
+      return `<tr><th>${escapeHtml(team)}</th>${weekCells}<td>${total.wins || 0}-${total.losses || 0}</td></tr>`;
+    }).join('');
+    table.innerHTML = `<thead><tr>${headerRow}</tr></thead><tbody>${rows}</tbody>`;
+    wrap.appendChild(table);
+    weeklyRecordCard.appendChild(wrap);
+  }
+  weeklyRecordContainer.appendChild(weeklyRecordCard);
 
   // Championships tab
   const championshipsContainer = pane('championships');
@@ -674,6 +810,7 @@ document.getElementById('clearBtn').addEventListener('click', ()=>{
 
 // Sample data loader
 const sample = {
+  current_year: 2026,
   career_totals:[
     {name:'Jaron Ahmann',wins:12,losses:3,pointsFor:2000,pointsAgainst:1500,avgPointsFor:100,avgPointsAgainst:75,winningPercentage:80},
     {name:'Jacob Maxfield',wins:8,losses:7,pointsFor:1600,pointsAgainst:1550,avgPointsFor:88.9,avgPointsAgainst:86.1,winningPercentage:53.33}
@@ -686,7 +823,11 @@ const sample = {
     'Jacob Maxfield':{
       'Jaron Ahmann':{wins:3,losses:7,pointsFor:650,pointsAgainst:700}
     }
-  }
+  },
+  power_rankings_current_year:[
+    {name:'Jaron Ahmann',powerRankingScore:2848.5,wins:12,losses:3,ties:0,pointsFor:2000,winningPercentage:80},
+    {name:'Jacob Maxfield',powerRankingScore:2791.2,wins:8,losses:7,ties:0,pointsFor:1600,winningPercentage:53.33}
+  ]
 };
 
 document.getElementById('sampleBtn').addEventListener('click', ()=>{
