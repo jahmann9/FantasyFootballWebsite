@@ -3,12 +3,12 @@
     {
       "name": "Jaron Ahmann",
       "wins": 78,
-      "losses": 60,
-      "pointsFor": 15945.62,
-      "pointsAgainst": 15372.6,
-      "avgPointsFor": 115.55,
-      "avgPointsAgainst": 111.4,
-      "winningPercentage": 56.52,
+      "losses": 61,
+      "pointsFor": 16051.62,
+      "pointsAgainst": 15509.6,
+      "avgPointsFor": 115.48,
+      "avgPointsAgainst": 111.58,
+      "winningPercentage": 56.12,
       "seasons": [
         {
           "year": 2016,
@@ -83,9 +83,9 @@
         {
           "year": 2026,
           "wins": 5,
-          "losses": 3,
-          "pointsFor": 1026,
-          "pointsAgainst": 995
+          "losses": 4,
+          "pointsFor": 1132,
+          "pointsAgainst": 1132
         }
       ],
       "highest_scores": [
@@ -142,11 +142,11 @@
           "week": 4
         }
       ],
-      "medianPoints": 116.71,
-      "stdDevPoints": 29.52,
+      "medianPoints": 116.42,
+      "stdDevPoints": 29.42,
       "current_streak": {
-        "type": "W",
-        "length": 3
+        "type": "L",
+        "length": 1
       },
       "longest_win_streak": 8,
       "longest_win_streak_start": {
@@ -167,11 +167,11 @@
         "week": 9
       },
       "above_avg_record": {
-        "wins": 54,
-        "losses": 13
+        "wins": 55,
+        "losses": 14
       },
       "below_avg_record": {
-        "wins": 24,
+        "wins": 23,
         "losses": 46
       },
       "best_season_record": {
@@ -202,12 +202,12 @@
     {
       "name": "Jackson Gannon",
       "wins": 66,
-      "losses": 72,
-      "pointsFor": 15280.0,
-      "pointsAgainst": 15766.42,
-      "avgPointsFor": 110.72,
-      "avgPointsAgainst": 114.25,
-      "winningPercentage": 47.83,
+      "losses": 73,
+      "pointsFor": 15351.0,
+      "pointsAgainst": 15917.42,
+      "avgPointsFor": 110.44,
+      "avgPointsAgainst": 114.51,
+      "winningPercentage": 47.48,
       "seasons": [
         {
           "year": 2016,
@@ -282,9 +282,9 @@
         {
           "year": 2026,
           "wins": 2,
-          "losses": 6,
-          "pointsFor": 742,
-          "pointsAgainst": 994
+          "losses": 7,
+          "pointsFor": 813,
+          "pointsAgainst": 1145
         }
       ],
       "highest_scores": [
@@ -341,10 +341,10 @@
           "week": 2
         }
       ],
-      "medianPoints": 108.94,
-      "stdDevPoints": 29.34,
+      "medianPoints": 108.86,
+      "stdDevPoints": 29.43,
       "current_streak": {
-        "type": "W",
+        "type": "L",
         "length": 1
       },
       "longest_win_streak": 8,
@@ -371,7 +371,7 @@
       },
       "below_avg_record": {
         "wins": 20,
-        "losses": 54
+        "losses": 55
       },
       "best_season_record": {
         "year": 2023,
@@ -393,9 +393,9 @@
       },
       "worst_season_points": {
         "year": 2026,
-        "pointsFor": 742,
+        "pointsFor": 813,
         "wins": 2,
-        "losses": 6
+        "losses": 7
       }
     },
     {
@@ -536,13 +536,13 @@
     },
     {
       "name": "Jacob Maxfield",
-      "wins": 79,
+      "wins": 80,
       "losses": 59,
-      "pointsFor": 15515.78,
-      "pointsAgainst": 15063.52,
-      "avgPointsFor": 112.43,
-      "avgPointsAgainst": 109.16,
-      "winningPercentage": 57.25,
+      "pointsFor": 15622.78,
+      "pointsAgainst": 15140.52,
+      "avgPointsFor": 112.39,
+      "avgPointsAgainst": 108.92,
+      "winningPercentage": 57.55,
       "seasons": [
         {
           "year": 2016,
@@ -616,10 +616,10 @@
         },
         {
           "year": 2026,
-          "wins": 5,
+          "wins": 6,
           "losses": 3,
-          "pointsFor": 1059,
-          "pointsAgainst": 914
+          "pointsFor": 1166,
+          "pointsAgainst": 991
         }
       ],
       "highest_scores": [
@@ -676,11 +676,11 @@
           "week": 8
         }
       ],
-      "medianPoints": 111.31,
-      "stdDevPoints": 26.26,
+      "medianPoints": 111.06,
+      "stdDevPoints": 26.17,
       "current_streak": {
         "type": "W",
-        "length": 1
+        "length": 2
       },
       "longest_win_streak": 8,
       "longest_win_streak_start": {
@@ -705,7 +705,7 @@
         "losses": 12
       },
       "below_avg_record": {
-        "wins": 26,
+        "wins": 27,
         "losses": 47
       },
       "best_season_record": {
@@ -735,13 +735,13 @@
     },
     {
       "name": "Austin Horan",
-      "wins": 82,
+      "wins": 83,
       "losses": 56,
-      "pointsFor": 16059.68,
-      "pointsAgainst": 14858.62,
-      "avgPointsFor": 116.37,
-      "avgPointsAgainst": 107.67,
-      "winningPercentage": 59.42,
+      "pointsFor": 16210.68,
+      "pointsAgainst": 14929.62,
+      "avgPointsFor": 116.62,
+      "avgPointsAgainst": 107.41,
+      "winningPercentage": 59.71,
       "seasons": [
         {
           "year": 2016,
@@ -815,10 +815,10 @@
         },
         {
           "year": 2026,
-          "wins": 8,
+          "wins": 9,
           "losses": 0,
-          "pointsFor": 1252,
-          "pointsAgainst": 981
+          "pointsFor": 1403,
+          "pointsAgainst": 1052
         }
       ],
       "highest_scores": [
@@ -875,20 +875,20 @@
           "week": 1
         }
       ],
-      "medianPoints": 114.09,
-      "stdDevPoints": 29.87,
+      "medianPoints": 114.14,
+      "stdDevPoints": 29.91,
       "current_streak": {
         "type": "W",
-        "length": 13
+        "length": 14
       },
-      "longest_win_streak": 13,
+      "longest_win_streak": 14,
       "longest_win_streak_start": {
         "year": 2025,
         "week": 10
       },
       "longest_win_streak_end": {
         "year": 2026,
-        "week": 8
+        "week": 9
       },
       "longest_loss_streak": 8,
       "longest_loss_streak_start": {
@@ -904,7 +904,7 @@
         "losses": 12
       },
       "below_avg_record": {
-        "wins": 26,
+        "wins": 27,
         "losses": 44
       },
       "best_season_record": {
@@ -1105,13 +1105,13 @@
     },
     {
       "name": "Bo Kitrell",
-      "wins": 61,
+      "wins": 62,
       "losses": 77,
-      "pointsFor": 14766.78,
-      "pointsAgainst": 15598.26,
-      "avgPointsFor": 107.01,
-      "avgPointsAgainst": 113.03,
-      "winningPercentage": 44.2,
+      "pointsFor": 14902.78,
+      "pointsAgainst": 15704.26,
+      "avgPointsFor": 107.21,
+      "avgPointsAgainst": 112.98,
+      "winningPercentage": 44.6,
       "seasons": [
         {
           "year": 2016,
@@ -1185,10 +1185,10 @@
         },
         {
           "year": 2026,
-          "wins": 6,
+          "wins": 7,
           "losses": 2,
-          "pointsFor": 1061,
-          "pointsAgainst": 955
+          "pointsFor": 1197,
+          "pointsAgainst": 1061
         }
       ],
       "highest_scores": [
@@ -1245,20 +1245,20 @@
           "week": 3
         }
       ],
-      "medianPoints": 104.0,
-      "stdDevPoints": 26.46,
+      "medianPoints": 104,
+      "stdDevPoints": 26.48,
       "current_streak": {
         "type": "W",
-        "length": 5
+        "length": 6
       },
-      "longest_win_streak": 5,
+      "longest_win_streak": 6,
       "longest_win_streak_start": {
         "year": 2026,
         "week": 4
       },
       "longest_win_streak_end": {
         "year": 2026,
-        "week": 8
+        "week": 9
       },
       "longest_loss_streak": 13,
       "longest_loss_streak_start": {
@@ -1270,7 +1270,7 @@
         "week": 14
       },
       "above_avg_record": {
-        "wins": 42,
+        "wins": 43,
         "losses": 33
       },
       "below_avg_record": {
@@ -1304,13 +1304,13 @@
     },
     {
       "name": "Dylan Bohlke",
-      "wins": 76,
+      "wins": 77,
       "losses": 62,
-      "pointsFor": 16532.0,
-      "pointsAgainst": 15396.6,
-      "avgPointsFor": 119.8,
-      "avgPointsAgainst": 111.57,
-      "winningPercentage": 55.07,
+      "pointsFor": 16685.0,
+      "pointsAgainst": 15491.6,
+      "avgPointsFor": 120.04,
+      "avgPointsAgainst": 111.45,
+      "winningPercentage": 55.4,
       "seasons": [
         {
           "year": 2016,
@@ -1384,10 +1384,10 @@
         },
         {
           "year": 2026,
-          "wins": 6,
+          "wins": 7,
           "losses": 2,
-          "pointsFor": 1324,
-          "pointsAgainst": 991
+          "pointsFor": 1477,
+          "pointsAgainst": 1086
         }
       ],
       "highest_scores": [
@@ -1444,10 +1444,10 @@
           "week": 9
         }
       ],
-      "medianPoints": 114.83,
-      "stdDevPoints": 32.48,
+      "medianPoints": 116,
+      "stdDevPoints": 32.49,
       "current_streak": {
-        "type": "L",
+        "type": "W",
         "length": 1
       },
       "longest_win_streak": 14,
@@ -1473,7 +1473,7 @@
         "losses": 15
       },
       "below_avg_record": {
-        "wins": 24,
+        "wins": 25,
         "losses": 47
       },
       "best_season_record": {
@@ -1504,12 +1504,12 @@
     {
       "name": "Trevor Reimnitz",
       "wins": 44,
-      "losses": 82,
-      "pointsFor": 12922.64,
-      "pointsAgainst": 14620.5,
-      "avgPointsFor": 102.56,
-      "avgPointsAgainst": 116.04,
-      "winningPercentage": 34.92,
+      "losses": 83,
+      "pointsFor": 12999.64,
+      "pointsAgainst": 14727.5,
+      "avgPointsFor": 102.36,
+      "avgPointsAgainst": 115.96,
+      "winningPercentage": 34.65,
       "seasons": [
         {
           "year": 2016,
@@ -1577,9 +1577,9 @@
         {
           "year": 2026,
           "wins": 3,
-          "losses": 5,
-          "pointsFor": 819,
-          "pointsAgainst": 1120
+          "losses": 6,
+          "pointsFor": 896,
+          "pointsAgainst": 1227
         }
       ],
       "highest_scores": [
@@ -1636,10 +1636,10 @@
           "week": 8
         }
       ],
-      "medianPoints": 102.7,
-      "stdDevPoints": 26.89,
+      "medianPoints": 102.36,
+      "stdDevPoints": 26.87,
       "current_streak": {
-        "type": "W",
+        "type": "L",
         "length": 1
       },
       "longest_win_streak": 4,
@@ -1661,11 +1661,11 @@
         "week": 8
       },
       "above_avg_record": {
-        "wins": 33,
-        "losses": 22
+        "wins": 34,
+        "losses": 23
       },
       "below_avg_record": {
-        "wins": 11,
+        "wins": 10,
         "losses": 60
       },
       "best_season_record": {
@@ -1961,12 +1961,12 @@
     {
       "name": "Keaton Moss",
       "wins": 67,
-      "losses": 59,
-      "pointsFor": 14766.18,
-      "pointsAgainst": 14408.9,
-      "avgPointsFor": 117.19,
-      "avgPointsAgainst": 114.36,
-      "winningPercentage": 53.17,
+      "losses": 60,
+      "pointsFor": 14887.18,
+      "pointsAgainst": 14547.9,
+      "avgPointsFor": 117.22,
+      "avgPointsAgainst": 114.55,
+      "winningPercentage": 52.76,
       "seasons": [
         {
           "year": 2017,
@@ -2034,9 +2034,9 @@
         {
           "year": 2026,
           "wins": 4,
-          "losses": 4,
-          "pointsFor": 1147,
-          "pointsAgainst": 1018
+          "losses": 5,
+          "pointsFor": 1268,
+          "pointsAgainst": 1157
         }
       ],
       "highest_scores": [
@@ -2093,11 +2093,11 @@
           "week": 6
         }
       ],
-      "medianPoints": 113.9,
-      "stdDevPoints": 30.13,
+      "medianPoints": 114,
+      "stdDevPoints": 30.01,
       "current_streak": {
         "type": "L",
-        "length": 1
+        "length": 2
       },
       "longest_win_streak": 6,
       "longest_win_streak_start": {
@@ -2123,7 +2123,7 @@
       },
       "below_avg_record": {
         "wins": 26,
-        "losses": 46
+        "losses": 47
       },
       "best_season_record": {
         "year": 2022,
@@ -2152,13 +2152,13 @@
     },
     {
       "name": "Erik Gustafson",
-      "wins": 47,
+      "wins": 48,
       "losses": 67,
-      "pointsFor": 12845.04,
-      "pointsAgainst": 13676.56,
-      "avgPointsFor": 112.68,
-      "avgPointsAgainst": 119.97,
-      "winningPercentage": 41.23,
+      "pointsFor": 12984.04,
+      "pointsAgainst": 13797.56,
+      "avgPointsFor": 112.9,
+      "avgPointsAgainst": 119.98,
+      "winningPercentage": 41.74,
       "seasons": [
         {
           "year": 2018,
@@ -2218,10 +2218,10 @@
         },
         {
           "year": 2026,
-          "wins": 2,
+          "wins": 3,
           "losses": 6,
-          "pointsFor": 879,
-          "pointsAgainst": 919
+          "pointsFor": 1018,
+          "pointsAgainst": 1040
         }
       ],
       "highest_scores": [
@@ -2278,10 +2278,10 @@
           "week": 2
         }
       ],
-      "medianPoints": 110.86,
-      "stdDevPoints": 24.39,
+      "medianPoints": 110.92,
+      "stdDevPoints": 24.41,
       "current_streak": {
-        "type": "L",
+        "type": "W",
         "length": 1
       },
       "longest_win_streak": 5,
@@ -2303,12 +2303,12 @@
         "week": 11
       },
       "above_avg_record": {
-        "wins": 32,
-        "losses": 17
+        "wins": 33,
+        "losses": 16
       },
       "below_avg_record": {
         "wins": 15,
-        "losses": 50
+        "losses": 51
       },
       "best_season_record": {
         "year": 2023,
@@ -2318,9 +2318,9 @@
       },
       "worst_season_record": {
         "year": 2026,
-        "wins": 2,
+        "wins": 3,
         "losses": 6,
-        "pointsFor": 879
+        "pointsFor": 1018
       },
       "best_season_points": {
         "year": 2023,
@@ -2329,9 +2329,9 @@
         "losses": 7
       },
       "worst_season_points": {
-        "year": 2026,
-        "pointsFor": 879,
-        "wins": 2,
+        "year": 2018,
+        "pointsFor": 1012.48,
+        "wins": 5,
         "losses": 6
       }
     },
@@ -2466,13 +2466,13 @@
     },
     {
       "name": "Scott Ayers",
-      "wins": 27,
+      "wins": 28,
       "losses": 23,
-      "pointsFor": 6746.66,
-      "pointsAgainst": 6250.02,
-      "avgPointsFor": 134.93,
-      "avgPointsAgainst": 125.0,
-      "winningPercentage": 54.0,
+      "pointsFor": 6877.66,
+      "pointsAgainst": 6316.02,
+      "avgPointsFor": 134.86,
+      "avgPointsAgainst": 123.84,
+      "winningPercentage": 54.9,
       "seasons": [
         {
           "year": 2023,
@@ -2497,10 +2497,10 @@
         },
         {
           "year": 2026,
-          "wins": 4,
+          "wins": 5,
           "losses": 4,
-          "pointsFor": 1103,
-          "pointsAgainst": 1042
+          "pointsFor": 1234,
+          "pointsAgainst": 1108
         }
       ],
       "highest_scores": [
@@ -2557,11 +2557,11 @@
           "week": 5
         }
       ],
-      "medianPoints": 137.77,
-      "stdDevPoints": 26.21,
+      "medianPoints": 137.68,
+      "stdDevPoints": 25.95,
       "current_streak": {
-        "type": "L",
-        "length": 2
+        "type": "W",
+        "length": 1
       },
       "longest_win_streak": 6,
       "longest_win_streak_start": {
@@ -2586,7 +2586,7 @@
         "losses": 4
       },
       "below_avg_record": {
-        "wins": 8,
+        "wins": 9,
         "losses": 19
       },
       "best_season_record": {
@@ -2597,9 +2597,9 @@
       },
       "worst_season_record": {
         "year": 2026,
-        "wins": 4,
+        "wins": 5,
         "losses": 4,
-        "pointsFor": 1103
+        "pointsFor": 1234
       },
       "best_season_points": {
         "year": 2025,
@@ -2609,20 +2609,20 @@
       },
       "worst_season_points": {
         "year": 2026,
-        "pointsFor": 1103,
-        "wins": 4,
+        "pointsFor": 1234,
+        "wins": 5,
         "losses": 4
       }
     },
     {
       "name": "Jason Hawkins",
       "wins": 14,
-      "losses": 22,
-      "pointsFor": 3933,
-      "pointsAgainst": 4371,
-      "avgPointsFor": 109.25,
-      "avgPointsAgainst": 121.42,
-      "winningPercentage": 38.89,
+      "losses": 23,
+      "pointsFor": 4028,
+      "pointsAgainst": 4524,
+      "avgPointsFor": 108.86,
+      "avgPointsAgainst": 122.27,
+      "winningPercentage": 37.84,
       "seasons": [
         {
           "year": 2024,
@@ -2641,9 +2641,9 @@
         {
           "year": 2026,
           "wins": 1,
-          "losses": 7,
-          "pointsFor": 686,
-          "pointsAgainst": 915
+          "losses": 8,
+          "pointsFor": 781,
+          "pointsAgainst": 1068
         }
       ],
       "highest_scores": [
@@ -2700,11 +2700,11 @@
           "week": 13
         }
       ],
-      "medianPoints": 104.89,
-      "stdDevPoints": 38.95,
+      "medianPoints": 104.86,
+      "stdDevPoints": 38.47,
       "current_streak": {
         "type": "L",
-        "length": 3
+        "length": 4
       },
       "longest_win_streak": 7,
       "longest_win_streak_start": {
@@ -2726,7 +2726,7 @@
       },
       "above_avg_record": {
         "wins": 10,
-        "losses": 8
+        "losses": 9
       },
       "below_avg_record": {
         "wins": 4,
@@ -2741,8 +2741,8 @@
       "worst_season_record": {
         "year": 2026,
         "wins": 1,
-        "losses": 7,
-        "pointsFor": 686
+        "losses": 8,
+        "pointsFor": 781
       },
       "best_season_points": {
         "year": 2024,
@@ -2752,20 +2752,20 @@
       },
       "worst_season_points": {
         "year": 2026,
-        "pointsFor": 686,
+        "pointsFor": 781,
         "wins": 1,
-        "losses": 7
+        "losses": 8
       }
     },
     {
       "name": "Bryant Holt",
       "wins": 17,
-      "losses": 19,
-      "pointsFor": 4502,
-      "pointsAgainst": 4591,
-      "avgPointsFor": 125.06,
-      "avgPointsAgainst": 127.53,
-      "winningPercentage": 47.22,
+      "losses": 20,
+      "pointsFor": 4568,
+      "pointsAgainst": 4722,
+      "avgPointsFor": 123.46,
+      "avgPointsAgainst": 127.62,
+      "winningPercentage": 45.95,
       "seasons": [
         {
           "year": 2024,
@@ -2784,9 +2784,9 @@
         {
           "year": 2026,
           "wins": 2,
-          "losses": 6,
-          "pointsFor": 793,
-          "pointsAgainst": 1048
+          "losses": 7,
+          "pointsFor": 859,
+          "pointsAgainst": 1179
         }
       ],
       "highest_scores": [
@@ -2833,21 +2833,21 @@
           "week": 8
         },
         {
+          "score": 66.1,
+          "year": 2026,
+          "week": 9
+        },
+        {
           "score": 82.68,
           "year": 2025,
           "week": 12
-        },
-        {
-          "score": 86.8,
-          "year": 2025,
-          "week": 4
         }
       ],
-      "medianPoints": 132.05,
-      "stdDevPoints": 31.31,
+      "medianPoints": 130.22,
+      "stdDevPoints": 32.39,
       "current_streak": {
         "type": "L",
-        "length": 5
+        "length": 6
       },
       "longest_win_streak": 5,
       "longest_win_streak_start": {
@@ -2858,14 +2858,14 @@
         "year": 2024,
         "week": 13
       },
-      "longest_loss_streak": 5,
+      "longest_loss_streak": 6,
       "longest_loss_streak_start": {
         "year": 2026,
         "week": 4
       },
       "longest_loss_streak_end": {
         "year": 2026,
-        "week": 8
+        "week": 9
       },
       "above_avg_record": {
         "wins": 11,
@@ -2873,7 +2873,7 @@
       },
       "below_avg_record": {
         "wins": 6,
-        "losses": 12
+        "losses": 13
       },
       "best_season_record": {
         "year": 2024,
@@ -2884,8 +2884,8 @@
       "worst_season_record": {
         "year": 2026,
         "wins": 2,
-        "losses": 6,
-        "pointsFor": 793
+        "losses": 7,
+        "pointsFor": 859
       },
       "best_season_points": {
         "year": 2024,
@@ -2895,19 +2895,19 @@
       },
       "worst_season_points": {
         "year": 2026,
-        "pointsFor": 793,
+        "pointsFor": 859,
         "wins": 2,
-        "losses": 6
+        "losses": 7
       }
     }
   ],
   "head_to_head": {
     "Austin Horan": {
       "Jackson Gannon": {
-        "wins": 12,
+        "wins": 13,
         "losses": 3,
-        "pointsFor": 1850.82,
-        "pointsAgainst": 1599.52,
+        "pointsFor": 2001.78,
+        "pointsAgainst": 1669.82,
         "games": [
           {
             "year": 2016,
@@ -3032,9 +3032,9 @@
           {
             "year": 2026,
             "week": 9,
-            "scoreFor": 0.0,
-            "scoreAgainst": 0.0,
-            "outcome": "T",
+            "scoreFor": 150.96,
+            "scoreAgainst": 70.3,
+            "outcome": "W",
             "platform": "Sleeper"
           }
         ]
@@ -5434,10 +5434,10 @@
         ]
       },
       "Jason Hawkins": {
-        "wins": 1,
+        "wins": 2,
         "losses": 1,
-        "pointsFor": 308.76,
-        "pointsAgainst": 280.88,
+        "pointsFor": 461.56,
+        "pointsAgainst": 375.8,
         "games": [
           {
             "year": 2024,
@@ -5458,9 +5458,9 @@
           {
             "year": 2026,
             "week": 9,
-            "scoreFor": 0.0,
-            "scoreAgainst": 0.0,
-            "outcome": "T",
+            "scoreFor": 152.8,
+            "scoreAgainst": 94.92,
+            "outcome": "W",
             "platform": "Sleeper"
           }
         ]
@@ -6373,9 +6373,9 @@
       },
       "Austin Horan": {
         "wins": 3,
-        "losses": 12,
-        "pointsFor": 1599.52,
-        "pointsAgainst": 1850.82,
+        "losses": 13,
+        "pointsFor": 1669.82,
+        "pointsAgainst": 2001.78,
         "games": [
           {
             "year": 2016,
@@ -6500,9 +6500,9 @@
           {
             "year": 2026,
             "week": 9,
-            "scoreFor": 0.0,
-            "scoreAgainst": 0.0,
-            "outcome": "T",
+            "scoreFor": 70.3,
+            "scoreAgainst": 150.96,
+            "outcome": "L",
             "platform": "Sleeper"
           }
         ]
@@ -6854,10 +6854,10 @@
         ]
       },
       "Trevor Reimnitz": {
-        "wins": 8,
+        "wins": 9,
         "losses": 5,
-        "pointsFor": 1403.34,
-        "pointsAgainst": 1294.56,
+        "pointsFor": 1510.36,
+        "pointsAgainst": 1372.26,
         "games": [
           {
             "year": 2016,
@@ -6966,9 +6966,9 @@
           {
             "year": 2026,
             "week": 9,
-            "scoreFor": 0.0,
-            "scoreAgainst": 0.0,
-            "outcome": "T",
+            "scoreFor": 107.02,
+            "scoreAgainst": 77.7,
+            "outcome": "W",
             "platform": "Sleeper"
           }
         ]
@@ -9554,10 +9554,10 @@
         ]
       },
       "Jaron Ahmann": {
-        "wins": 4,
+        "wins": 5,
         "losses": 10,
-        "pointsFor": 1515.98,
-        "pointsAgainst": 1697.56,
+        "pointsFor": 1652.2,
+        "pointsAgainst": 1804.22,
         "games": [
           {
             "year": 2016,
@@ -9674,9 +9674,9 @@
           {
             "year": 2026,
             "week": 9,
-            "scoreFor": 0.0,
-            "scoreAgainst": 0.0,
-            "outcome": "T",
+            "scoreFor": 136.22,
+            "scoreAgainst": 106.66,
+            "outcome": "W",
             "platform": "Sleeper"
           }
         ]
@@ -10399,9 +10399,9 @@
     "Jaron Ahmann": {
       "Bo Kitrell": {
         "wins": 10,
-        "losses": 4,
-        "pointsFor": 1697.56,
-        "pointsAgainst": 1515.98,
+        "losses": 5,
+        "pointsFor": 1804.22,
+        "pointsAgainst": 1652.2,
         "games": [
           {
             "year": 2016,
@@ -10518,9 +10518,9 @@
           {
             "year": 2026,
             "week": 9,
-            "scoreFor": 0.0,
-            "scoreAgainst": 0.0,
-            "outcome": "T",
+            "scoreFor": 106.66,
+            "scoreAgainst": 136.22,
+            "outcome": "L",
             "platform": "Sleeper"
           }
         ]
@@ -12067,9 +12067,9 @@
       },
       "Jacob Maxfield": {
         "wins": 5,
-        "losses": 8,
-        "pointsFor": 1294.56,
-        "pointsAgainst": 1403.34,
+        "losses": 9,
+        "pointsFor": 1372.26,
+        "pointsAgainst": 1510.36,
         "games": [
           {
             "year": 2016,
@@ -12178,9 +12178,9 @@
           {
             "year": 2026,
             "week": 9,
-            "scoreFor": 0.0,
-            "scoreAgainst": 0.0,
-            "outcome": "T",
+            "scoreFor": 77.7,
+            "scoreAgainst": 107.02,
+            "outcome": "L",
             "platform": "Sleeper"
           }
         ]
@@ -13149,9 +13149,9 @@
       },
       "Erik Gustafson": {
         "wins": 8,
-        "losses": 3,
-        "pointsFor": 1343.82,
-        "pointsAgainst": 1250.44,
+        "losses": 4,
+        "pointsFor": 1464.66,
+        "pointsAgainst": 1389.9,
         "games": [
           {
             "year": 2018,
@@ -13244,9 +13244,9 @@
           {
             "year": 2026,
             "week": 9,
-            "scoreFor": 0.0,
-            "scoreAgainst": 0.0,
-            "outcome": "T",
+            "scoreFor": 120.84,
+            "scoreAgainst": 139.46,
+            "outcome": "L",
             "platform": "Sleeper"
           }
         ]
@@ -15394,10 +15394,10 @@
         ]
       },
       "Keaton Moss": {
-        "wins": 3,
+        "wins": 4,
         "losses": 8,
-        "pointsFor": 1250.44,
-        "pointsAgainst": 1343.82,
+        "pointsFor": 1389.9,
+        "pointsAgainst": 1464.66,
         "games": [
           {
             "year": 2018,
@@ -15490,9 +15490,9 @@
           {
             "year": 2026,
             "week": 9,
-            "scoreFor": 0.0,
-            "scoreAgainst": 0.0,
-            "outcome": "T",
+            "scoreFor": 139.46,
+            "scoreAgainst": 120.84,
+            "outcome": "W",
             "platform": "Sleeper"
           }
         ]
@@ -16228,10 +16228,10 @@
         ]
       },
       "Bryant Holt": {
-        "wins": 0,
+        "wins": 1,
         "losses": 2,
-        "pointsFor": 236.42,
-        "pointsAgainst": 287.5,
+        "pointsFor": 367.48,
+        "pointsAgainst": 353.6,
         "games": [
           {
             "year": 2024,
@@ -16252,9 +16252,9 @@
           {
             "year": 2026,
             "week": 9,
-            "scoreFor": 0.0,
-            "scoreAgainst": 0.0,
-            "outcome": "T",
+            "scoreFor": 131.06,
+            "scoreAgainst": 66.1,
+            "outcome": "W",
             "platform": "Sleeper"
           }
         ]
@@ -16591,9 +16591,9 @@
       },
       "Scott Ayers": {
         "wins": 2,
-        "losses": 0,
-        "pointsFor": 287.5,
-        "pointsAgainst": 236.42,
+        "losses": 1,
+        "pointsFor": 353.6,
+        "pointsAgainst": 367.48,
         "games": [
           {
             "year": 2024,
@@ -16614,9 +16614,9 @@
           {
             "year": 2026,
             "week": 9,
-            "scoreFor": 0.0,
-            "scoreAgainst": 0.0,
-            "outcome": "T",
+            "scoreFor": 66.1,
+            "scoreAgainst": 131.06,
+            "outcome": "L",
             "platform": "Sleeper"
           }
         ]
@@ -16985,9 +16985,9 @@
       },
       "Dylan Bohlke": {
         "wins": 1,
-        "losses": 1,
-        "pointsFor": 280.88,
-        "pointsAgainst": 308.76,
+        "losses": 2,
+        "pointsFor": 375.8,
+        "pointsAgainst": 461.56,
         "games": [
           {
             "year": 2024,
@@ -17008,9 +17008,9 @@
           {
             "year": 2026,
             "week": 9,
-            "scoreFor": 0.0,
-            "scoreAgainst": 0.0,
-            "outcome": "T",
+            "scoreFor": 94.92,
+            "scoreAgainst": 152.8,
+            "outcome": "L",
             "platform": "Sleeper"
           }
         ]
@@ -17813,157 +17813,157 @@
   "power_rankings_current_year": [
     {
       "name": "Austin Horan",
-      "powerRankingScore": 5008.0,
-      "wins": 8,
+      "powerRankingScore": 5612.0,
+      "wins": 9,
       "losses": 0,
       "ties": 0,
-      "pointsFor": 1252.0,
+      "pointsFor": 1403.0,
       "winningPercentage": 100.0,
-      "weeksAboveMedian": 8,
-      "weeksPlayed": 8,
+      "weeksAboveMedian": 9,
+      "weeksPlayed": 9,
       "medianWeekWinPercentage": 100.0,
       "year": 2026
     },
     {
       "name": "Dylan Bohlke",
-      "powerRankingScore": 4799.5,
-      "wins": 6,
+      "powerRankingScore": 5415.67,
+      "wins": 7,
       "losses": 2,
       "ties": 0,
-      "pointsFor": 1324.0,
-      "winningPercentage": 75.0,
-      "weeksAboveMedian": 7,
-      "weeksPlayed": 8,
-      "medianWeekWinPercentage": 87.5,
-      "year": 2026
-    },
-    {
-      "name": "Keaton Moss",
-      "powerRankingScore": 3584.38,
-      "wins": 4,
-      "losses": 4,
-      "ties": 0,
-      "pointsFor": 1147.0,
-      "winningPercentage": 50.0,
-      "weeksAboveMedian": 5,
-      "weeksPlayed": 8,
-      "medianWeekWinPercentage": 62.5,
+      "pointsFor": 1477.0,
+      "winningPercentage": 77.78,
+      "weeksAboveMedian": 8,
+      "weeksPlayed": 9,
+      "medianWeekWinPercentage": 88.89,
       "year": 2026
     },
     {
       "name": "Bo Kitrell",
-      "powerRankingScore": 3580.88,
-      "wins": 6,
+      "powerRankingScore": 4123.0,
+      "wins": 7,
       "losses": 2,
       "ties": 0,
-      "pointsFor": 1061.0,
-      "winningPercentage": 75.0,
-      "weeksAboveMedian": 5,
-      "weeksPlayed": 8,
-      "medianWeekWinPercentage": 62.5,
-      "year": 2026
-    },
-    {
-      "name": "Jacob Maxfield",
-      "powerRankingScore": 3574.12,
-      "wins": 5,
-      "losses": 3,
-      "ties": 0,
-      "pointsFor": 1059.0,
-      "winningPercentage": 62.5,
+      "pointsFor": 1197.0,
+      "winningPercentage": 77.78,
       "weeksAboveMedian": 6,
-      "weeksPlayed": 8,
-      "medianWeekWinPercentage": 75.0,
+      "weeksPlayed": 9,
+      "medianWeekWinPercentage": 66.67,
       "year": 2026
     },
     {
       "name": "Scott Ayers",
-      "powerRankingScore": 3446.88,
-      "wins": 4,
+      "powerRankingScore": 3976.22,
+      "wins": 5,
       "losses": 4,
       "ties": 0,
-      "pointsFor": 1103.0,
-      "winningPercentage": 50.0,
-      "weeksAboveMedian": 5,
-      "weeksPlayed": 8,
-      "medianWeekWinPercentage": 62.5,
+      "pointsFor": 1234.0,
+      "winningPercentage": 55.56,
+      "weeksAboveMedian": 6,
+      "weeksPlayed": 9,
+      "medianWeekWinPercentage": 66.67,
+      "year": 2026
+    },
+    {
+      "name": "Keaton Moss",
+      "powerRankingScore": 3944.89,
+      "wins": 4,
+      "losses": 5,
+      "ties": 0,
+      "pointsFor": 1268.0,
+      "winningPercentage": 44.44,
+      "weeksAboveMedian": 6,
+      "weeksPlayed": 9,
+      "medianWeekWinPercentage": 66.67,
+      "year": 2026
+    },
+    {
+      "name": "Jacob Maxfield",
+      "powerRankingScore": 3886.67,
+      "wins": 6,
+      "losses": 3,
+      "ties": 0,
+      "pointsFor": 1166.0,
+      "winningPercentage": 66.67,
+      "weeksAboveMedian": 6,
+      "weeksPlayed": 9,
+      "medianWeekWinPercentage": 66.67,
       "year": 2026
     },
     {
       "name": "Jaron Ahmann",
-      "powerRankingScore": 3334.5,
+      "powerRankingScore": 3521.78,
       "wins": 5,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "pointsFor": 1026.0,
-      "winningPercentage": 62.5,
+      "pointsFor": 1132.0,
+      "winningPercentage": 55.56,
       "weeksAboveMedian": 5,
-      "weeksPlayed": 8,
-      "medianWeekWinPercentage": 62.5,
+      "weeksPlayed": 9,
+      "medianWeekWinPercentage": 55.56,
       "year": 2026
     },
     {
       "name": "Erik Gustafson",
-      "powerRankingScore": 2197.5,
-      "wins": 2,
+      "powerRankingScore": 2714.67,
+      "wins": 3,
       "losses": 6,
       "ties": 0,
-      "pointsFor": 879.0,
-      "winningPercentage": 25.0,
-      "weeksAboveMedian": 2,
-      "weeksPlayed": 8,
-      "medianWeekWinPercentage": 25.0,
+      "pointsFor": 1018.0,
+      "winningPercentage": 33.33,
+      "weeksAboveMedian": 3,
+      "weeksPlayed": 9,
+      "medianWeekWinPercentage": 33.33,
       "year": 2026
     },
     {
       "name": "Trevor Reimnitz",
-      "powerRankingScore": 2149.88,
+      "powerRankingScore": 2289.78,
       "wins": 3,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "pointsFor": 819.0,
-      "winningPercentage": 37.5,
+      "pointsFor": 896.0,
+      "winningPercentage": 33.33,
       "weeksAboveMedian": 2,
-      "weeksPlayed": 8,
-      "medianWeekWinPercentage": 25.0,
+      "weeksPlayed": 9,
+      "medianWeekWinPercentage": 22.22,
       "year": 2026
     },
     {
       "name": "Bryant Holt",
-      "powerRankingScore": 1982.5,
+      "powerRankingScore": 2099.78,
       "wins": 2,
-      "losses": 6,
+      "losses": 7,
       "ties": 0,
-      "pointsFor": 793.0,
-      "winningPercentage": 25.0,
+      "pointsFor": 859.0,
+      "winningPercentage": 22.22,
       "weeksAboveMedian": 2,
-      "weeksPlayed": 8,
-      "medianWeekWinPercentage": 25.0,
+      "weeksPlayed": 9,
+      "medianWeekWinPercentage": 22.22,
       "year": 2026
     },
     {
       "name": "Jackson Gannon",
-      "powerRankingScore": 1762.25,
+      "powerRankingScore": 1897.0,
       "wins": 2,
-      "losses": 6,
+      "losses": 7,
       "ties": 0,
-      "pointsFor": 742.0,
-      "winningPercentage": 25.0,
+      "pointsFor": 813.0,
+      "winningPercentage": 22.22,
       "weeksAboveMedian": 1,
-      "weeksPlayed": 8,
-      "medianWeekWinPercentage": 12.5,
+      "weeksPlayed": 9,
+      "medianWeekWinPercentage": 11.11,
       "year": 2026
     },
     {
       "name": "Jason Hawkins",
-      "powerRankingScore": 1457.75,
+      "powerRankingScore": 1648.78,
       "wins": 1,
-      "losses": 7,
+      "losses": 8,
       "ties": 0,
-      "pointsFor": 686.0,
-      "winningPercentage": 12.5,
+      "pointsFor": 781.0,
+      "winningPercentage": 11.11,
       "weeksAboveMedian": 0,
-      "weeksPlayed": 8,
+      "weeksPlayed": 9,
       "medianWeekWinPercentage": 0.0,
       "year": 2026
     }
@@ -17971,124 +17971,124 @@
   "schedule_comparison_current_year": {
     "Austin Horan": {
       "Austin Horan": {
-        "wins": 8,
+        "wins": 9,
         "losses": 0,
         "ties": 0
       },
       "Bo Kitrell": {
-        "wins": 6,
+        "wins": 7,
         "losses": 2,
         "ties": 0
       },
       "Bryant Holt": {
-        "wins": 7,
+        "wins": 8,
         "losses": 1,
         "ties": 0
       },
       "Dylan Bohlke": {
-        "wins": 8,
+        "wins": 9,
         "losses": 0,
         "ties": 0
       },
       "Erik Gustafson": {
-        "wins": 8,
+        "wins": 9,
         "losses": 0,
         "ties": 0
       },
       "Jackson Gannon": {
-        "wins": 6,
+        "wins": 7,
         "losses": 2,
         "ties": 0
       },
       "Jacob Maxfield": {
-        "wins": 8,
+        "wins": 9,
         "losses": 0,
         "ties": 0
       },
       "Jaron Ahmann": {
-        "wins": 6,
+        "wins": 7,
         "losses": 2,
         "ties": 0
       },
       "Jason Hawkins": {
         "wins": 7,
-        "losses": 1,
+        "losses": 2,
         "ties": 0
       },
       "Keaton Moss": {
-        "wins": 7,
+        "wins": 8,
         "losses": 1,
         "ties": 0
       },
       "Scott Ayers": {
-        "wins": 5,
+        "wins": 6,
         "losses": 3,
         "ties": 0
       },
       "Trevor Reimnitz": {
-        "wins": 6,
+        "wins": 7,
         "losses": 2,
         "ties": 0
       }
     },
     "Bo Kitrell": {
       "Austin Horan": {
-        "wins": 5,
+        "wins": 6,
         "losses": 3,
         "ties": 0
       },
       "Bo Kitrell": {
-        "wins": 6,
+        "wins": 7,
         "losses": 2,
         "ties": 0
       },
       "Bryant Holt": {
-        "wins": 6,
+        "wins": 7,
         "losses": 2,
         "ties": 0
       },
       "Dylan Bohlke": {
-        "wins": 5,
+        "wins": 6,
         "losses": 3,
         "ties": 0
       },
       "Erik Gustafson": {
-        "wins": 5,
+        "wins": 6,
         "losses": 3,
         "ties": 0
       },
       "Jackson Gannon": {
         "wins": 6,
-        "losses": 2,
+        "losses": 3,
         "ties": 0
       },
       "Jacob Maxfield": {
-        "wins": 6,
+        "wins": 7,
         "losses": 2,
         "ties": 0
       },
       "Jaron Ahmann": {
-        "wins": 5,
+        "wins": 6,
         "losses": 3,
         "ties": 0
       },
       "Jason Hawkins": {
         "wins": 6,
-        "losses": 2,
+        "losses": 3,
         "ties": 0
       },
       "Keaton Moss": {
         "wins": 4,
-        "losses": 4,
+        "losses": 5,
         "ties": 0
       },
       "Scott Ayers": {
-        "wins": 3,
+        "wins": 4,
         "losses": 5,
         "ties": 0
       },
       "Trevor Reimnitz": {
-        "wins": 3,
+        "wins": 4,
         "losses": 5,
         "ties": 0
       }
@@ -18096,185 +18096,185 @@
     "Bryant Holt": {
       "Austin Horan": {
         "wins": 2,
-        "losses": 6,
+        "losses": 7,
         "ties": 0
       },
       "Bo Kitrell": {
         "wins": 1,
-        "losses": 7,
+        "losses": 8,
         "ties": 0
       },
       "Bryant Holt": {
         "wins": 2,
-        "losses": 6,
+        "losses": 7,
         "ties": 0
       },
       "Dylan Bohlke": {
         "wins": 2,
-        "losses": 6,
+        "losses": 7,
         "ties": 0
       },
       "Erik Gustafson": {
         "wins": 2,
-        "losses": 6,
+        "losses": 7,
         "ties": 0
       },
       "Jackson Gannon": {
         "wins": 4,
-        "losses": 4,
+        "losses": 5,
         "ties": 0
       },
       "Jacob Maxfield": {
         "wins": 3,
-        "losses": 5,
+        "losses": 6,
         "ties": 0
       },
       "Jaron Ahmann": {
         "wins": 3,
-        "losses": 5,
+        "losses": 6,
         "ties": 0
       },
       "Jason Hawkins": {
         "wins": 2,
-        "losses": 6,
+        "losses": 7,
         "ties": 0
       },
       "Keaton Moss": {
         "wins": 2,
-        "losses": 6,
+        "losses": 7,
         "ties": 0
       },
       "Scott Ayers": {
         "wins": 3,
-        "losses": 5,
+        "losses": 6,
         "ties": 0
       },
       "Trevor Reimnitz": {
         "wins": 2,
-        "losses": 6,
+        "losses": 7,
         "ties": 0
       }
     },
     "Dylan Bohlke": {
       "Austin Horan": {
-        "wins": 6,
+        "wins": 7,
         "losses": 2,
         "ties": 0
       },
       "Bo Kitrell": {
-        "wins": 6,
+        "wins": 7,
         "losses": 2,
         "ties": 0
       },
       "Bryant Holt": {
-        "wins": 5,
+        "wins": 6,
         "losses": 3,
         "ties": 0
       },
       "Dylan Bohlke": {
-        "wins": 6,
+        "wins": 7,
         "losses": 2,
         "ties": 0
       },
       "Erik Gustafson": {
-        "wins": 7,
+        "wins": 8,
         "losses": 1,
         "ties": 0
       },
       "Jackson Gannon": {
-        "wins": 7,
+        "wins": 8,
         "losses": 1,
         "ties": 0
       },
       "Jacob Maxfield": {
-        "wins": 8,
+        "wins": 9,
         "losses": 0,
         "ties": 0
       },
       "Jaron Ahmann": {
-        "wins": 7,
+        "wins": 8,
         "losses": 1,
         "ties": 0
       },
       "Jason Hawkins": {
-        "wins": 7,
+        "wins": 8,
         "losses": 1,
         "ties": 0
       },
       "Keaton Moss": {
-        "wins": 7,
+        "wins": 8,
         "losses": 1,
         "ties": 0
       },
       "Scott Ayers": {
-        "wins": 6,
+        "wins": 7,
         "losses": 2,
         "ties": 0
       },
       "Trevor Reimnitz": {
-        "wins": 7,
+        "wins": 8,
         "losses": 1,
         "ties": 0
       }
     },
     "Erik Gustafson": {
       "Austin Horan": {
-        "wins": 1,
+        "wins": 2,
         "losses": 7,
         "ties": 0
       },
       "Bo Kitrell": {
-        "wins": 2,
+        "wins": 3,
         "losses": 6,
         "ties": 0
       },
       "Bryant Holt": {
-        "wins": 3,
+        "wins": 4,
         "losses": 5,
         "ties": 0
       },
       "Dylan Bohlke": {
-        "wins": 3,
+        "wins": 4,
         "losses": 5,
         "ties": 0
       },
       "Erik Gustafson": {
-        "wins": 2,
+        "wins": 3,
         "losses": 6,
         "ties": 0
       },
       "Jackson Gannon": {
         "wins": 2,
-        "losses": 6,
+        "losses": 7,
         "ties": 0
       },
       "Jacob Maxfield": {
-        "wins": 4,
+        "wins": 5,
         "losses": 4,
         "ties": 0
       },
       "Jaron Ahmann": {
-        "wins": 3,
+        "wins": 4,
         "losses": 5,
         "ties": 0
       },
       "Jason Hawkins": {
         "wins": 5,
-        "losses": 3,
+        "losses": 4,
         "ties": 0
       },
       "Keaton Moss": {
-        "wins": 2,
+        "wins": 3,
         "losses": 6,
         "ties": 0
       },
       "Scott Ayers": {
-        "wins": 2,
+        "wins": 3,
         "losses": 6,
         "ties": 0
       },
       "Trevor Reimnitz": {
-        "wins": 2,
+        "wins": 3,
         "losses": 6,
         "ties": 0
       }
@@ -18282,434 +18282,434 @@
     "Jackson Gannon": {
       "Austin Horan": {
         "wins": 2,
-        "losses": 6,
+        "losses": 7,
         "ties": 0
       },
       "Bo Kitrell": {
         "wins": 3,
-        "losses": 5,
+        "losses": 6,
         "ties": 0
       },
       "Bryant Holt": {
         "wins": 2,
-        "losses": 6,
+        "losses": 7,
         "ties": 0
       },
       "Dylan Bohlke": {
         "wins": 2,
-        "losses": 6,
+        "losses": 7,
         "ties": 0
       },
       "Erik Gustafson": {
         "wins": 1,
-        "losses": 7,
+        "losses": 8,
         "ties": 0
       },
       "Jackson Gannon": {
         "wins": 2,
-        "losses": 6,
+        "losses": 7,
         "ties": 0
       },
       "Jacob Maxfield": {
         "wins": 4,
-        "losses": 4,
+        "losses": 5,
         "ties": 0
       },
       "Jaron Ahmann": {
         "wins": 1,
-        "losses": 7,
+        "losses": 8,
         "ties": 0
       },
       "Jason Hawkins": {
         "wins": 3,
-        "losses": 5,
+        "losses": 6,
         "ties": 0
       },
       "Keaton Moss": {
         "wins": 2,
-        "losses": 6,
+        "losses": 7,
         "ties": 0
       },
       "Scott Ayers": {
-        "wins": 0,
+        "wins": 1,
         "losses": 8,
         "ties": 0
       },
       "Trevor Reimnitz": {
         "wins": 1,
-        "losses": 7,
+        "losses": 8,
         "ties": 0
       }
     },
     "Jacob Maxfield": {
       "Austin Horan": {
-        "wins": 4,
+        "wins": 5,
         "losses": 4,
         "ties": 0
       },
       "Bo Kitrell": {
-        "wins": 6,
+        "wins": 7,
         "losses": 2,
         "ties": 0
       },
       "Bryant Holt": {
         "wins": 5,
-        "losses": 3,
+        "losses": 4,
         "ties": 0
       },
       "Dylan Bohlke": {
-        "wins": 5,
+        "wins": 6,
         "losses": 3,
         "ties": 0
       },
       "Erik Gustafson": {
         "wins": 6,
-        "losses": 2,
+        "losses": 3,
         "ties": 0
       },
       "Jackson Gannon": {
         "wins": 5,
-        "losses": 3,
+        "losses": 4,
         "ties": 0
       },
       "Jacob Maxfield": {
-        "wins": 5,
+        "wins": 6,
         "losses": 3,
         "ties": 0
       },
       "Jaron Ahmann": {
         "wins": 4,
-        "losses": 4,
+        "losses": 5,
         "ties": 0
       },
       "Jason Hawkins": {
         "wins": 6,
-        "losses": 2,
+        "losses": 3,
         "ties": 0
       },
       "Keaton Moss": {
         "wins": 4,
-        "losses": 4,
+        "losses": 5,
         "ties": 0
       },
       "Scott Ayers": {
-        "wins": 3,
+        "wins": 4,
         "losses": 5,
         "ties": 0
       },
       "Trevor Reimnitz": {
-        "wins": 3,
+        "wins": 4,
         "losses": 5,
         "ties": 0
       }
     },
     "Jaron Ahmann": {
       "Austin Horan": {
-        "wins": 3,
+        "wins": 4,
         "losses": 5,
         "ties": 0
       },
       "Bo Kitrell": {
         "wins": 5,
-        "losses": 3,
+        "losses": 4,
         "ties": 0
       },
       "Bryant Holt": {
         "wins": 4,
-        "losses": 4,
+        "losses": 5,
         "ties": 0
       },
       "Dylan Bohlke": {
-        "wins": 4,
+        "wins": 5,
         "losses": 4,
         "ties": 0
       },
       "Erik Gustafson": {
         "wins": 5,
-        "losses": 3,
+        "losses": 4,
         "ties": 0
       },
       "Jackson Gannon": {
         "wins": 4,
-        "losses": 4,
+        "losses": 5,
         "ties": 0
       },
       "Jacob Maxfield": {
-        "wins": 7,
+        "wins": 8,
         "losses": 1,
         "ties": 0
       },
       "Jaron Ahmann": {
         "wins": 5,
-        "losses": 3,
+        "losses": 4,
         "ties": 0
       },
       "Jason Hawkins": {
         "wins": 5,
-        "losses": 3,
+        "losses": 4,
         "ties": 0
       },
       "Keaton Moss": {
         "wins": 4,
-        "losses": 4,
+        "losses": 5,
         "ties": 0
       },
       "Scott Ayers": {
-        "wins": 4,
+        "wins": 5,
         "losses": 4,
         "ties": 0
       },
       "Trevor Reimnitz": {
         "wins": 3,
-        "losses": 5,
+        "losses": 6,
         "ties": 0
       }
     },
     "Jason Hawkins": {
       "Austin Horan": {
-        "wins": 0,
+        "wins": 1,
         "losses": 8,
         "ties": 0
       },
       "Bo Kitrell": {
         "wins": 1,
-        "losses": 7,
+        "losses": 8,
         "ties": 0
       },
       "Bryant Holt": {
         "wins": 1,
-        "losses": 7,
+        "losses": 8,
         "ties": 0
       },
       "Dylan Bohlke": {
         "wins": 0,
-        "losses": 8,
+        "losses": 9,
         "ties": 0
       },
       "Erik Gustafson": {
         "wins": 1,
-        "losses": 7,
+        "losses": 8,
         "ties": 0
       },
       "Jackson Gannon": {
         "wins": 1,
-        "losses": 7,
+        "losses": 8,
         "ties": 0
       },
       "Jacob Maxfield": {
-        "wins": 2,
+        "wins": 3,
         "losses": 6,
         "ties": 0
       },
       "Jaron Ahmann": {
         "wins": 2,
-        "losses": 6,
+        "losses": 7,
         "ties": 0
       },
       "Jason Hawkins": {
         "wins": 1,
-        "losses": 7,
+        "losses": 8,
         "ties": 0
       },
       "Keaton Moss": {
         "wins": 1,
-        "losses": 7,
+        "losses": 8,
         "ties": 0
       },
       "Scott Ayers": {
-        "wins": 2,
+        "wins": 3,
         "losses": 6,
         "ties": 0
       },
       "Trevor Reimnitz": {
         "wins": 0,
-        "losses": 8,
+        "losses": 9,
         "ties": 0
       }
     },
     "Keaton Moss": {
       "Austin Horan": {
-        "wins": 5,
+        "wins": 6,
         "losses": 3,
         "ties": 0
       },
       "Bo Kitrell": {
-        "wins": 6,
+        "wins": 7,
         "losses": 2,
         "ties": 0
       },
       "Bryant Holt": {
         "wins": 4,
-        "losses": 4,
+        "losses": 5,
         "ties": 0
       },
       "Dylan Bohlke": {
-        "wins": 4,
+        "wins": 5,
         "losses": 4,
         "ties": 0
       },
       "Erik Gustafson": {
         "wins": 6,
-        "losses": 2,
+        "losses": 3,
         "ties": 0
       },
       "Jackson Gannon": {
         "wins": 6,
-        "losses": 2,
+        "losses": 3,
         "ties": 0
       },
       "Jacob Maxfield": {
-        "wins": 5,
+        "wins": 6,
         "losses": 3,
         "ties": 0
       },
       "Jaron Ahmann": {
         "wins": 6,
-        "losses": 2,
+        "losses": 3,
         "ties": 0
       },
       "Jason Hawkins": {
         "wins": 8,
-        "losses": 0,
+        "losses": 1,
         "ties": 0
       },
       "Keaton Moss": {
         "wins": 4,
-        "losses": 4,
+        "losses": 5,
         "ties": 0
       },
       "Scott Ayers": {
-        "wins": 6,
+        "wins": 7,
         "losses": 2,
         "ties": 0
       },
       "Trevor Reimnitz": {
-        "wins": 4,
+        "wins": 5,
         "losses": 4,
         "ties": 0
       }
     },
     "Scott Ayers": {
       "Austin Horan": {
-        "wins": 5,
+        "wins": 6,
         "losses": 3,
         "ties": 0
       },
       "Bo Kitrell": {
-        "wins": 7,
+        "wins": 8,
         "losses": 1,
         "ties": 0
       },
       "Bryant Holt": {
-        "wins": 3,
+        "wins": 4,
         "losses": 5,
         "ties": 0
       },
       "Dylan Bohlke": {
-        "wins": 5,
+        "wins": 6,
         "losses": 3,
         "ties": 0
       },
       "Erik Gustafson": {
-        "wins": 6,
+        "wins": 7,
         "losses": 2,
         "ties": 0
       },
       "Jackson Gannon": {
         "wins": 6,
-        "losses": 2,
+        "losses": 3,
         "ties": 0
       },
       "Jacob Maxfield": {
-        "wins": 4,
+        "wins": 5,
         "losses": 4,
         "ties": 0
       },
       "Jaron Ahmann": {
         "wins": 4,
-        "losses": 4,
+        "losses": 5,
         "ties": 0
       },
       "Jason Hawkins": {
         "wins": 8,
-        "losses": 0,
+        "losses": 1,
         "ties": 0
       },
       "Keaton Moss": {
         "wins": 4,
-        "losses": 4,
+        "losses": 5,
         "ties": 0
       },
       "Scott Ayers": {
-        "wins": 4,
+        "wins": 5,
         "losses": 4,
         "ties": 0
       },
       "Trevor Reimnitz": {
-        "wins": 4,
+        "wins": 5,
         "losses": 4,
         "ties": 0
       }
     },
     "Trevor Reimnitz": {
       "Austin Horan": {
-        "wins": 1,
+        "wins": 2,
         "losses": 7,
         "ties": 0
       },
       "Bo Kitrell": {
         "wins": 3,
-        "losses": 5,
+        "losses": 6,
         "ties": 0
       },
       "Bryant Holt": {
         "wins": 3,
-        "losses": 5,
+        "losses": 6,
         "ties": 0
       },
       "Dylan Bohlke": {
         "wins": 1,
-        "losses": 7,
+        "losses": 8,
         "ties": 0
       },
       "Erik Gustafson": {
         "wins": 4,
-        "losses": 4,
+        "losses": 5,
         "ties": 0
       },
       "Jackson Gannon": {
         "wins": 2,
-        "losses": 6,
+        "losses": 7,
         "ties": 0
       },
       "Jacob Maxfield": {
         "wins": 3,
-        "losses": 5,
+        "losses": 6,
         "ties": 0
       },
       "Jaron Ahmann": {
         "wins": 3,
-        "losses": 5,
+        "losses": 6,
         "ties": 0
       },
       "Jason Hawkins": {
         "wins": 3,
-        "losses": 5,
+        "losses": 6,
         "ties": 0
       },
       "Keaton Moss": {
         "wins": 1,
-        "losses": 7,
+        "losses": 8,
         "ties": 0
       },
       "Scott Ayers": {
-        "wins": 1,
+        "wins": 2,
         "losses": 7,
         "ties": 0
       },
       "Trevor Reimnitz": {
         "wins": 3,
-        "losses": 5,
+        "losses": 6,
         "ties": 0
       }
     }
@@ -18748,11 +18748,15 @@
         "8": {
           "wins": 11,
           "losses": 0
+        },
+        "9": {
+          "wins": 10,
+          "losses": 1
         }
       },
       "total": {
-        "wins": 74,
-        "losses": 14
+        "wins": 84,
+        "losses": 15
       }
     },
     "Bo Kitrell": {
@@ -18788,11 +18792,15 @@
         "8": {
           "wins": 4,
           "losses": 7
+        },
+        "9": {
+          "wins": 8,
+          "losses": 3
         }
       },
       "total": {
-        "wins": 54,
-        "losses": 34
+        "wins": 62,
+        "losses": 37
       }
     },
     "Bryant Holt": {
@@ -18828,11 +18836,15 @@
         "8": {
           "wins": 1,
           "losses": 10
+        },
+        "9": {
+          "wins": 0,
+          "losses": 11
         }
       },
       "total": {
         "wins": 26,
-        "losses": 62
+        "losses": 73
       }
     },
     "Dylan Bohlke": {
@@ -18868,10 +18880,14 @@
         "8": {
           "wins": 9,
           "losses": 2
+        },
+        "9": {
+          "wins": 11,
+          "losses": 0
         }
       },
       "total": {
-        "wins": 73,
+        "wins": 84,
         "losses": 15
       }
     },
@@ -18908,11 +18924,15 @@
         "8": {
           "wins": 6,
           "losses": 5
+        },
+        "9": {
+          "wins": 9,
+          "losses": 2
         }
       },
       "total": {
-        "wins": 29,
-        "losses": 59
+        "wins": 38,
+        "losses": 61
       }
     },
     "Jackson Gannon": {
@@ -18948,11 +18968,15 @@
         "8": {
           "wins": 2,
           "losses": 9
+        },
+        "9": {
+          "wins": 1,
+          "losses": 10
         }
       },
       "total": {
-        "wins": 21,
-        "losses": 67
+        "wins": 22,
+        "losses": 77
       }
     },
     "Jacob Maxfield": {
@@ -18988,11 +19012,15 @@
         "8": {
           "wins": 8,
           "losses": 3
+        },
+        "9": {
+          "wins": 5,
+          "losses": 6
         }
       },
       "total": {
-        "wins": 51,
-        "losses": 37
+        "wins": 56,
+        "losses": 43
       }
     },
     "Jaron Ahmann": {
@@ -19028,11 +19056,15 @@
         "8": {
           "wins": 10,
           "losses": 1
+        },
+        "9": {
+          "wins": 4,
+          "losses": 7
         }
       },
       "total": {
-        "wins": 48,
-        "losses": 40
+        "wins": 52,
+        "losses": 47
       }
     },
     "Jason Hawkins": {
@@ -19068,11 +19100,15 @@
         "8": {
           "wins": 0,
           "losses": 11
+        },
+        "9": {
+          "wins": 3,
+          "losses": 8
         }
       },
       "total": {
-        "wins": 11,
-        "losses": 77
+        "wins": 14,
+        "losses": 85
       }
     },
     "Keaton Moss": {
@@ -19108,11 +19144,15 @@
         "8": {
           "wins": 5,
           "losses": 6
+        },
+        "9": {
+          "wins": 6,
+          "losses": 5
         }
       },
       "total": {
-        "wins": 60,
-        "losses": 28
+        "wins": 66,
+        "losses": 33
       }
     },
     "Matt Smelser": {
@@ -19146,6 +19186,10 @@
           "losses": 0
         },
         "8": {
+          "wins": 0,
+          "losses": 0
+        },
+        "9": {
           "wins": 0,
           "losses": 0
         }
@@ -19188,6 +19232,10 @@
         "8": {
           "wins": 0,
           "losses": 0
+        },
+        "9": {
+          "wins": 0,
+          "losses": 0
         }
       },
       "total": {
@@ -19228,11 +19276,15 @@
         "8": {
           "wins": 3,
           "losses": 8
+        },
+        "9": {
+          "wins": 7,
+          "losses": 4
         }
       },
       "total": {
-        "wins": 56,
-        "losses": 32
+        "wins": 63,
+        "losses": 36
       }
     },
     "Tom Docter": {
@@ -19266,6 +19318,10 @@
           "losses": 0
         },
         "8": {
+          "wins": 0,
+          "losses": 0
+        },
+        "9": {
           "wins": 0,
           "losses": 0
         }
@@ -19308,11 +19364,15 @@
         "8": {
           "wins": 7,
           "losses": 4
+        },
+        "9": {
+          "wins": 2,
+          "losses": 9
         }
       },
       "total": {
-        "wins": 25,
-        "losses": 63
+        "wins": 27,
+        "losses": 72
       }
     },
     "Zach Fleer": {
@@ -19346,6 +19406,10 @@
           "losses": 0
         },
         "8": {
+          "wins": 0,
+          "losses": 0
+        },
+        "9": {
           "wins": 0,
           "losses": 0
         }
@@ -19386,6 +19450,10 @@
           "losses": 0
         },
         "8": {
+          "wins": 0,
+          "losses": 0
+        },
+        "9": {
           "wins": 0,
           "losses": 0
         }
